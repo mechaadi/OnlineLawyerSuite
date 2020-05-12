@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  overflow: hidden;
+}
+
+.navbar {
+  top: 0;
+  color: rgb(68, 57, 57);
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  border-style: dotted;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.jumbotron {
+  color: aliceblue;
+  background-image: url("https://i.picsum.photos/id/23/1920/1080.jpg");
+  border-style: double;
+  display: flex;
+  flex-direction: row;
+  height: 99.41vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  border-style: double;
+  display: flex;
+  flex-direction: row;
+  height: 99.41vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_down {
+  border-style: double;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  height: 99.41vh;
+  align-items: center;
+  justify-content: center;
+}
+.membership {
+  height: 80vh;
+  display: flex;
+  flex: 1.4;
+  border-style: double;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  height: 20vh;
+  display: flex;
+  flex: 1;
+  border-style: double;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+}
