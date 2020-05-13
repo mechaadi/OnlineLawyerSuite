@@ -3,8 +3,8 @@ function About() {
     return (
         <div className="body">
             <div className="navbar">
-                <h1>Navbar Here</h1>
-        </div>
+                <h1>Edited By Sandeep</h1>
+            </div>
             <div className="jumbotron">
                 <h1>Jumbotron Here</h1>
             </div>
