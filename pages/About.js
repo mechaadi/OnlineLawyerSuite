@@ -1,9 +1,10 @@
 import './app.module.css';
+import Navbar from '../Navbar/Navbar';
 function About() {
     return (
         <div className="body">
-            <div className="navbar">
-                <h1>Edited By Sandeep</h1>
+            <div className="navbarhandler">
+                <Navbar/>
             </div>
             <div className="jumbotron">
                 <h1>Jumbotron Here</h1>

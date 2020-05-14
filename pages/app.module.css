@@ -6,19 +6,9 @@
 .body {
   overflow: hidden;
 }
-
-.navbar {
-  top: 0;
-  color: rgb(68, 57, 57);
-  display: flex;
-  overflow: hidden;
+.navbarhandler {
   position: fixed;
   width: 100%;
-  top: 0;
-  height: 50px;
-  border-style: dotted;
-  align-items: center;
-  justify-content: center;
 }
 
 .img {
@@ -28,11 +18,11 @@
 
 .jumbotron {
   color: aliceblue;
-  background-image: url("https://i.picsum.photos/id/23/1920/1080.jpg");
-  border-style: double;
+  background-image: url("https://www.plantbasednews.org/.image/t_share/MTY2NTE1MDcyMTk2MTU4NzA2/harvard-law-school-plantbased.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: row;
-  height: 99.41vh;
+  height: 100vh;
   width: auto;
   align-items: center;
   justify-content: center;
@@ -77,4 +67,10 @@
 h1 {
   align-items: center;
   justify-content: center;
+  font-size: 80px;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 }
