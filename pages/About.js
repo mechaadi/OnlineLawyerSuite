@@ -1,5 +1,5 @@
 import './app.module.css';
-import Navbar from '../Navbar/Navbar';
+import Navbar from './Navbar/Navbar.js'
 function About() {
     return (
         <div className="body">
