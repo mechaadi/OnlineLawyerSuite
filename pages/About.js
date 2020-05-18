@@ -1,5 +1,6 @@
 import './app.module.css';
-import Navbar from './Navbar/Navbar.js'
+import Navbar from './Components/Navbar/Navbar.js'
+import Footer from './Components/Footer/Footer';
 function About() {
     return (
         <div className="body">
@@ -27,7 +28,7 @@ function About() {
                     <h2>Memebership Here</h2>
                 </div>
                 <div className="footer">
-                    <h1>Footer Here</h1>
+                    <h1><Footer/></h1>
                 </div>
             </div>
 
