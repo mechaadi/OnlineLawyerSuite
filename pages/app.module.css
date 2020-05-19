@@ -48,7 +48,7 @@
   justify-content: center;
 }
 .membership {
-  height: 80vh;
+  height: 60vh;
   display: flex;
   flex: 1.4;
   border-style: double;
@@ -56,10 +56,8 @@
   justify-content: center;
 }
 .footer {
-  height: 20vh;
+  height: 40vh;
   display: flex;
-  flex: 1;
-  /* border-style: double; */
   align-items: center;
   justify-content: center;
 }
