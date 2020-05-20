@@ -1,50 +1,59 @@
-import './register.module.css';
+import register_styles from './register.module.css';
 import Link from 'next/link'
+
 const Login = () => {
     return (
         <div>
-            <div className=" register flex-center">
-                <div className="app flex-center">
-                    <div className="header">
-                        Welcome Back.
+            <div className={register_styles.register+ ' ' +register_styles.flex_center}>
+                <div className={register_styles.app + ' ' +register_styles.flex_center}>
+                    <div className={register_styles.header}>
+                        Ready to Take a Free trial?
                 </div>
-                    <div className="subheader">
+                    <div className={register_styles.subheader}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 </div>
-                    <div className="box flex-center">
+                    <div className={register_styles.box + ' ' +register_styles.flex_center}>
 
 
-                        <div className="form">
-                            <div className="box-title">
-                                Login
+                        <div className={register_styles.form}>
+                            <div className={register_styles.box_title}>
+                                Sign up for a free account
                                 </div>
-                        </div>
-                        <div className="formc">
-
-                            <div className="border">
-                                <input type="text" autoComplete={true} className="text-input" placeholder="Email Address" />
+                            <div className={register_styles.form_row}>
+                                <div className={register_styles.border}>
+                                    <input type="text" className={register_styles.text_input_A} placeholder="First Name" />
+                                </div>
+                                <div className={register_styles.border}>
+                                    <input type="text" className={register_styles.text_input_A} placeholder="Last Name" />
+                                </div>
                             </div>
-                            <div className="border">
-                                <input type="password" className="text-input" placeholder="Create Password" />
+                        </div>
+                        <div className={register_styles.formc}>
+
+                            <div className={register_styles.border}>
+                                <input type="text" autoComplete={register_styles.true} className={register_styles.text_input} placeholder="Email Address" />
+                            </div>
+                            <div className={register_styles.border}>
+                                <input type="password" className={register_styles.text_input} placeholder="Create Password" />
                             </div>
 
                         </div>
-                        <div className="buttons">
-                            <button className="a">Login</button>
-                            <button className="a">Register</button>
+                        <div className={register_styles.buttons}>
+                            <button className={register_styles.a}>Register</button>
+                            <button className={register_styles.a}>Login</button>
                         </div>
                     </div>
                 </div>
-                <div className="membership">
-                    <div className="mem-left">
-                        <div className="mem-content">
+                <div className={register_styles.membership}>
+                    <div className={register_styles.mem_left}>
+                        <div className={register_styles.mem_content}>
                             Membership
                                  </div>
-                        <div className="mem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
+                        <div className={register_styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
                     </div>
-                    <div className="mem-right">
+                    <div className={register_styles.mem_right}>
                         <Link href="/">
-                            <button className="a">Join Today</button>
+                            <button className={register_styles.a}>Join Today</button>
                         </Link>
                     </div>
                 </div>

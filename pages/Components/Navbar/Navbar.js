@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./navbar.module.css";
+import nav from "./navbar.module.css";
 import Link from 'next/link'
 export default function Navbar() {
   const [state, setstate] = useState(false);
@@ -11,52 +11,52 @@ export default function Navbar() {
   };
 
   return (
-    <div className="nav">
-      <div className="logo">Branding</div>
-      <div className="ab">
-        <ul className="items">
-          <li> Features </li>
-          <li> Pricing </li>
-          <li> Community </li>
-          <li> Support </li>
+    <div className={nav.nav}>
+      <div className={nav.logo}>Branding</div>
+      <div className={nav.ab}>
+        <ul className={nav.items}>
+          <li className = {nav.li}> Features </li>
+          <li className = {nav.li}> Pricing </li>
+          <li className = {nav.li}> Community </li>
+          <li className = {nav.li}> Support </li>
         </ul>
-        <ul className="navbuttons">
+        <ul className={nav.navbuttons}>
           <Link href="/Components/Login/Login">
-            <button className="button" >
-              <li> Login </li>
+            <button className={nav.button} >
+              <li className = {nav.li}> Login </li>
             </button>
           </Link>
           <Link href="/Components/Register/Register">
-            <button className="button">
-              <li> Register</li>
+            <button className={nav.button}>
+              <li className = {nav.li}> Register</li>
             </button>
           </Link>
         </ul>
       </div>
-      <div className="toggler" onClick={toogle}>
+      <div className={nav.toggler} onClick={toogle}>
         <img
           src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png"
           alt="toggle"
-          className="img"
+          className={nav.img}
         />
       </div>
       {state && (
-        <div className="overlay">
-          <div className="overlay_men">
+        <div className={nav.overlay}>
+          <div className={nav.overlay_men}>
             <ul>
-              <li>
-                <div className="overlay_close" onClick={toogle}>
+              <li className = {nav.li}>
+                <div className={nav.overlay_close} onClick={toogle}>
                   <img
-                    className="overlay_close_button"
+                    className={nav.overlay_close_button}
                     src="https://www.materialui.co/materialIcons/navigation/close_white_2048x2048.png"
                     alt="close"
                   />
                 </div>
               </li>
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Community</li>
-              <li>Support</li>
+              <li className = {nav.li}>Features</li>
+              <li className = {nav.li}>Pricing</li>
+              <li className = {nav.li}>Community</li>
+              <li className = {nav.li}>Support</li>
             </ul>
           </div>
         </div>

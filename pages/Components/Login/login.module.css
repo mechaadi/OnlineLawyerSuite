@@ -1,7 +1,7 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
-}
+} */
 
 .flex-center {
   display: flex;
@@ -13,6 +13,10 @@
 .login {
   height: 99.41vh;
   justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .app {
@@ -21,6 +25,10 @@
   height: 65vh;
   flex-direction: column;
   width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   /* border-style: dotted; */
 }
 
@@ -41,9 +49,13 @@
 }
 
 .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 15px;
   padding-inline: 5%;
-  min-width: auto;
+  min-width: 450px;
   padding: 15px;
   min-height: 55%;
   background: #ffffff;
@@ -54,7 +66,7 @@
   width: 100%;
 }
 
-.box-title {
+.box_title {
   width: 60%;
   font-weight: bold;
   font-size: 20px;
@@ -70,22 +82,22 @@
   padding: 10px;
 }
 
-.form-row {
+.form_row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.text-input {
+.text_input {
   width: 100%;
   padding: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-::placeholder {
+/* ::placeholder {
   color: rgba(0, 0, 0, 0.8);
-}
-.text-input-A {
+} */
+.text_input_A {
   width: 100%;
   padding: 5px;
   color: rgba(0, 0, 0, 0.8);
@@ -124,39 +136,37 @@
 }
 
 .membership {
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 25px;
   align-items: center;
   justify-content: center;
   width: 80%;
   display: flex;
   max-height: 50%;
-  border-style: none;
 }
-.mem-left {
+.mem_left {
   padding: 20px;
   display: flex;
-  flex: 1.8;
+  flex: 2;
   width: 100%;
   flex-direction: column;
   /* border-style: dashed; */
   width: 100%;
 }
-.mem-text {
+.mem_text {
   margin-top: 20px;
   font-size: 18px;
   /* border-style: dashed; */
 }
-.mem-right {
+.mem_right {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  /* border-style: dashed; */
   width: 100%;
 }
-.mem-content {
+.mem_content {
   display: flex;
   flex-direction: column;
   font-size: large;
@@ -191,7 +201,7 @@
   .header {
     font-size: 25px;
   }
-  .input-container {
+  .input_container {
     flex-wrap: wrap;
   }
   .box {

@@ -1,58 +1,52 @@
-import './login.module.css';
+import login_styles from './login.module.css';
 import Link from 'next/link'
+
 const Login = () => {
     return (
         <div>
-            <div className=" login flex-center">
-                <div className="app flex-center">
-                    <div className="header">
-                        Ready to Take a Free trial?
+            <div className={login_styles.login+ ' ' +login_styles.flex_center}>
+                <div className={login_styles.app + ' ' +login_styles.flex_center}>
+                    <div className={login_styles.header}>
+                        Welcome Back.
                 </div>
-                    <div className="subheader">
+                    <div className={login_styles.subheader}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 </div>
-                    <div className="box flex-center">
+                    <div className={login_styles.box + ' ' +login_styles.flex_center}>
 
 
-                        <div className="form">
-                            <div className="box-title">
-                                Sign up for a free account
+                        <div className={login_styles.form}>
+                            <div className={login_styles.box_title}>
+                                Login
                                 </div>
-                            <div className="form-row">
-                                <div className="border">
-                                    <input type="text" className="text-input-A" placeholder="First Name" />
-                                </div>
-                                <div className="border">
-                                    <input type="text" className="text-input-A" placeholder="Last Name" />
-                                </div>
-                            </div>
+                           
                         </div>
-                        <div className="formc">
+                        <div className={login_styles.formc}>
 
-                            <div className="border">
-                                <input type="text" autoComplete={true} className="text-input" placeholder="Email Address" />
+                            <div className={login_styles.border}>
+                                <input type="text" autoComplete={login_styles.true} className={login_styles.text_input} placeholder="Email Address" />
                             </div>
-                            <div className="border">
-                                <input type="password" className="text-input" placeholder="Create Password" />
+                            <div className={login_styles.border}>
+                                <input type="password" className={login_styles.text_input} placeholder="Password" />
                             </div>
 
                         </div>
-                        <div className="buttons">
-                            <button className="a">Register</button>
-                            <button className="a">Login</button>
+                        <div className={login_styles.buttons}>
+                            <button className={login_styles.a}>Login</button>
+                            <button className={login_styles.a}>Register</button>
                         </div>
                     </div>
                 </div>
-                <div className="membership">
-                    <div className="mem-left">
-                        <div className="mem-content">
+                <div className={login_styles.membership}>
+                    <div className={login_styles.mem_left}>
+                        <div className={login_styles.mem_content}>
                             Membership
                                  </div>
-                        <div className="mem-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
+                        <div className={login_styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
                     </div>
-                    <div className="mem-right">
+                    <div className={login_styles.mem_right}>
                         <Link href="/">
-                            <button className="a">Join Today</button>
+                            <button className={login_styles.a}>Join Today</button>
                         </Link>
                     </div>
                 </div>

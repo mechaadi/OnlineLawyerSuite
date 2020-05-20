@@ -1,5 +1,14 @@
-// next.config.js
-const withCSS = require('@zeit/next-css')
-module.exports = withCSS({
-  /* config options here */
-})
+// module.exports = withPlugins(
+//   [
+//     [
+//       withCSS,
+//       {
+//         cssLoaderOptions: {
+//           localIdentName: '[name]_[local]_[hash:6]',
+//         },
+//         cssModules: true,
+//       },
+//     ],
+//   ],
+//   nextConfig
+// );
