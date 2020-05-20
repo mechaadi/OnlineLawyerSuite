@@ -35,7 +35,7 @@
   height: 99.41vh;
   width: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .section_down {
