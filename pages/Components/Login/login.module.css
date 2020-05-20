@@ -1,7 +1,11 @@
-/* * {
+.body {
   margin: 0px;
   padding: 0px;
-} */
+  background: #e5e5e5;
+  height: auto;
+  font-family: Arial;
+  overflow: hidden;
+}
 
 .flex-center {
   display: flex;
@@ -11,7 +15,7 @@
 }
 
 .login {
-  height: 99.41vh;
+  height: 98vh;
   justify-content: space-around;
   display: flex;
   align-items: center;
@@ -22,14 +26,15 @@
 .app {
   display: flex;
   margin-top: 45px;
-  height: 65vh;
+  height: auto;
+  padding: 25px;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* border-style: dotted; */
+  background-color: white;
 }
 
 .header {
@@ -37,6 +42,7 @@
   /* border-style: dotted; */
   font-size: 38px;
   padding: 5px;
+  margin-top: 25px;
 }
 
 .subheader {
@@ -49,16 +55,17 @@
 }
 
 .box {
-  display: flex;     
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 15px;
   padding-inline: 5%;
   min-width: 450px;
-  padding: 15px;
+  padding: 20px;
   min-height: 55%;
   background: #ffffff;
+  margin-bottom: 35px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .input-container {
@@ -67,7 +74,7 @@
 }
 
 .box_title {
-  width: 60%;
+  width: 80%;
   font-weight: bold;
   font-size: 20px;
   /* border-style: dotted; */
@@ -90,6 +97,7 @@
 
 .text_input {
   width: 100%;
+  margin-right: 97px;
   padding: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -120,10 +128,11 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  margin-top: 20px;
   flex-direction: row;
 }
 
-.a {
+.btn {
   border: none;
   color: white;
   background: #18a0fb;
@@ -136,13 +145,15 @@
 }
 
 .membership {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 25px;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
   display: flex;
-  max-height: 50%;
+  background-color: white;
+  height: auto;
+  padding: 25px;
 }
 .mem_left {
   padding: 20px;
@@ -150,13 +161,10 @@
   flex: 2;
   width: 100%;
   flex-direction: column;
-  /* border-style: dashed; */
   width: 100%;
 }
 .mem_text {
-  margin-top: 20px;
-  font-size: 18px;
-  /* border-style: dashed; */
+  font-size: 20px;
 }
 .mem_right {
   display: flex;
@@ -166,12 +174,6 @@
   padding: 20px;
   width: 100%;
 }
-.mem_content {
-  display: flex;
-  flex-direction: column;
-  font-size: large;
-  font-weight: bold;
-}
 
 @media only screen and (max-width: 930px) {
   /* .login {
@@ -179,8 +181,12 @@
   } */
   .header {
     font-size: 25px;
+    margin-top: 25px;
   }
   .subheader {
+    font-size: 18px;
+  }
+  .mem_text {
     font-size: 18px;
   }
   .app {
@@ -195,6 +201,7 @@
   .mem-text {
     font-size: 15px;
   }
+
 }
 
 @media only screen and (max-width: 530px) {
@@ -208,6 +215,9 @@
     min-width: 85%;
   }
   .subheader {
+    font-size: 16px;
+  }
+  .mem-text {
     font-size: 16px;
   }
   .app {
@@ -229,10 +239,18 @@
   .app {
     height: auto;
   }
+  .text_input {
+    margin-right: 15px;
+  }
   .box {
     border-style: none;
+    margin-bottom: 5px;
   }
   .membership {
     height: auto;
+  }
+  .mem_text{
+    font-size: 15px;
+    padding: 5px;
   }
 }

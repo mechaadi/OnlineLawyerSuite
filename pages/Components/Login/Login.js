@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Login = () => {
     return (
-        <div>
+        <div className = {login_styles.body}>
             <div className={login_styles.login+ ' ' +login_styles.flex_center}>
                 <div className={login_styles.app + ' ' +login_styles.flex_center}>
                     <div className={login_styles.header}>
@@ -32,21 +32,18 @@ const Login = () => {
 
                         </div>
                         <div className={login_styles.buttons}>
-                            <button className={login_styles.a}>Login</button>
-                            <button className={login_styles.a}>Register</button>
+                            <button className={login_styles.btn}>Login</button>
+                            <button className={login_styles.btn}>Register</button>
                         </div>
                     </div>
                 </div>
                 <div className={login_styles.membership}>
                     <div className={login_styles.mem_left}>
-                        <div className={login_styles.mem_content}>
-                            Membership
-                                 </div>
                         <div className={login_styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
                     </div>
                     <div className={login_styles.mem_right}>
                         <Link href="/">
-                            <button className={login_styles.a}>Join Today</button>
+                            <button className={login_styles.btn}>Join Today</button>
                         </Link>
                     </div>
                 </div>

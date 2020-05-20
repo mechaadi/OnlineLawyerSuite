@@ -1,7 +1,11 @@
-/* * {
+.body {
   margin: 0px;
   padding: 0px;
-} */
+  background: #e5e5e5;
+  /* height: auto; */
+  font-family: Arial;
+  overflow: hidden;
+}
 
 .flex-center {
   display: flex;
@@ -11,7 +15,7 @@
 }
 
 .register {
-  height: 99.41vh;
+  height: 98vh;
   justify-content: space-around;
   display: flex;
   align-items: center;
@@ -22,14 +26,15 @@
 .app {
   display: flex;
   margin-top: 45px;
-  height: 65vh;
+  height: auto;
+  padding: 25px;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* border-style: dotted; */
+  background-color: white;
 }
 
 .header {
@@ -37,6 +42,7 @@
   /* border-style: dotted; */
   font-size: 38px;
   padding: 5px;
+  margin-top: 25px;
 }
 
 .subheader {
@@ -55,10 +61,10 @@
   flex-direction: column;
   margin-top: 15px;
   padding-inline: 5%;
-  min-width: auto;
-  padding: 15px;
+  min-width: 450px;
+  padding: 30px;
+  padding-top: 20px;
   min-height: 55%;
-  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .input-container {
@@ -92,20 +98,15 @@
   width: 100%;
   padding: 5px;
   color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /* ::placeholder {
   color: rgba(0, 0, 0, 0.8);
 } */
-.text_input_A {
-  width: 100%;
-  padding: 5px;
-  color: rgba(0, 0, 0, 0.8);
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
+
 .formc {
-  min-width: 100%;
+  width: 100%;
   /* border-style: double; */
   flex-direction: column;
 }
@@ -123,7 +124,7 @@
   flex-direction: row;
 }
 
-.a {
+.btn {
   border: none;
   color: white;
   background: #18a0fb;
@@ -136,13 +137,16 @@
 }
 
 .membership {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 25px;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
+  height: auto;
+  padding: 25px;
   display: flex;
   max-height: 50%;
+  background: #ffffff;
 }
 .mem_left {
   padding: 20px;
@@ -155,7 +159,7 @@
 }
 .mem_text {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
   /* border-style: dashed; */
 }
 .mem_right {
@@ -186,6 +190,9 @@
   .app {
     width: 90%;
   }
+  .mem_text {
+    font-size: 18px;
+  }
   .membership {
     width: 90%;
   }
@@ -213,6 +220,9 @@
   .app {
     width: 100%;
   }
+  .mem-text {
+    font-size: 16px;
+  }
   .membership {
     /* margin-top: 15px; */
     width: 100%;
@@ -234,5 +244,12 @@
   }
   .membership {
     height: auto;
+  }
+  .text_input {
+    margin-right: 15px;
+  }
+  .mem_text{
+    font-size: 15px;
+    padding: 5px;
   }
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Login = () => {
     return (
-        <div>
+        <div className={register_styles.body}>
             <div className={register_styles.register+ ' ' +register_styles.flex_center}>
                 <div className={register_styles.app + ' ' +register_styles.flex_center}>
                     <div className={register_styles.header}>
@@ -21,17 +21,17 @@ const Login = () => {
                                 </div>
                             <div className={register_styles.form_row}>
                                 <div className={register_styles.border}>
-                                    <input type="text" className={register_styles.text_input_A} placeholder="First Name" />
+                                    <input type="text" className={register_styles.text_input} placeholder="First Name" />
                                 </div>
                                 <div className={register_styles.border}>
-                                    <input type="text" className={register_styles.text_input_A} placeholder="Last Name" />
+                                    <input type="text" className={register_styles.text_input} placeholder="Last Name" />
                                 </div>
                             </div>
                         </div>
                         <div className={register_styles.formc}>
 
                             <div className={register_styles.border}>
-                                <input type="text" autoComplete={register_styles.true} className={register_styles.text_input} placeholder="Email Address" />
+                                <input type="text" autoComplete={register_styles.text_input} className={register_styles.text_input} placeholder="Email Address" />
                             </div>
                             <div className={register_styles.border}>
                                 <input type="password" className={register_styles.text_input} placeholder="Create Password" />
@@ -39,8 +39,8 @@ const Login = () => {
 
                         </div>
                         <div className={register_styles.buttons}>
-                            <button className={register_styles.a}>Register</button>
-                            <button className={register_styles.a}>Login</button>
+                            <button className={register_styles.btn}>Register</button>
+                            <button className={register_styles.btn}>Login</button>
                         </div>
                     </div>
                 </div>
@@ -53,12 +53,11 @@ const Login = () => {
                     </div>
                     <div className={register_styles.mem_right}>
                         <Link href="/">
-                            <button className={register_styles.a}>Join Today</button>
+                            <button className={register_styles.btn}>Join Today</button>
                         </Link>
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
