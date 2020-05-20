@@ -43,6 +43,7 @@ li {
   margin-bottom: 10px;
 }
 .button {
+  border-style: none;
   display: flex;
   color: rgb(255, 255, 255);
   margin-right: 14px;
