@@ -39,8 +39,12 @@ const Login = () => {
 
                         </div>
                         <div className={register_styles.buttons}>
-                            <button className={register_styles.btn}>Register</button>
+                            <button className={register_styles.btn}>Register</button>   
                             <button className={register_styles.btn}>Login</button>
+                            <select className={register_styles.select}>
+                                <option className = {register_styles.option}>User</option>
+                                <option className = {register_styles.option}>Lawyer</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -53,7 +57,7 @@ const Login = () => {
                     </div>
                     <div className={register_styles.mem_right}>
                         <Link href="/">
-                            <button className={register_styles.btn}>Join Today</button>
+                            <button className={register_styles.jointodaybutton}>Join Today</button>
                         </Link>
                     </div>
                 </div>

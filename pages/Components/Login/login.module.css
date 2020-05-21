@@ -24,6 +24,7 @@
 }
 
 .app {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   margin-top: 45px;
   height: auto;
@@ -62,6 +63,7 @@
   margin-top: 15px;
   padding-inline: 5%;
   min-width: 450px;
+  padding: 45px;
   padding: 20px;
   min-height: 55%;
   background: #ffffff;
@@ -98,7 +100,7 @@
 .text_input {
   width: 100%;
   margin-right: 97px;
-  padding: 5px;
+  padding: 8px;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -133,6 +135,7 @@
 }
 
 .btn {
+  font-family: 'Montserrat', sans-serif;
   border: none;
   color: white;
   background: #18a0fb;
@@ -142,6 +145,10 @@
   width: 120px;
   padding: 8px;
   margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .membership {
@@ -160,11 +167,13 @@
   display: flex;
   flex: 2;
   width: 100%;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+ 
 }
 .mem_text {
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+  margin-bottom: 15px;
 }
 .mem_right {
   display: flex;
@@ -173,6 +182,18 @@
   justify-content: center;
   padding: 20px;
   width: 100%;
+}
+.jointodaybutton {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  color: white;
+  background: #18a0fb;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  width: 120px;
+  padding: 8px;
+  margin: 10px;
 }
 
 @media only screen and (max-width: 930px) {
@@ -191,6 +212,9 @@
   }
   .app {
     width: 90%;
+  }
+  .buttons{
+    flex-wrap: wrap;
   }
   .membership {
     width: 90%;
@@ -248,9 +272,31 @@
   }
   .membership {
     height: auto;
+    flex-wrap: wrap;
   }
   .mem_text{
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 366px) {
+  .buttons {
+    flex-wrap: wrap !important;
+  }
+  .btn{
+    margin-bottom: 10px;
+  }
+  .select{
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 423px) {
+  .jointodaybutton{
+    margin: 2px;
+  }
+  .mem_left{
+    flex: 1.6;
+    min-width: 200px;
   }
 }

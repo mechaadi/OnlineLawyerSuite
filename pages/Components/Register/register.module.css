@@ -3,7 +3,7 @@
   padding: 0px;
   background: #e5e5e5;
   /* height: auto; */
-  font-family: Arial;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 
@@ -24,6 +24,7 @@
 }
 
 .app {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   margin-top: 45px;
   height: auto;
@@ -62,8 +63,9 @@
   margin-top: 15px;
   padding-inline: 5%;
   min-width: 450px;
-  padding: 30px;
+  padding: 45px;
   padding-top: 20px;
+  margin-bottom: 35px;
   min-height: 55%;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -73,11 +75,13 @@
 }
 
 .box_title {
-  width: 60%;
+  width: 80%;
   font-weight: bold;
   font-size: 20px;
   /* border-style: dotted; */
-  margin: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .border {
   height: 35px;
@@ -96,7 +100,7 @@
 
 .text_input {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
   color: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -125,6 +129,7 @@
 }
 
 .btn {
+  font-family: 'Montserrat', sans-serif;
   border: none;
   color: white;
   background: #18a0fb;
@@ -133,7 +138,28 @@
   font-size: 15px;
   width: 120px;
   padding: 8px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.select {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  color: white;
+  background: #18a0fb;
+  text-align-last:center;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  width: 120px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.option{
+  color: black !important;
+  background-color: white;
 }
 
 .membership {
@@ -160,7 +186,7 @@
 .mem_text {
   margin-top: 20px;
   font-size: 20px;
-  /* border-style: dashed; */
+  margin-bottom: 15px;
 }
 .mem_right {
   display: flex;
@@ -175,6 +201,18 @@
   flex-direction: column;
   font-size: large;
   font-weight: bold;
+}
+.jointodaybutton {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  color: white;
+  background: #18a0fb;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  width: 120px;
+  padding: 8px;
+  margin: 10px;
 }
 
 @media only screen and (max-width: 930px) {
@@ -195,6 +233,9 @@
   }
   .membership {
     width: 90%;
+  }
+  .buttons{
+    flex-wrap: wrap;
   }
   .box {
     min-width: 65%;
@@ -241,6 +282,7 @@
   }
   .box {
     border-style: none;
+    margin-bottom: 5px;
   }
   .membership {
     height: auto;
@@ -248,8 +290,37 @@
   .text_input {
     margin-right: 15px;
   }
-  .mem_text{
+  .mem_text {
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
+  }
+  .mem_content{
+    padding: 10px;
+  }
+
+}
+@media only screen and (max-width: 366px) {
+  .buttons {
+    flex-wrap: wrap !important;
+  }
+  .btn{
+    margin-bottom: 10px;
+  }
+  .select{
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 423px) {
+
+  .membership{
+    flex-wrap: wrap;
+  }
+  .jointodaybutton {
+    margin: 2px;
+  }
+  .mem_left {
+    flex: 1.1;
+    min-width: 200px;
   }
 }

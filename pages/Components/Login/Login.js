@@ -3,23 +3,23 @@ import Link from 'next/link'
 
 const Login = () => {
     return (
-        <div className = {login_styles.body}>
-            <div className={login_styles.login+ ' ' +login_styles.flex_center}>
-                <div className={login_styles.app + ' ' +login_styles.flex_center}>
+        <div className={login_styles.body}>
+            <div className={login_styles.login + ' ' + login_styles.flex_center}>
+                <div className={login_styles.app + ' ' + login_styles.flex_center}>
                     <div className={login_styles.header}>
                         Welcome Back.
                 </div>
                     <div className={login_styles.subheader}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 </div>
-                    <div className={login_styles.box + ' ' +login_styles.flex_center}>
+                    <div className={login_styles.box + ' ' + login_styles.flex_center}>
 
 
                         <div className={login_styles.form}>
                             <div className={login_styles.box_title}>
                                 Login
                                 </div>
-                           
+
                         </div>
                         <div className={login_styles.formc}>
 
@@ -43,7 +43,7 @@ const Login = () => {
                     </div>
                     <div className={login_styles.mem_right}>
                         <Link href="/">
-                            <button className={login_styles.btn}>Join Today</button>
+                            <button className={login_styles.jointodaybutton}>Join Today</button>
                         </Link>
                     </div>
                 </div>
