@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar/Navbar.js'
 import Footer from './Components/Footer/Footer';
 import LeftRight from './Components/LeftRightLeft/LeftRight';
 import RightLeft from './Components/LeftRightLeft/RightLeft';
+import Membership from './Components/Membership/Membership';
 function About() {
     return (
         <div className={app.body}>
@@ -27,7 +28,7 @@ function About() {
             <div className={app.section_down}>
 
                 <div className={app.membership}>
-                    <h2>Memebership Here</h2>
+                    <Membership/>
                 </div>
                 <div className={app.footer}>
                     <h1><Footer /></h1>

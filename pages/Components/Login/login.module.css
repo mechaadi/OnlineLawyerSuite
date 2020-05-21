@@ -230,7 +230,7 @@
 
 @media only screen and (max-width: 530px) {
   .header {
-    font-size: 25px;
+    font-size: 25px; 
   }
   .input_container {
     flex-wrap: wrap;

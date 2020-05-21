@@ -1,0 +1,96 @@
+.membership {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+  margin-right: 80px;
+  margin-left: 80px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  /* padding: 25px; */
+  display: flex;
+  /* max-height: 50%; */
+  background: #ffffff;
+}
+.mem_left {
+  padding: 20px;
+  display: flex;
+  flex: 1;
+
+  width: 100%;
+  flex-direction: column;
+  /* border-style: dashed; */
+  width: 100%;
+}
+.mem_text {
+  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: -0.015em;
+}
+.mem_right {
+  display: flex;
+  flex: 0.7;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: 28px;
+  /* border-style: solid; */
+}
+.mem_content {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  min-width: 300px;
+  line-height: 50px;
+  /* border-style: outset; */
+
+  letter-spacing: -0.015em;
+}
+.jointodaybutton {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  color: white;
+  background: #18a0fb;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 120px;
+  padding: 8px;
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .mem_right{
+    flex: 1;
+    margin-top: 0px;
+    /* border-style: double; */
+  }
+  .mem_text{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .membership{
+    height: auto;
+    margin: 0px;
+    justify-content: center;
+  }
+  .mem_right{
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .mem_left{
+    text-align: center;
+  }
+}
