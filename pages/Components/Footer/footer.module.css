@@ -5,8 +5,8 @@
   font-family: sans-serif;
   text-align: center;
   display: flex;
-  background-color: orange;
-  border-style: double;
+  
+  
   font-family: "Montserrat", sans-serif;
   justify-content: space-around;
   width: auto;
@@ -15,6 +15,7 @@
 }
 .brand2 {
   display: none;
+
   font-family: "Montserrat", sans-serif;
   width: auto;
   text-align: center;
@@ -23,10 +24,10 @@
 }
 .left {
   display: flex;
-  border-style: solid;
+  
   text-align: left;
   width: 100%;
-  border-color: red;
+  
   justify-content: space-between;
   padding: 10px;
 }
@@ -34,8 +35,8 @@
   text-align: right;
 }
 .list {
-  border-style: solid;
-  border-color: green;
+  
+  
   list-style-type: none;
   padding: 0px;
   display: flex;
@@ -49,7 +50,7 @@
   width: 100%;
   font-size: 15px;
   font-weight: bold;
-  border-style: outset;
+  
 }
 .brand {
   display: flex;
@@ -62,7 +63,7 @@
 
 @media screen and (max-width: 900px) {
   .App {
-    background-color: olive;
+    
   }
   .brand2 {
     display: none;
@@ -76,12 +77,12 @@
 }
 @media screen and (max-width: 770px) {
   .App {
-    background-color: olive;
+    
   }
 }
 @media screen and (max-width: 490px) {
   .App {
-    background-color: royalblue;
+    
   }
 
   .brand {
