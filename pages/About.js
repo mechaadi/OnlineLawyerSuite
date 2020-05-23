@@ -4,6 +4,8 @@ import Footer from './Components/Footer/Footer';
 import LeftRight from './Components/LeftRightLeft/LeftRight';
 import RightLeft from './Components/LeftRightLeft/RightLeft';
 import Membership from './Components/Membership/Membership';
+import CTA from './Components/CTA/CTA.js';
+
 function About() {
     return (
         <div className={app.body}>
@@ -14,7 +16,8 @@ function About() {
                 <h1>Jumbotron Here</h1>
             </div>
             <div className={app.section}>
-                <h1> new Branch Features Listing with CTAs... Here</h1>
+                <CTA/>
+
             </div>
             <div className={''}>
                 <LeftRight />

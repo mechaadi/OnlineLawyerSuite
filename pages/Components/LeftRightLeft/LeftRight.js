@@ -5,7 +5,8 @@ export default function App() {
     <div className={leftright.App}>
       <div className={leftright.Main}>
         <div className={leftright.left_box}>
-          <h1>Lorem Ipsum</h1>
+          <div className={leftright.h1_heading}>Sed ut perspiciatis unde omnis</div>
+          <div className={leftright.description}>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.</div>
         </div>
         <div className={leftright.right_box}>
                   <img src="https://picsum.photos/400/400" className={leftright.image}/>
