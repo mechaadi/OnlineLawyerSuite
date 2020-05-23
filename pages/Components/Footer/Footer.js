@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       {/* </div> */}
     </div>
-    <div className={footer.brand2}>Brand</div>
+    <div className={footer.brand2}>Branding</div>
   </div>
   );
 };
