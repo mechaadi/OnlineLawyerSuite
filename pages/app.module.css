@@ -41,12 +41,12 @@
 }
 
 .section_down {
-  border-style: double;
+  /* border-style: double;
   display: flex;
   flex-direction: column;
   height: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .membership {
   height: 340px;
@@ -57,12 +57,12 @@
   justify-content: stretch;
 }
 .footer {
-  flex: 1;
-  height: 40vh;
-  width: 100%;
-  display: flex;
+  /* flex: 1;
+  height: auto;
+  width: 100%; 
+   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch; */
 }
 
 /* h1 {

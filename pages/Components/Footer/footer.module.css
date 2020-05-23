@@ -1,62 +1,118 @@
-.main-footer {
-  display: flex;
-}
-.row {
-  width: 100%;
-  margin: 0px auto 10px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom-style: solid;
-}
-.row2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.col {
-  font-size: 20px;
-  /* border-style: groove; */
-  width: 100%;
-  /* padding: 2px; */
-  margin-bottom: 20px;
-  flex: 1;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.bla {
-    margin-top: 10px;
+ 
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.App {
+  font-family: sans-serif;
   text-align: center;
-  font-size: 10px;
-  margin-left: 20px;
-}
-.gola_container {
   display: flex;
-  justify-content: center;
+  
+  
+  font-family: "Montserrat", sans-serif;
+  justify-content: space-around;
+  width: auto;
   align-items: center;
-  height: 50px;
-  width: 100%;
-  margin-bottom: 20px;
+  padding: 10px;
 }
-.Hello {
-     margin-top: 10px;
-  background-image: url("https://picsum.photos/100/300");
-  margin-left: 10px;
-  margin-right: 10px;
+.brand2 {
+  display: none;
 
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border-style: solid;
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+.left {
+  display: flex;
+  
+  text-align: left;
+  width: 100%;
+  
+  justify-content: space-between;
+  padding: 10px;
+}
+.right {
+  text-align: right;
+}
+.list {
+  
+  
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  margin: 0px;
+  justify-content: space-between;
+  width: 100%;
+}
+.li {
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  
 }
 .brand {
+  display: flex;
+  margin-right: 10px;
+  font-family: "Comfortaa", cursive;
+  font-size: 28.4444px;
+  margin-left: 10px;
   font-size: 35px;
-  text-align: center;
-  margin-left: 80px;
-  margin-right: 100px;
 }
-/* @media(max-width: 900px){
-    .row{
-        flex-wrap: wrap;
-    }
-} */
+
+@media screen and (max-width: 900px) {
+  .App {
+    
+  }
+  .brand2 {
+    display: none;
+  }
+  .list {
+    flex-direction: column;
+  }
+  .li {
+    width: auto;
+  }
+}
+@media screen and (max-width: 770px) {
+  .App {
+    
+  }
+}
+@media screen and (max-width: 490px) {
+  .App {
+    
+  }
+
+  .brand {
+    display: none;
+  }
+  .li {
+    font-size: 15px;
+    width: auto;
+  }
+  .brand2 {
+    display: block;
+  }
+  .list,
+  .right,
+  .left,
+  .li {
+    padding: 7px;
+    margin: 2px;
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (max-width: 350px) {
+  .list,
+  .right,
+  .left,
+  .li {
+    padding: 5px;
+    margin: 2px;
+    width: auto;
+    height: auto;
+  }
+}

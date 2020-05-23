@@ -15,7 +15,7 @@
 }
 
 .register {
-  height: 98vh;
+  height: auto;
   justify-content: space-around;
   display: flex;
   align-items: center;
