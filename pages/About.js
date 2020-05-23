@@ -14,7 +14,7 @@ function About() {
                 <h1>Jumbotron Here</h1>
             </div>
             <div className={app.section}>
-                <h1> eirughierugheriugh Features Listing with CTAs... Here</h1>
+                <h1> new Branch Features Listing with CTAs... Here</h1>
             </div>
             <div className={''}>
                 <LeftRight />
