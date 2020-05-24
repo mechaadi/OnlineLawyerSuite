@@ -5,10 +5,8 @@
   font-family: sans-serif;
   text-align: center;
   display: flex;
-  
-  
   font-family: "Montserrat", sans-serif;
-  justify-content: space-around;
+  justify-content: space-between;
   width: auto;
   align-items: center;
   padding: 10px;
@@ -24,19 +22,15 @@
 }
 .left {
   display: flex;
-  
   text-align: left;
   width: 100%;
-  
   justify-content: space-between;
-  padding: 10px;
+  padding: px;
 }
 .right {
   text-align: right;
 }
 .list {
-  
-  
   list-style-type: none;
   padding: 0px;
   display: flex;
@@ -62,9 +56,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .App {
-    
-  }
   .brand2 {
     display: none;
   }
@@ -82,7 +73,7 @@
 }
 @media screen and (max-width: 490px) {
   .App {
-    
+    /* background-color: aqua; */
   }
 
   .brand {
@@ -99,8 +90,6 @@
   .right,
   .left,
   .li {
-    padding: 7px;
-    margin: 2px;
     width: auto;
     height: auto;
   }
@@ -110,9 +99,11 @@
   .right,
   .left,
   .li {
-    padding: 5px;
-    margin: 2px;
     width: auto;
     height: auto;
+    margin: 0px;
+  }
+  .App{
+    padding: 0px;
   }
 }

@@ -2,10 +2,10 @@
   margin: 0px;
   padding: 0px;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
 .navbarhandler {
@@ -19,6 +19,8 @@
 }
 
 .jumbotron {
+  margin-left: 0px;
+  margin-right: 0px;
   color: aliceblue;
   background-image: url("https://www.plantbasednews.org/.image/t_share/MTY2NTE1MDcyMTk2MTU4NzA2/harvard-law-school-plantbased.jpg");
   background-size: cover;
@@ -31,9 +33,11 @@
 }
 
 .section {
-  border-style: double;
   display: flex;
+  border-style: double;
   flex-direction: row;
+  margin-left: 80px;
+  margin-right: 80px;
   height: 99.41vh;
   width: auto;
   align-items: center;
@@ -50,19 +54,16 @@
 }
 .membership {
   height: 340px;
-  width: 100%;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: auto;
   display: flex;
-  border-style: solid;
   align-items: center;
-  justify-content: stretch;
+  justify-content: center;
 }
 .footer {
-  /* flex: 1;
-  height: auto;
-  width: 100%; 
-   display: flex;
-  align-items: center;
-  justify-content: stretch; */
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 /* h1 {
@@ -71,8 +72,12 @@
   font-size: 80px;
 } */
 @media screen and (max-width: 650px) {
-  .membership{
+  .membership {
     height: auto;
     justify-content: center;
+  }
+  .section , .membership , .footer {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }

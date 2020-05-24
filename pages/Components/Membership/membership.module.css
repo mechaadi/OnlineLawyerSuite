@@ -1,24 +1,16 @@
 .membership {
-  margin-top: 25px;
-  margin-bottom: 25px;
   align-items: center;
-  margin-right: 80px;
-  margin-left: 80px;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-  /* padding: 25px; */
+  width: auto;
   display: flex;
-  /* max-height: 50%; */
   background: #ffffff;
 }
 .mem_left {
   padding: 20px;
   display: flex;
   flex: 1;
-
   width: 100%;
   flex-direction: column;
   /* border-style: dashed; */
@@ -27,12 +19,13 @@
 .mem_text {
   margin-top: 20px;
   font-size: 30px;
+  text-align: justify;
   margin-bottom: 15px;
   letter-spacing: -0.015em;
 }
 .mem_right {
   display: flex;
-  flex: 0.7;
+  flex: 0.5;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -47,8 +40,6 @@
   font-size: 36px;
   min-width: 300px;
   line-height: 50px;
-  /* border-style: outset; */
-
   letter-spacing: -0.015em;
 }
 .jointodaybutton {
@@ -64,33 +55,34 @@
   margin: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .mem_text {
+    font-size: 25px;
+  }
+}
 
 @media screen and (max-width: 800px) {
-  .mem_right{
+  .mem_right {
     flex: 1;
     margin-top: 0px;
     /* border-style: double; */
   }
-  .mem_text{
-    font-size: 25px;
+  .mem_text {
+    font-size: 20px;
     margin-bottom: 10px;
   }
 }
 
-
 @media screen and (max-width: 500px) {
-  .membership{
+  .membership {
     height: auto;
     margin: 0px;
     justify-content: center;
   }
-  .mem_right{
-    flex: 1;
-  }
 }
 
 @media screen and (max-width: 350px) {
-  .mem_left{
+  .mem_left {
     text-align: center;
   }
 }
