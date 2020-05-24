@@ -1,4 +1,4 @@
-  .App {
+.App {
     font-family: Arial, Helvetica, sans-serif;
     /* text-align: center; */
     overflow: hidden;
@@ -21,18 +21,8 @@
     /* border-radius: 10px; */
     object-fit: fill;
   }
-  
-  .left_box {
-    align-items: stretch;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    /* border-style: dotted; */
-    min-width: 400px;
-    min-height: 200px;
-    justify-content: center;
-  }
-  .right_box {
+
+  .left_box{
     min-width: 400px;
     min-height: 200px;
   
@@ -42,6 +32,18 @@
     flex: 1;
     justify-content: center;
   }
+
+  .right_box{
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* border-style: dashed; */
+    min-width: 400px;
+    min-height: 200px;
+    justify-content: center;
+  }
+
   .h1_heading{
     margin-left: 20px;
     font-weight:bold;
@@ -53,48 +55,45 @@
     margin-left: 20px;
     margin-top: 20px;
   }
-  
   @media only screen and (max-width: 450px) {
     /* body {
       background-color: rgb(66, 69, 70);
     } */
-    .right_box {
+    .left_box {
       min-height: auto;
       min-width: 300px;
      
     }
-      .left_box{
+      .right_box{
       /* background-color: aqua; */
       min-width: 200px;
       min-height: 100px;
     }
-    
   }
   @media only screen and (max-width: 350px) {
     /* body {
       background-color: rgb(66, 69, 70);
     } */
-    .right_box {
+    .left_box {
       min-height: 200px;
       min-width: 100%;
  
     }
-    .left_box{
+    .right_box{
       /* background-color: aqua; */
       min-width: 200px;
       min-height: 100px;
       justify-content: center;
     }
-    
     .description{
-      text-align: justify;
-      margin-left: 0px;
+        text-align:justify;
+        margin-left: 0px;
     }
+
     .h1_heading{
-      font-size: 20px;
-      margin-left: 0px;
-      /* text-align: center; */
-  }
+        font-size: 20px;
+        margin-left: 0px;
+        /* text-align: center; */
+    }
   
   }
-  
