@@ -50,14 +50,34 @@
   border-radius: 6px;
   font-weight: 500;
   font-size: 17px;
-  width: 120px;
-  padding: 8px;
-  margin: 10px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 40px;
+}
+
+.button2 {
+  background-color: white;
+  border: 1px solid #18a0fb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  color: #18a0fb;
 }
 
 @media screen and (max-width: 1200px) {
   .mem_text {
     font-size: 25px;
+  }
+  .jointodaybutton {
+    margin: 10px;
+    width: 150px;
   }
 }
 
@@ -84,5 +104,9 @@
 @media screen and (max-width: 350px) {
   .mem_left {
     text-align: center;
+  } 
+  .jointodaybutton{
+    width: auto;
+    margin: 5px;
   }
 }

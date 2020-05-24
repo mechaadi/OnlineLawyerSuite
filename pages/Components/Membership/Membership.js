@@ -11,7 +11,7 @@ const Membership = () => {
                 </div>
                 <div className={styles.mem_right}>
                     <button className={styles.jointodaybutton}>Join Today</button>
-                    <button className={styles.jointodaybutton}>Join Today</button>
+                    <button className={styles.jointodaybutton  + ' ' + styles.button2}>Contact Us</button>
                 </div>
 
             </div>
