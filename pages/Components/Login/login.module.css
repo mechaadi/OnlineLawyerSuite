@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-.app {
+.main {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   margin-top: 45px;
@@ -88,6 +88,7 @@
   display: flex;
   justify-content: center;
   min-width: 200px;
+  margin-right: 97px;
   padding: 10px;
 }
 
@@ -210,7 +211,7 @@
   .mem_text {
     font-size: 18px;
   }
-  .app {
+  .main {
     width: 90%;
   }
   .buttons{
@@ -244,7 +245,7 @@
   .mem-text {
     font-size: 16px;
   }
-  .app {
+  .main {
     width: 100%;
   }
   .membership {
@@ -254,13 +255,16 @@
   .mem-text {
     font-size: 12px;
   }
+  .border{
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 465px) {
   .login {
     height: auto;
   }
-  .app {
+  .main {
     height: auto;
   }
   .text_input {
@@ -278,6 +282,7 @@
     font-size: 15px;
     padding: 10px;
   }
+  
 }
 @media only screen and (max-width: 366px) {
   .buttons {
