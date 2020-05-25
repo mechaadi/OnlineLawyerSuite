@@ -1,0 +1,97 @@
+.h1{
+   font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    color: #000000;
+    border-style: outset;
+    width: 70%;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+.heading{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+
+    /* margin-top: 120px;
+    margin-right: 850px; */
+}
+
+.description{
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+
+    margin-top: 24px;
+    margin-bottom: 43px;
+
+
+}
+
+.ABContainer{
+    display: flex;
+
+}
+.one{
+    border-style: outset;
+    min-width: 300px;
+}
+
+
+.A{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+/* .B{
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.main{
+   display: flex;
+   align-items: stretch;
+   flex-direction: column;
+
+}
+
+.Abutton{
+    margin-bottom:71px ;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .ABContainer{
+       
+        flex-wrap: wrap;
+    }
+    .description{
+        text-align: justify;
+    }
+    .one{
+        min-width: auto;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .ABContainer{
+       background-color: aquamarine;
+        flex-wrap: wrap;
+    }
+}

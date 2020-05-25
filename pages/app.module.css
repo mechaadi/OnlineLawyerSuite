@@ -38,7 +38,7 @@
   flex-direction: row;
   margin-left: 80px;
   margin-right: 80px;
-  height: 99.41vh;
+  height: auto;
   width: auto;
   align-items: center;
   justify-content: space-evenly;

@@ -5,6 +5,7 @@ import LeftRight from './Components/LeftRightLeft/LeftRight';
 import RightLeft from './Components/LeftRightLeft/RightLeft';
 import Membership from './Components/Membership/Membership';
 import CTA from './Components/CTA/CTA.js';
+import Testimonials from './Components/Testimonials/Testimonials.js';
 
 function About() {
     return (
@@ -19,14 +20,14 @@ function About() {
                 <CTA/>
 
             </div>
-            <div className={''}>
+            <div className={app.section}>
                 <LeftRight />
             </div>
-            <div className={''}>
+            <div className={app.section}>
                 <RightLeft />
             </div>
             <div className={app.section}>
-                <h1>Testimonials Here</h1>
+                <Testimonials/>
             </div>
             <div className={app.section_down}>
 
