@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   background: #e5e5e5;
-  /* height: auto; */
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
@@ -23,7 +22,7 @@
   flex-direction: column;
 }
 
-.app {
+.main {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   margin-top: 45px;
@@ -225,7 +224,7 @@
   .subheader {
     font-size: 18px;
   }
-  .app {
+  .main {
     width: 90%;
   }
   .mem_text {
@@ -258,7 +257,7 @@
   .subheader {
     font-size: 16px;
   }
-  .app {
+  .main {
     width: 100%;
   }
   .mem-text {
@@ -277,7 +276,7 @@
   .register {
     height: auto;
   }
-  .app {
+  .main {
     height: auto;
   }
   .box {

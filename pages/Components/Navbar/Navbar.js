@@ -15,20 +15,20 @@ export default function Navbar() {
       <div className={nav.logo}>Branding</div>
       <div className={nav.ab}>
         <ul className={nav.items}>
-          <li className = {nav.li}> Features </li>
-          <li className = {nav.li}> Pricing </li>
-          <li className = {nav.li}> Community </li>
-          <li className = {nav.li}> Support </li>
+          <li className={nav.li}> Features </li>
+          <li className={nav.li}> Pricing </li>
+          <li className={nav.li}> Community </li>
+          <li className={nav.li}> Support </li>
         </ul>
         <ul className={nav.navbuttons}>
-          <Link href="/Components/Login/Login">
+          <Link href="/Components/Login/Login" as={"/Login"}>
             <button className={nav.button} >
-              <li className = {nav.li}> Login </li>
+              <li className={nav.li}> Login </li>
             </button>
           </Link>
-          <Link href="/Components/Register/Register">
+          <Link href="/Components/Register/Register" as={"/Register"}>
             <button className={nav.button}>
-              <li className = {nav.li}> Register</li>
+              <li className={nav.li}> Register</li>
             </button>
           </Link>
         </ul>
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className={nav.overlay}>
           <div className={nav.overlay_men}>
             <ul>
-              <li className = {nav.li}>
+              <li className={nav.li}>
                 <div className={nav.overlay_close} onClick={toogle}>
                   <img
                     className={nav.overlay_close_button}
@@ -53,10 +53,16 @@ export default function Navbar() {
                   />
                 </div>
               </li>
-              <li className = {nav.li}>Features</li>
-              <li className = {nav.li}>Pricing</li>
-              <li className = {nav.li}>Community</li>
-              <li className = {nav.li}>Support</li>
+              <li className={nav.li}>Features</li>
+              <li className={nav.li}>Pricing</li>
+              <li className={nav.li}>Community</li>
+              <li className={nav.li}>Support</li>
+              <Link href="/Components/Login/Login" as={"/Login"}>
+                <li className={nav.li}>Login</li>
+              </Link>
+              <Link href="/Components/Login/Login" as={"/Register"}>
+                <li className={nav.li}>Register</li>
+              </Link>
             </ul>
           </div>
         </div>

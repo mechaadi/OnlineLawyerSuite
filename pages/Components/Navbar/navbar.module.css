@@ -22,6 +22,7 @@
   /* border-style: dashed; */
 }
 .li {
+  font-family: "Montserrat", sans-serif;
   list-style: none;
   padding-right: 10px;
   padding-left: 10px;
@@ -78,7 +79,7 @@
   justify-content: center;
   align-items: center;
   display: none;
-  margin-right: 2%;
+  margin-right: 5%;
   /* border-style: dashed; */
 }
 .img {
@@ -86,7 +87,7 @@
   height: 100%;
   widows: 100%;
 }
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 750px) {
   .App {
     background-color: rgb(46, 46, 46);
   }

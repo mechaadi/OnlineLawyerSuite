@@ -1,0 +1,28 @@
+.btn {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  color: white;
+  background: #18a0fb;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  width: 120px;
+  padding: 8px;
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.light_button {
+  background-color: white;
+  border: 1px solid #18a0fb;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+  color: #18a0fb;
+}
