@@ -5,6 +5,7 @@ const Component = () => {
             <div className={styles.heading}>
                 Testimonials
             </div>
+            
             <div className={styles.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore

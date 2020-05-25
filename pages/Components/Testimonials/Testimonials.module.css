@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     border-style: dashed;
-    padding: 20px;
+    /* padding: 20px; */
     justify-content: space-around;
+    width: 100%;
 }
 .box{
     border-style: double;
@@ -13,21 +14,24 @@
     flex-direction: column;
     margin-top: 64px;
     margin-bottom: 64px;
+    width: auto;
+    padding: 30px;
 }
 
-.B{
+/* .B{
     display: flex;
     flex-direction: row;
     border-style: dashed;
     justify-content: space-around;
 
-}
+} */
 
 .heading{
     font-size: 48px;
     line-height: 72px;
     text-align: center;
     letter-spacing: -0.015em;
+    border-style: dotted;
 }
 
 .description{
@@ -35,41 +39,54 @@
     line-height: 50px;
     text-align: center;
     letter-spacing: -0.015em;
+    flex-wrap: wrap;
+    width: auto;
+    display: flex;
+    border-style: dotted;
+
 }
 
 .one{
     /* margin-left: 100px; */
     width: 173px;
     height: 76px;
-    margin-right: 84px;
-    margin-left: 84px;
+    /* margin-right: 20px;
+    margin-left: 20px; */
 }
 
-.two{
-    margin-left: 84px;
-    /* margin-right: 83px; */
+
+
+.main{
+    display: flex;
+    flex-direction: column;
 }
 
-.three{
-    margin-left: 84px;
+@media only screen and (max-width: 1024px) {
+    
+    
 }
 
-.four{
-    margin-left: 84px;
-}
+@media only screen and (max-width: 800px) {
+    
+    .main{
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+    }
+    .heading{
+        background-color: aquamarine;
+        max-width: 100%;
+    }
+    .description{
+        background-color: aquamarine;
+        max-width: 90%;
+        display: flex;
+        font-size: 18px;
+        line-height: 25px;
 
-.five{
-    /* margin-left: 368px; */
-}
+    }
 
-.six{
-    margin-left: 84px;
-}
-
-.seven{
-    margin-left: 84px;
-}
-
-.eight{
-    margin-left: 84px;
+    
 }
