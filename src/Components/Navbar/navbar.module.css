@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.body {
+    margin: 0px;
+    padding: 0px;
+    /* color: rgb(151, 147, 138); */
+}
+
+.App {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(0, 0, 0);
+    /* height: 100vh; */
+    font-family: sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo {
+    margin: 2%;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    align-items: center;
+    /* border-style: dashed; */
+}
+
+.logo>img {
+    border-radius: 8px;
+}
+
+.li {
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.items {
+    /* border-style: dashed; */
+    width: auto;
+    padding: 5px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav {
+    color: #18a0fb;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    width: none;
+    align-items: center;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+}
+
+.button {
+    border-style: none;
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-right: 14px;
+    padding: 5%;
+    font-weight: bolder;
+    justify-content: space-around;
+    background: #18a0fb;
+    border-radius: 6px;
+}
+
+.navbuttons {
+    display: flex;
+    padding: 1%;
+    /* border-style: dashed; */
+    min-width: auto;
+    justify-content: space-evenly;
+    margin: 0%;
+}
+
+.ab {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* border-style: double; */
+}
+
+.toggler {
+    height: 30px;
+    width: 50px;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-right: 5%;
+    /* border-style: dashed; */
+}
+
+.img {
+    display: none;
+    height: 100%;
+    widows: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+    .App {
+        background-color: rgb(46, 46, 46);
+    }
+    .navbuttons {
+        display: none;
+    }
+    .items {
+        display: none;
+    }
+    .img {
+        display: initial;
+    }
+    .toggler {
+        display: initial;
+    }
+}
+
+.overlay {
+    height: 100vh;
+    width: 80%;
+    position: fixed;
+    color: wheat;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(20, 20, 20, 0.856);
+    overflow-x: hidden;
+    /* transition: 1s; */
+    padding-top: 60px;
+}
+
+.overlay_men {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.overlay_close_button {
+    width: 45px;
+    height: 45px;
+}
