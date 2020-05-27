@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <div className={nav.nav}>
       <div className={nav.logo} onClick={handleLogoClick}>
-        <img src={require('../../assets/images/uplaw.png')} height={40} />
+        <img src={require('../../assets/images/uplawwhite.png')} height={60} />
       </div>
       <div className={nav.ab}>
         <ul className={nav.items}>

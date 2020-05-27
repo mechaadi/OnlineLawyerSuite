@@ -9,7 +9,7 @@ export default function App(props) {
           <div className={leftright.description}>{props.desc}</div>
         </div>
         <div className={leftright.right_box}>
-                  <img src="https://picsum.photos/400/400" className={leftright.image}/>
+          <img src={props.img} className={leftright.image} />
         </div>
       </div>
     </div>

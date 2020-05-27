@@ -32,7 +32,7 @@ export default function NavAlt() {
     return (
         <div className={nav.nav}>
             <div className={nav.logo} onClick={handleLogoClick}>
-                <img src={require('../../../public/static/uplaw.png')} height={40} />
+                <img src={require('../../../public/static/uplawwhite.png')} height={60} />
             </div>
             <div className={nav.ab}>
                 <ul className={nav.items}>

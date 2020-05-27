@@ -11,7 +11,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={footer.brand}>
-      <img src={require('../../../public/static/uplaw.png')} height={40}/>
+      <img src={require('../../../public/static/uplawwhite.png')} height={80}/>
       </div>
       <div className={footer.left  + ' ' +  footer.right}>
         <ul className={footer.list}>
@@ -23,7 +23,7 @@ const Footer = () => {
       {/* </div> */}
     </div>
     <div className={footer.brand2}>
-      <img src={require('../../../public/static/uplaw.png')} height={40}/>
+      <img src={require('../../../public/static/uplawwhite.png')} height={80}/>
     </div>
   </div>
   );
