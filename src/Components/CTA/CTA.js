@@ -9,57 +9,54 @@ const Component = () => {
                 <div className={styles.A}>
                     <div className={styles.one}>
                         <div className={styles.heading}>
-                            Sed ut perspiciatis
+                            Search
                     </div>
                         <div className={styles.description}>
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                            aut odit aut fugit, sed quia consequuntur magni dolores eos
-                            qui ratione voluptatem sequi nesciunt.
-                            Neque porro quisquam est.
+                            Search for lawyers nearby your location and as per your law requirements.
                     </div>
                         <div className={styles.button} className={styles.Abutton}>
-                        <LightButton name="Learn More" />
+                            <LightButton name="Learn More" />
                         </div>
                     </div>
                     <div className={styles.one}>
                         <div className={styles.heading}>
-                            Lorem ipsum dolor
+                            Book Anywhere 
                     </div>
                         <div className={styles.description}>
-                            Amet, consectetur adipiscing elit, sed do eiusmod tempor inc
-                            ididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi.
+                            Book message / voice / video consultation with best lawyers of India. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                         <div className={styles.button} className={styles.Abutton}>
-                        <LightButton name="Learn More" />
+                            <LightButton name="Learn More" />
                         </div>
                     </div>
                 </div>
                 <div className={styles.A}>
                     <div className={styles.one}>
                         <div className={styles.heading}>
-                            Nemo enim ipsam
+                            Know as you go
                     </div>
                         <div className={styles.description}>
-                            Consequuntur magni dolores eos qui ratione voluptatem sequi
-                            nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                            dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
+                        Get notifications when someone give you legal advice and follow you.
+                                 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                     </div>
                         <div className={styles.button}>
-                        <LightButton name="Learn More" />
+                            <LightButton name="Learn More" />
                         </div>
                     </div>
                     <div className={styles.one}>
                         <div className={styles.heading}>
-                            Tempor incididunt
+                            Arrange Meetings as you go
+                            
                     </div>
                         <div className={styles.description}>
-                            Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                            est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                            velit, sed quia non numquam eius modi tempora.
+                            Have a meeting consultation with experience Lawyer at his/her office.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                     </div>
                         <div className={styles.button}>
-                        <LightButton name="Learn More" />
+                            <LightButton name="Learn More" />
                         </div>
                     </div>
                 </div>

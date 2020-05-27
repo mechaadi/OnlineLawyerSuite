@@ -28,15 +28,15 @@ function About() {
 
                 </div>
                 <div className={app.section}>
-                    <LeftRight />
+                    <LeftRight title = "ShortList" desc = "We had hand-picked some of the best Lawyers, you can browse through the website and shortlist few according to your legal need, city, and specialization." />
                 </div>
                 <div className={app.specialSection}>
                     <div className={app.section}>
-                        <RightLeft />
+                        <RightLeft title = "Scrutinize" desc = "Once you’re done shortlisting, you can compare the Lawyers according to their experience on the specialization you need and also consider other things."/>
                     </div>
                 </div>
                 <div className={app.section}>
-                    <LeftRight />
+                    <LeftRight title = "Select" desc = "Once you’re done analysing, you can select and hire the best Lawyer in your city.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   "/>
                 </div>
                 <div className={app.section}>
                     <Testimonials />

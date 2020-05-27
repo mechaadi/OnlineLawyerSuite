@@ -15,7 +15,7 @@ const Membership = () => {
                 <div className={styles.mem_content}>
                     Membership
                      </div>
-                <div className={styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
+                <div className={styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits </div>
             </div>
             <div className={styles.mem_right}>
                     <Button onChildClick={hanleButtonClick} name="Join Today" />

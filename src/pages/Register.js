@@ -38,7 +38,7 @@ const Register = () => {
                         Ready to Take a Free trial?
                 </div>
                     <div className={register_styles.subheader}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        Create an account at uplaw. Make sure to select you preference as a lawyer or as an user.
                 </div>
                     <div className={register_styles.box + ' ' + register_styles.flex_center}>
 
@@ -80,7 +80,7 @@ const Register = () => {
                         <div className={register_styles.mem_content}>
                             Membership
                                  </div>
-                        <div className={register_styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
+                        <div className={register_styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits </div>
                     </div>
                     <div className={register_styles.mem_right}>
                         <Link href="/" passHref >

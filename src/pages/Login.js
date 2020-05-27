@@ -34,7 +34,7 @@ const Login = () => {
                             Welcome Back.
                 </div>
                         <div className={login_styles.subheader}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            Login to get access.
                 </div>
                         <div className={login_styles.box + ' ' + login_styles.flex_center}>
 
@@ -63,7 +63,7 @@ const Login = () => {
                     </div>
                     <div className={login_styles.membership}>
                         <div className={login_styles.mem_left}>
-                            <div className={login_styles.mem_text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </div>
+                            <div className={login_styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits  </div>
                         </div>
                         <div className={login_styles.mem_right}>
                             <Link href="/" passHref >

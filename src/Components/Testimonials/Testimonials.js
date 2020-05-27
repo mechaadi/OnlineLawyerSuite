@@ -7,8 +7,8 @@ const Component = () => {
             </div>
             
             <div className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore
+            We have some of the best reviews , from consulting to legal advices. Have a look at it!
+                
             </div>
             <div className ={styles.box}>
             <div className={styles.A}>
