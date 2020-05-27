@@ -4,7 +4,7 @@ import LightButton from '../Buttons/LightButton'
 const Component = () => {
     return (
         <div className={styles.main}>
-            <div className={styles.h1}> Features listing with CTAs and brief description. </div>
+            <div className={styles.h1}> Brief Features on Uplaw </div>
             <div className={styles.ABContainer}>
                 <div className={styles.A}>
                     <div className={styles.one}>
