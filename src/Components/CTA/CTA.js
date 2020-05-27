@@ -47,7 +47,7 @@ const Component = () => {
                     </div>
                     <div className={styles.one}>
                         <div className={styles.heading}>
-                            Arrange Meetings as you go
+                            Arrange Meetings as you like it
                             
                     </div>
                         <div className={styles.description}>
