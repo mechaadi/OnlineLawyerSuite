@@ -70,9 +70,8 @@ export default function Navbar() {
               <li className={nav.li}>Pricing</li>
               <li className={nav.li}>Community</li>
               <li className={nav.li}>Support</li>
-              
-              <Button name="Login" onChildClick={handleLoginButton}></Button>
-              <Button name="Register" onChildClick={handleRegisterButton}></Button>
+              <li className={nav.li} onClick={handleLoginButton}>Login</li>
+              <li className={nav.li} onClick={handleRegisterButton}>Register</li>
             </ul>
           </div>
         </div>

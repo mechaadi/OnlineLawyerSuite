@@ -11,12 +11,12 @@ export default function NavAlt() {
     const [state, setstate] = useState(false);
 
     function handleLoginButton(event) {
-    router.push('/Login')
-  }
+        router.push('/Login')
+    }
 
-  function handleRegisterButton(event) {
-    router.push('/Register')
-  }
+    function handleRegisterButton(event) {
+        router.push('/Register')
+    }
 
     function handleLogoClick() {
         router.push('/')
@@ -44,16 +44,6 @@ export default function NavAlt() {
                 <ul className={nav.navbuttons}>
                     <Button name="Login" onChildClick={handleLoginButton}></Button>
                     <Button name="Register" onChildClick={handleRegisterButton}></Button>
-                    {/* <Link href="../Login/Login" as={"/Login"}>
-            <button className={nav.button} >
-              <li className={nav.li}> Login </li>
-            </button>
-          </Link>
-          <Link href="/Components/Register/Register" as={"/Register"}>
-            <button className={nav.button}>
-              <li className={nav.li}> Register</li>
-            </button>
-          </Link> */}
                 </ul>
             </div>
             <div className={nav.toggler} onClick={toogle}>
@@ -80,14 +70,9 @@ export default function NavAlt() {
                             <li className={nav.li}>Pricing</li>
                             <li className={nav.li}>Community</li>
                             <li className={nav.li}>Support</li>
-                            {/* <Link href="/Components/Login/Login" as={"/Login"}>
-                <li className={nav.li}>Login</li>
-              </Link>
-              <Link href="/Components/Login/Login" as={"/Register"}>
-                <li className={nav.li}>Register</li>
-              </Link> */}
-              <Button name="Login" onChildClick={handleLoginButton}></Button>
-              <Button name="Register" onChildClick={handleRegisterButton}></Button>
+
+                            <li className={nav.li} onClick={handleLoginButton}>Login</li>
+                            <li className={nav.li} onClick={handleRegisterButton}>Register</li>
                         </ul>
                     </div>
                 </div>
