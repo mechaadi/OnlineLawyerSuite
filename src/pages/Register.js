@@ -58,8 +58,7 @@ const Register = () => {
                                 <Button name="Login" />
                             </Link>
                             <select className={register_styles.select}>
-                                <option className={register_styles.option}>User</option>
-                                <option className={register_styles.option}>Lawyer</option>
+                                <option className={register_styles.option}>User</option><option className={register_styles.option}>Lawyer</option>
                             </select>
                         </div>
                     </div>
