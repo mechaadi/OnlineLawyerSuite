@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 const Membership = () => {
     const router = useRouter()
     function hanleButtonClick (event){
-        console.log(event)
         router.push('/Login')
     }
     return (

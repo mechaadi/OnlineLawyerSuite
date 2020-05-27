@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function NavAlt() {
+    const router = useRouter()
+
   const [state, setstate] = useState(false);
+
+  function handleLogoClick(){
+    router.push('/')
+  }
+
 
   const toogle = () => {
     setstate(!state);
@@ -13,7 +21,7 @@ export default function NavAlt() {
 
   return (
     <div className={nav.nav}>
-      <div className={nav.logo} onClick={()=>{window.location.href = '/'}}>
+      <div className={nav.logo} onClick={handleLogoClick}>
         <img src={require('../../../public/static/uplaw.png')} height={40}/>
       </div>
       <div className={nav.ab}>

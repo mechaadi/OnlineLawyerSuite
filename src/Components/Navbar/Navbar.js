@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Link from 'next/link'
 import Button from '../Buttons/Button'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 export default function Navbar() {
 
   const router = useRouter()
 
-  function handleLoginButton(event){
+  function handleLoginButton(event) {
     router.push('/Login')
   }
 
-  function handleRegisterButton(event){
+  function handleRegisterButton(event) {
     router.push('/Register')
+  }
+
+  function handleLogoClick(){
+    router.push('/')
   }
 
   const [state, setstate] = useState(false);
@@ -26,8 +30,8 @@ export default function Navbar() {
 
   return (
     <div className={nav.nav}>
-      <div className={nav.logo} onClick={()=>{window.location.href = '/'}}>
-        <img src={require('../../../public/static/uplaw.png')} height={40}/>
+      <div className={nav.logo} onClick={handleLogoClick}>
+        <img src={require('../../assets/images/uplaw.png')} height={40} />
       </div>
       <div className={nav.ab}>
         <ul className={nav.items}>
@@ -37,7 +41,7 @@ export default function Navbar() {
           <li className={nav.li}> Support </li>
         </ul>
         <ul className={nav.navbuttons}>
-            
+
           <Button name="Login" onChildClick={handleLoginButton}></Button>
           <Button name="Register" onChildClick={handleRegisterButton}></Button>
         </ul>
@@ -66,12 +70,9 @@ export default function Navbar() {
               <li className={nav.li}>Pricing</li>
               <li className={nav.li}>Community</li>
               <li className={nav.li}>Support</li>
-              <Link href="/Components/Login/Login" as={"/Login"}>
-                <li className={nav.li}>Login</li>
-              </Link>
-              <Link href="/Components/Login/Login" as={"/Register"}>
-                <li className={nav.li}>Register</li>
-              </Link>
+              
+              <Button name="Login" onChildClick={handleLoginButton}></Button>
+              <Button name="Register" onChildClick={handleRegisterButton}></Button>
             </ul>
           </div>
         </div>
