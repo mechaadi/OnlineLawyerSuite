@@ -9,11 +9,11 @@ export default function Navbar() {
   const router = useRouter()
 
   function handleLoginButton(event){
-    router.push('/login')
+    router.push('/Login')
   }
 
   function handleRegisterButton(event){
-    router.push('/register')
+    router.push('/Register')
   }
 
   const [state, setstate] = useState(false);

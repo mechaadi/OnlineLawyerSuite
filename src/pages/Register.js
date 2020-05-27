@@ -16,7 +16,7 @@ const Register = () => {
     }
 
     function handleLoginButton(event){
-        router.push('/login')
+        router.push('/Login')
     }
 
     return (
