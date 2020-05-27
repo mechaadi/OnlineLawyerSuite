@@ -8,7 +8,7 @@ const Membership = () => {
     const router = useRouter()
     function hanleButtonClick (event){
         console.log(event)
-        router.push('Login')
+        router.push('/Login')
     }
     return (
         <div className={styles.membership}>
