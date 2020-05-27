@@ -1,9 +1,12 @@
 
 import button from './button.module.css'
-const Button = (props) => {
+const Button = ({name, onChildClick}) => {
+   function handleClick(){
+        onChildClick(event)
+    }
     return (
         <div>
-            <button className={button.btn} >{props.name}</button>
+            <button onClick={handleClick} className={button.btn}>{name}</button>
         </div>
     )
 }

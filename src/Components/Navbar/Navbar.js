@@ -1,8 +1,21 @@
 import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Link from 'next/link'
+import Button from '../Buttons/Button'
+import {useRouter} from 'next/router'
 
 export default function Navbar() {
+
+  const router = useRouter()
+
+  function handleLoginButton(event){
+    router.push('/login')
+  }
+
+  function handleRegisterButton(event){
+    router.push('/register')
+  }
+
   const [state, setstate] = useState(false);
 
   const toogle = () => {
@@ -24,16 +37,9 @@ export default function Navbar() {
           <li className={nav.li}> Support </li>
         </ul>
         <ul className={nav.navbuttons}>
-          <Link href="../Login/Login" as={"/Login"}>
-            <button className={nav.button} >
-              <li className={nav.li}> Login </li>
-            </button>
-          </Link>
-          <Link href="/Components/Register/Register" as={"/Register"}>
-            <button className={nav.button}>
-              <li className={nav.li}> Register</li>
-            </button>
-          </Link>
+            
+          <Button name="Login" onChildClick={handleLoginButton}></Button>
+          <Button name="Register" onChildClick={handleRegisterButton}></Button>
         </ul>
       </div>
       <div className={nav.toggler} onClick={toogle}>

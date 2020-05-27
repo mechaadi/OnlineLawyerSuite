@@ -5,9 +5,20 @@ import Light_Button from '../Components/Buttons/LightButton';
 import Input from '../Components/Inputs/Input';
 import NavAlt from '../Components/Navbar/NavAlt.js'
 import app from './css/app.module.css';
-
+import {useRouter} from 'next/router'
 
 const Register = () => {
+
+    const router = useRouter();
+
+    function handleRegisterButton(event){
+
+    }
+
+    function handleLoginButton(event){
+        router.push('/login')
+    }
+
     return (
         <div>
                   <style jsx global>{`
@@ -56,12 +67,8 @@ const Register = () => {
 
                         </div>
                         <div className={register_styles.buttons}>
-                            <Link href="/" passHref >
-                                <Button name="Register" />
-                            </Link>
-                            <Link href="/" passHref >
-                                <Button name="Login" />
-                            </Link>
+                                <Button onChildClick={handleRegisterButton} name="Register" />
+                                <Button onChildClick={handleLoginButton} name="Login" />
                             <select className={register_styles.select}>
                                 <option className={register_styles.option}>User</option><option className={register_styles.option}>Lawyer</option>
                             </select>
