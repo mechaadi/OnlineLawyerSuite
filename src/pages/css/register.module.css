@@ -1,325 +1,335 @@
 .body {
-  margin: 0px;
-  padding: 0px;
-  background: #e5e5e5;
-  font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background: #e5e5e5;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    padding-top: 100px;
 }
 
 .flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .register {
-  height: auto;
-  justify-content: space-around;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    height: auto;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .main {
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  margin-top: 45px;
-  height: auto;
-  padding: 25px;
-  flex-direction: column;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    margin-top: 45px;
+    height: auto;
+    padding: 25px;
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
 }
 
 .header {
-  text-align: center;
-  /* border-style: dotted; */
-  font-size: 38px;
-  padding: 5px;
-  margin-top: 25px;
+    text-align: center;
+    /* border-style: dotted; */
+    font-size: 38px;
+    padding: 5px;
+    margin-top: 25px;
 }
 
 .subheader {
-  /* border-style: groove; */
-  font-size: 25px;
-  max-width: 90%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+    /* border-style: groove; */
+    font-size: 25px;
+    max-width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 15px;
-  padding-inline: 5%;
-  min-width: 450px;
-  padding: 45px;
-  padding-top: 20px;
-  margin-bottom: 35px;
-  min-height: 55%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    padding-inline: 5%;
+    min-width: 450px;
+    padding: 45px;
+    padding-top: 20px;
+    margin-bottom: 35px;
+    min-height: 55%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 .input-container {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .box_title {
-  width: 80%;
-  font-weight: bold;
-  font-size: 20px;
-  /* border-style: dotted; */
-  margin-left: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    width: 80%;
+    font-weight: bold;
+    font-size: 20px;
+    /* border-style: dotted; */
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 .border {
-  height: 35px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-width: 200px;
-  padding: 10px;
+    height: 35px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+    padding: 10px;
 }
 
 .form_row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .text_input {
-  width: 100%;
-  padding: 8px;
-  color: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 
 /* ::placeholder {
   color: rgba(0, 0, 0, 0.8);
 } */
 
 .formc {
-  width: 100%;
-  /* border-style: double; */
-  flex-direction: column;
+    width: 100%;
+    /* border-style: double; */
+    flex-direction: column;
 }
 
 .form {
-  min-width: 100%;
-  /* border-style: double; */
-  flex-direction: row;
+    min-width: 100%;
+    /* border-style: double; */
+    flex-direction: row;
 }
 
 .buttons {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: row;
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  color: white;
-  background: #18a0fb;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 15px;
-  width: 120px;
-  padding: 8px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    color: white;
+    background: #18a0fb;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    width: 120px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
+
 .select {
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  color: white;
-  background: #18a0fb;
-  text-align-last:center;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 15px;
-  width: 120px;
-  padding: 8px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    color: white;
+    background: #18a0fb;
+    text-align-last: center;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    width: 120px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
-.option{
-  color: black !important;
-  background-color: white;
+
+.option {
+    color: black !important;
+    background-color: white;
 }
 
 .membership {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  height: auto;
-  padding: 25px;
-  display: flex;
-  max-height: 50%;
-  background: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    padding: 25px;
+    display: flex;
+    max-height: 50%;
+    background: #ffffff;
 }
+
 .mem_left {
-  padding: 20px;
-  display: flex;
-  flex: 2;
-  width: 100%;
-  flex-direction: column;
-  /* border-style: dashed; */
-  width: 100%;
+    padding: 20px;
+    display: flex;
+    flex: 2;
+    width: 100%;
+    flex-direction: column;
+    /* border-style: dashed; */
+    width: 100%;
 }
+
 .mem_text {
-  margin-top: 20px;
-  font-size: 20px;
-  margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
+
 .mem_right {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  width: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
 }
+
 .mem_content {
-  display: flex;
-  flex-direction: column;
-  font-size: large;
-  font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bold;
 }
+
 .jointodaybutton {
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  color: white;
-  background: #18a0fb;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 15px;
-  width: 120px;
-  padding: 8px;
-  margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    color: white;
+    background: #18a0fb;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    width: 120px;
+    padding: 8px;
+    margin: 10px;
 }
 
 @media only screen and (max-width: 930px) {
-  /* .register {
+    /* .register {
     background-color: rgb(200, 200, 200);
   } */
-  .header {
-    font-size: 25px;
-  }
-  .subheader {
-    font-size: 18px;
-  }
-  .main {
-    width: 90%;
-  }
-  .mem_text {
-    font-size: 18px;
-  }
-  .membership {
-    width: 90%;
-  }
-  .buttons{
-    flex-wrap: wrap;
-  }
-  .box {
-    min-width: 65%;
-  }
-  .mem-text {
-    font-size: 15px;
-  }
+    .header {
+        font-size: 25px;
+    }
+    .subheader {
+        font-size: 18px;
+    }
+    .main {
+        width: 90%;
+    }
+    .mem_text {
+        font-size: 18px;
+    }
+    .membership {
+        width: 90%;
+    }
+    .buttons {
+        flex-wrap: wrap;
+    }
+    .box {
+        min-width: 65%;
+    }
+    .mem-text {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 530px) {
-  .header {
-    font-size: 25px;
-  }
-  .input_container {
-    flex-wrap: wrap;
-  }
-  .box {
-    min-width: 85%;
-  }
-  .subheader {
-    font-size: 16px;
-  }
-  .main {
-    width: 100%;
-  }
-  .mem-text {
-    font-size: 16px;
-  }
-  .membership {
-    /* margin-top: 15px; */
-    width: 100%;
-  }
-  .mem-text {
-    font-size: 12px;
-  }
+    .header {
+        font-size: 25px;
+    }
+    .input_container {
+        flex-wrap: wrap;
+    }
+    .box {
+        min-width: 85%;
+    }
+    .subheader {
+        font-size: 16px;
+    }
+    .main {
+        width: 100%;
+    }
+    .mem-text {
+        font-size: 16px;
+    }
+    .membership {
+        /* margin-top: 15px; */
+        width: 100%;
+    }
+    .mem-text {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 465px) {
-  .register {
-    height: auto;
-  }
-  .main {
-    height: auto;
-  }
-  .box {
-    border-style: none;
-    margin-bottom: 5px;
-  }
-  .membership {
-    height: auto;
-  }
-  .text_input {
-    margin-right: 15px;
-  }
-  .mem_text {
-    font-size: 15px;
-    padding: 10px;
-  }
-  .mem_content{
-    padding: 10px;
-  }
-
+    .register {
+        height: auto;
+    }
+    .main {
+        height: auto;
+    }
+    .box {
+        border-style: none;
+        margin-bottom: 5px;
+    }
+    .membership {
+        height: auto;
+    }
+    .text_input {
+        margin-right: 15px;
+    }
+    .mem_text {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .mem_content {
+        padding: 10px;
+    }
 }
+
 @media only screen and (max-width: 366px) {
-  .buttons {
-    flex-wrap: wrap !important;
-  }
-  .btn{
-    margin-bottom: 10px;
-  }
-  .select{
-    margin-bottom: 10px;
-  }
+    .buttons {
+        flex-wrap: wrap !important;
+    }
+    .btn {
+        margin-bottom: 10px;
+    }
+    .select {
+        margin-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 423px) {
-
-  .membership{
-    flex-wrap: wrap;
-  }
-  .jointodaybutton {
-    margin: 2px;
-  }
-  .mem_left {
-    flex: 1.1;
-    min-width: 200px;
-  }
+    .membership {
+        flex-wrap: wrap;
+    }
+    .jointodaybutton {
+        margin: 2px;
+    }
+    .mem_left {
+        flex: 1.1;
+        min-width: 200px;
+    }
 }

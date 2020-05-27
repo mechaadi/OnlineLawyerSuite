@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Button from '../Components/Buttons/Button';
 import Light_Button from '../Components/Buttons/LightButton';
 import Input from '../Components/Inputs/Input';
+import NavAlt from '../Components/Navbar/NavAlt.js'
+import app from './css/app.module.css';
+
 
 const Register = () => {
     return (
@@ -14,7 +17,9 @@ const Register = () => {
         background: #e5e5e5;
       }
     `}</style>
-       
+    <div className={app.navbarhandler}>
+                <NavAlt />
+            </div>
         <div className={register_styles.body + ' ' + register_styles.flex_center}>
             <div className={register_styles.register}>
                 <div className={register_styles.main + ' ' + register_styles.flex_center}>
