@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     function handleRegisterButton(event){
-        router.push('/register')
+        router.push('/Register')
     }
     return (
         <div>
