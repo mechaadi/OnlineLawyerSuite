@@ -41,6 +41,7 @@
     margin: 50px 10%;
     font-size: 250%;
     text-shadow: 1px 1px 5px #000;
+    margin-top: 200px !important;
 }
 
 .jumbotron>h1>p {
