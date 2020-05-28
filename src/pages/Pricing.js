@@ -1,5 +1,6 @@
 import styles from './css/pricing.module.css';
 import Banner from '../Components/Banner/Banner';
+import Nav from '../Components/Navbar/Navbar';
 const Pricing = () => {
     return (
         <div>
@@ -10,7 +11,9 @@ const Pricing = () => {
           height: 100%;
         }
       `}</style>
+      <Nav/>    
             <div className={styles.main_container}>
+               
                 <div className={styles.container}>
                     <div className={styles.heading}>
                         Simple Pricing
