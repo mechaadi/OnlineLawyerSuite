@@ -5,6 +5,12 @@
   justify-content: center;
   font-family: "Montserrat";
 }
+.navbarhandler {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #000;
+}
 .container {
   min-width: 75%;
   margin-top: 50px;

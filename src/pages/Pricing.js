@@ -11,9 +11,11 @@ const Pricing = () => {
           height: 100%;
         }
       `}</style>
-      <Nav/>    
+            <div className = {styles.navbarhandler}>
+                <Nav />
+            </div>
             <div className={styles.main_container}>
-               
+
                 <div className={styles.container}>
                     <div className={styles.heading}>
                         Simple Pricing
