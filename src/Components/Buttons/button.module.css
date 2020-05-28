@@ -22,8 +22,8 @@
     border: 1px solid #18a0fb;
     box-sizing: border-box;
     border-radius: 6px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 120px;
@@ -42,4 +42,5 @@
     color: white;
     background-color: black;
     transform: scale(1.10);
+    outline: 1;
 }

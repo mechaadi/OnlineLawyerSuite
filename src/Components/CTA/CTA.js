@@ -8,6 +8,7 @@ const Component = () => {
             <div className={styles.ABContainer}>
                 <div className={styles.A}>
                     <div className={styles.one}>
+                        <div className={styles.infographic + " " + styles.infographic_one}>
                         <div className={styles.heading}>
                             Search
                     </div>
@@ -16,22 +17,26 @@ const Component = () => {
                     </div>
                         <div className={styles.button} className={styles.Abutton}>
                             <LightButton name="Learn More" />
-                        </div>
+                            </div>
+                            </div>
                     </div>
                     <div className={styles.one}>
+                    <div className={styles.infographic + " " + styles.infographic_two}>
                         <div className={styles.heading}>
                             Book Anywhere 
                     </div>
                         <div className={styles.description}>
-                            Book message / voice / video consultation with best lawyers of India. 
+                            Book messages / voice / video consultation with best lawyers of India &.&nbsp;&nbsp;&nbsp;&nbsp; 
                     </div>
                         <div className={styles.button} className={styles.Abutton}>
                             <LightButton name="Learn More" />
-                        </div>
+                            </div>
+                            </div>
                     </div>
                 </div>
                 <div className={styles.A}>
                     <div className={styles.one}>
+                    <div className={styles.infographic + " " + styles.infographic_three}>
                         <div className={styles.heading}>
                             Know as you go
                     </div>
@@ -42,9 +47,11 @@ const Component = () => {
                     </div>
                         <div className={styles.button}>
                             <LightButton name="Learn More" />
-                        </div>
+                            </div>
+                            </div>
                     </div>
                     <div className={styles.one}>
+                    <div className={styles.infographic + " " + styles.infographic_four}>
                         <div className={styles.heading}>
                             Arrange Meetings as you like it
                             
@@ -55,6 +62,7 @@ const Component = () => {
                     </div>
                         <div className={styles.button}>
                             <LightButton name="Learn More" />
+                            </div>
                         </div>
                     </div>
                 </div>

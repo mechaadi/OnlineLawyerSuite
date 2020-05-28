@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import nav from "./navbar.module.css";
-import Link from 'next/link'
 import Button from '../Buttons/Button'
 import { useRouter } from 'next/router'
 

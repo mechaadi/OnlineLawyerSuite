@@ -7,6 +7,7 @@
     letter-spacing: -0.015em;
     color: #000000;
     margin-top: 120px;
+    margin-left: 10px;
     margin-bottom: 80px;
 }
 
@@ -16,20 +17,21 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
-    /* margin-top: 120px;
-    margin-right: 850px; */
+
 }
 
 .description {
     font-family: Montserrat;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: -0.015em;
     margin-top: 24px;
     width: 100%;
     margin-bottom: 43px;
+
+     
 }
 
 .ABContainer {
@@ -39,8 +41,46 @@
 .one {
     min-width: 300px;
     margin-bottom: 80px;
-    min-height: 300px;
+    min-height: 300px;;
 }
+
+
+.infographic {
+    min-width: 300px;
+    margin-bottom: 80px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.infographic_one {
+    background: linear-gradient( rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url("https://cdn.discordapp.com/attachments/715197944202002584/715481448701886584/dribbble-02.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.infographic_two {
+    background: linear-gradient( rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url("https://cdn.dribbble.com/users/508588/screenshots/11263375/media/dce4e2c09206cbd471fb7ff22a3aab57.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.infographic_three {
+    background: linear-gradient( rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url("https://media.discordapp.net/attachments/715197944202002584/715469922087731220/Untitled.png?width=907&height=684");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.infographic_four {
+    background: linear-gradient( rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url("https://cdn.dribbble.com/users/3014280/screenshots/5976645/illustration-drib-drib-travel.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .A {
     display: flex;
