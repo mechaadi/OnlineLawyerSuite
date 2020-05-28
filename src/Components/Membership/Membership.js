@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from './membership.module.css'
 import Button from '../Buttons/Button'
 import LightButton from '../Buttons/LightButton'
