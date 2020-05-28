@@ -9,7 +9,7 @@ const Membership = () => {
         router.push('/Login')
     }
     return (
-        <div className={styles.membership}>
+        <div className={styles.membership}
             <div className={styles.mem_left}>
                 <div className={styles.mem_content}>
                     Membership
