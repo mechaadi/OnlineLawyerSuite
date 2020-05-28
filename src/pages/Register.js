@@ -1,9 +1,8 @@
 import register_styles from './css/register.module.css';
 import Link from 'next/link'
 import Button from '../Components/Buttons/Button';
-import Light_Button from '../Components/Buttons/LightButton';
 import Input from '../Components/Inputs/Input';
-import NavAlt from '../Components/Navbar/NavAlt.js'
+import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import {useRouter} from 'next/router'
 
@@ -29,7 +28,7 @@ const Register = () => {
       }
     `}</style>
     <div className={app.navbarhandler}>
-                <NavAlt />
+                <Nav />
             </div>
         <div className={register_styles.body + ' ' + register_styles.flex_center}>
             <div className={register_styles.register}>

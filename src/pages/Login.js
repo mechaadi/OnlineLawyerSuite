@@ -2,7 +2,7 @@ import login_styles from './css/login.module.css';
 import Link from 'next/link'
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
-import NavAlt from '../Components/Navbar/NavAlt.js'
+import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import {useRouter} from "next/router"
 
@@ -25,7 +25,7 @@ const Login = () => {
       }
     `}</style>
             <div className={app.navbarhandler}>
-                <NavAlt />
+                <Nav />
             </div>
             <div className={login_styles.body}>
                 <div className={login_styles.login + ' ' + login_styles.flex_center}>

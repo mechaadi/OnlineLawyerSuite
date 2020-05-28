@@ -100,7 +100,7 @@
     widows: 100%;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 830px) {
     .App {
         background-color: rgb(46, 46, 46);
     }

@@ -15,8 +15,12 @@ export default function Navbar() {
     router.push('/Register')
   }
 
-  function handleLogoClick(){
+  function handleLogoClick() {
     router.push('/')
+  }
+
+  function handlePricing() {
+    router.push('/Pricing')
   }
 
   const [state, setstate] = useState(false);
@@ -35,7 +39,7 @@ export default function Navbar() {
       <div className={nav.ab}>
         <ul className={nav.items}>
           <li className={nav.li}> Features </li>
-          <li className={nav.li}> Pricing </li>
+          <li className={nav.li} onClick={handlePricing}> Pricing </li>
           <li className={nav.li}> Community </li>
           <li className={nav.li}> Support </li>
         </ul>
@@ -66,7 +70,7 @@ export default function Navbar() {
                 </div>
               </li>
               <li className={nav.li}>Features</li>
-              <li className={nav.li}>Pricing</li>
+              <li className={nav.li} onClick={handlePricing}>Pricing</li>
               <li className={nav.li}>Community</li>
               <li className={nav.li}>Support</li>
               <li className={nav.li} onClick={handleLoginButton}>Login</li>
