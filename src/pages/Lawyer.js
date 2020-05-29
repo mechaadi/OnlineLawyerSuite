@@ -2,6 +2,7 @@ import styles from './css/aboutLawyer.module.css';
 import Nav from '../Components/Navbar/Navbar.js';
 import app from './css/app.module.css';
 import Button from '../Components/Buttons/Button';
+import Comment from '../Components/Comment/Comment';
 const Lawyer = () => {
     return (
         <div>
@@ -89,59 +90,12 @@ const Lawyer = () => {
                         <div className={styles.lawyer_reviews_heading}>
                             Reviews
                         </div>
-                        <div className={styles.lawyer_reviews_container}>
-
-                            <div className={styles.lawyer_reviews_profile_pic}>
-                                <img className={styles.lawyer_reviews_image} src="https://cdn.discordapp.com/attachments/715197944202002584/715890541312868492/Gabriel-Macht-as-Harvey-Specter-copy-5-copy.jpg" />
-                            </div>
-
-                            <div>
-                                <div style={{ display: "flex" }}>
-                                    <div className={styles.lawyer_reviews_username}>
-                                        Harvey Spector
-                                    </div>
-                                    <div style={{ fontSize: 15, marginLeft: 10, color: "grey", marginTop: 8 }}>
-                                        15 hours ago
-                                    </div>
-                                </div>
-                                <div className={styles.lawyer_reviews_username_rating}>
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <div className={styles.lawyer_reviews_username_comment}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div className={styles.lawyer_reviews_container}>
-
-                            <div className={styles.lawyer_reviews_profile_pic}>
-                                <img className={styles.lawyer_reviews_image} src="https://cdn.discordapp.com/attachments/715197944202002584/715890541312868492/Gabriel-Macht-as-Harvey-Specter-copy-5-copy.jpg" />
-                            </div>
-
-                            <div>
-                                <div style={{ display: "flex" }}>
-                                    <div className={styles.lawyer_reviews_username}>
-                                        Harvey Spector
-                                    </div>
-                                    <div style={{ fontSize: 15, marginLeft: 10, color: "grey", marginTop: 8 }}>
-                                        15 hours ago
-                                    </div>
-                                </div>
-                                <div className={styles.lawyer_reviews_username_rating}>
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <div className={styles.lawyer_reviews_username_comment}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </div>
-                            </div>
-                        </div>
-
-
-
+                        <Comment
+                            username="Harvey Spector" timestamp="5 hours ago" stars="⭐⭐⭐⭐⭐"
+                            review="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+                        <Comment
+                            username="Harvey Spector" timestamp="5 hours ago" stars="⭐⭐⭐⭐⭐"
+                            review="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
                     </div>
 
