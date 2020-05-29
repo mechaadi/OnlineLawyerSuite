@@ -49,7 +49,7 @@ const Lawyer = () => {
                                 </div>
                                 <div className={styles.lawyer_cases_readmore}>Read More...</div>
                             </div>
-                            
+
                         </div>
 
 
@@ -75,28 +75,64 @@ const Lawyer = () => {
 
 
 
-                    <div className={styles.laywer_reviews_section}>
-                        <div className={styles.laywer_reviews_heading}>
+                    <div className={styles.lawyer_reviews_section}>
+                        <div className={styles.lawyer_reviews_heading}>
                             Reviews
                         </div>
-                        <div className={styles.laywer_reviews_container}>
-                            <div className={styles.laywer_reviews_profile_pic_container}>
-                                <div className={styles.laywer_reviews_profile_pic}>
-
+                        <div className={styles.lawyer_reviews_container}>
+                            
+                                <div className={styles.lawyer_reviews_profile_pic}>
+                                    <img className={styles.lawyer_reviews_image} src="https://cdn.discordapp.com/attachments/715197944202002584/715890541312868492/Gabriel-Macht-as-Harvey-Specter-copy-5-copy.jpg" />
                                 </div>
-                            </div>
-                            <div className={styles.laywer_reviews_container}>
-                                <div className={styles.laywer_reviews_username}>
-                                    Usernmae
+                      
+                            <div>
+                                <div style={{ display: "flex" }}>
+                                    <div className={styles.lawyer_reviews_username}>
+                                        Harvey Spector
+                                    </div>
+                                    <div style={{ fontSize: 15, marginLeft: 10, color: "grey" , marginTop: 8}}>
+                                        15 hours ago
+                                    </div>
                                 </div>
-                                <div className={styles.laywer_reviews_username_rating}>
-                                    ⭐⭐⭐⭐⭐⭐
+                                <div className={styles.lawyer_reviews_username_rating}>
+                                    ⭐⭐⭐⭐⭐
                                 </div>
-                                <div className={styles.laywer_reviews_username_comment}>
-                                    Comment...
+                                <div className={styles.lawyer_reviews_username_comment}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </div>
                             </div>
                         </div>
+
+
+
+
+                        <div className={styles.lawyer_reviews_container}>
+                            
+                                <div className={styles.lawyer_reviews_profile_pic}>
+                                    <img className={styles.lawyer_reviews_image} src="https://cdn.discordapp.com/attachments/715197944202002584/715890541312868492/Gabriel-Macht-as-Harvey-Specter-copy-5-copy.jpg" />
+                                </div>
+                      
+                            <div>
+                                <div style={{ display: "flex" }}>
+                                    <div className={styles.lawyer_reviews_username}>
+                                        Harvey Spector
+                                    </div>
+                                    <div style={{ fontSize: 15, marginLeft: 10, color: "grey" , marginTop: 8}}>
+                                        15 hours ago
+                                    </div>
+                                </div>
+                                <div className={styles.lawyer_reviews_username_rating}>
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <div className={styles.lawyer_reviews_username_comment}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
 
 
