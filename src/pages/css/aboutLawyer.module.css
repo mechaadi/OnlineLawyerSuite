@@ -23,27 +23,10 @@
   height: auto;
   flex-direction: column;
 }
-.lawyer_cases_box {
-  flex-direction: column;
-  width: auto;
-  padding: 5px;
-  height: auto;
-}
-.lawyer_cases_name {
-  font-size: 22px;
-  font-weight: 800;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.lawyer_cases_description {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
 .lawyer_cases_readmore {
   font-size: 15px;
   margin-top: 20px;
+  margin-left: 5px;
   font-weight: 600;
 }
 .lawyer_profile {
@@ -53,7 +36,7 @@
   min-height: 400px;
   /* border-style: dashed; */
 }
-.lawyer_profile_picture_container {
+/* .lawyer_profile_picture_container {
   width: 200px;
   height: 200px;
   margin: 20px;
@@ -80,7 +63,7 @@
   font-size: 20px;
   margin: 5px;
   margin-bottom: 25px;
-}
+} */
 
 .lawyer_reviews_section {
   width: auto;
