@@ -19,7 +19,7 @@ const Lawyer = () => {
                 <div className={styles.lawyer_container}>
 
 
-                    <div className={styles.lawyer_box + " " + styles.flex_center}>
+                    <div className={styles.lawyer_box}>
 
 
 
@@ -29,7 +29,7 @@ const Lawyer = () => {
                                     Where does it come from?
                                 </div>
                                 <div className={styles.lawyer_cases_description}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </div>
                             </div>
                             <div className={styles.lawyer_cases_box}>
@@ -37,14 +37,24 @@ const Lawyer = () => {
                                     Where does it come from?
                                 </div>
                                 <div className={styles.lawyer_cases_description}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </div>
                             </div>
-
+                            <div className={styles.lawyer_cases_box}>
+                                <div className={styles.lawyer_cases_name}>
+                                    Where does it come from?
+                                </div>
+                                <div className={styles.lawyer_cases_description}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                                <div className={styles.lawyer_cases_readmore}>Read More...</div>
+                            </div>
+                            
                         </div>
 
 
                         <div className={styles.lawyer_profile + " " + styles.flex_center}>
+
                             <div className={styles.lawyer_profile_picture_container}>
                                 <img src="https://cdn.discordapp.com/attachments/715197944202002584/715890541312868492/Gabriel-Macht-as-Harvey-Specter-copy-5-copy.jpg" className={styles.lawyer_profile_picture} />
                             </div>
@@ -57,7 +67,10 @@ const Lawyer = () => {
                             <div className={styles.lawyer_profile_about_lawyer}>
                                 About Lawyer
                             </div>
+
+
                         </div>
+
                     </div>
 
 
