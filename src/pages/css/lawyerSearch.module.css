@@ -1,0 +1,24 @@
+.main_container {
+    width: auto;
+    overflow: hidden;
+    font-family: "Montserrat";
+    border-style: dashed;
+    margin-top: 80px;
+  }
+  .navbarhandler {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px #000;
+  }
+  .flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lawyer_search_container {
+    width: 75%;
+    border-style: dashed;
+    height: 100%;
+  }
