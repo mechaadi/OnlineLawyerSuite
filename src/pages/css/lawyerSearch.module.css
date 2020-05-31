@@ -92,7 +92,6 @@
   display: flex;
   flex-direction: column;
   flex: 75%;
-  /* border-style: double; */
 }
 .lawyer_search_heading {
   font-size: 30px;
@@ -108,7 +107,7 @@
 }
 .lawyer_items_card {
   width: 50%;
-  max-width: 250px;
+  max-width: 220px;
   min-width: 100px;
   height: 180px;
   margin: 10px;
@@ -161,22 +160,48 @@
   font-size: 15px;
   font-weight: normal;
 }
-@media only screen and (max-width: 718px) {
+@media only screen and (max-width: 1010px) {
+  .lawyer_items_card {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 835px) {
+  .lawyer_items_card {
+    max-width: 190px;
+  }
+}
+@media only screen and (max-width: 780px) {
   .lawyer_search_container {
     flex-wrap: wrap;
   }
-  .lawyer_filter_container{
+  .lawyer_filter_container {
     flex: 100%;
     justify-content: center;
-    border-style: dashed;
     margin: 10px;
     margin-bottom: 50px;
   }
-  .lawyer_search_results_container{
+  .lawyer_search_results_container {
     flex: 100%;
   }
-  .lawyer_search_heading{
+  .lawyer_search_heading {
     margin-left: 10px;
   }
+  .lawyer_items_card{
+    max-width: 40%;
+  }
 }
-
+@media only screen and (max-width: 450px) {
+  .lawyer_items_card{
+    min-width: 80%;
+  }
+  .lawyer_search_items{
+    justify-content: center;
+    align-items: center;
+  }
+  .lawyer_search_heading{
+    margin-left: 15px;
+  }
+  .lawyer_filter_container{
+    margin-left: 15px;
+  }
+}

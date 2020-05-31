@@ -15,6 +15,8 @@ const Lawyer_Search = () => {
                 <Nav />
             </div>
             <div className={styles.main_container}>
+                
+    
                 <div className={styles.lawyer_search_container}>
 
                     <div className={styles.lawyer_filter_container}>
@@ -42,6 +44,9 @@ const Lawyer_Search = () => {
 
                                     </div>
                                 </div>
+
+
+                                
 
 
 
