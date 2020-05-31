@@ -43,22 +43,6 @@
   font-weight: bold;
   margin-top: 40px;
 }
-.lawyer_filter_box_heading {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-.lawyer_filter_box_check_box_container {
-  margin-top: 5px;
-  display: flex;
-  margin-bottom: 5px;
-}
-.checkbox {
-  margin-left: 5px;
-  font-size: 23px;
-}
-
 .lawyer_search_results_container {
   display: flex;
   flex-direction: column;

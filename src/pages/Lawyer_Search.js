@@ -2,6 +2,7 @@ import styles from './css/lawyerSearch.module.css';
 import Nav from '../Components/Navbar/Navbar.js';
 import Chips from '../Components/Chips/Chips';
 import Card from '../Components/Card/Card';
+import Filter from '../Components/Filters/Filter';
 const Lawyer_Search = () => {
     return (
         <div>
@@ -17,88 +18,17 @@ const Lawyer_Search = () => {
                 <Nav />
             </div>
             <div className={styles.main_container}>
-
-
                 <div className={styles.lawyer_search_container}>
-
                     <div className={styles.lawyer_filter_container}>
-
-
                         <div className={styles.lawyer_filter_box}>
-
                             <div className={styles.lawyer_filter_box_title}>
-
                                 Filters
-
                              </div>
-
-
                             <div className={styles.laywer_filter_cheecked_items_container}>
-
-
-
-
                                 <Chips name="Adidas" />
-
-
-
-
-
-
-
-
-
-
                             </div>
-
-                            <div>
-                                <div className={styles.lawyer_filter_box_heading}>
-
-                                    Stores Supported
-
-                            </div>
-
-                                <div className={styles.lawyer_filter_box_contaienr}>
-
-
-
-                                    <div className={styles.lawyer_filter_box_check_box_container}>
-
-                                        <input type="checkbox" style={{ border: "red", width: 20, height: 20 }} />
-
-                                        <div className={styles.checkbox}>
-                                            One
-                                    </div>
-
-
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            <Filter filter_title = "Supported Category" />
+                            <Filter filter_title = "Other Category"/>
                         </div>
                     </div>
                     <div className={styles.lawyer_search_results_container}>
