@@ -1,5 +1,6 @@
 import styles from './css/lawyerSearch.module.css';
 import Nav from '../Components/Navbar/Navbar.js';
+import Chips from '../Components/Chips/Chips';
 const Lawyer_Search = () => {
     return (
         <div>
@@ -36,14 +37,7 @@ const Lawyer_Search = () => {
 
 
 
-                                <div className={styles.filter_selected}>
-                                    Adidas
-
-                                    <div className={styles.image_container}>
-                                        <img src="https://cdn.discordapp.com/attachments/715197944202002584/716518689427685397/image-x-png-7.png" className={styles.image} />
-
-                                    </div>
-                                </div>
+                                <Chips name= "Adidas"/> 
 
 
                                 
