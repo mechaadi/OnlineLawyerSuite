@@ -1,24 +1,182 @@
 .main_container {
-    width: auto;
-    overflow: hidden;
-    font-family: "Montserrat";
-    border-style: dashed;
-    margin-top: 80px;
-  }
-  .navbarhandler {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    z-index: 1000;
-    box-shadow: 2px 2px 5px #000;
-  }
-  .flex_center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: auto;
+  overflow: hidden;
+  font-family: "Montserrat";
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarhandler {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #000;
+}
+.lawyer_search_container {
+  width: 75%;
+  display: flex;
+  height: 100%;
+}
+.lawyer_filter_container {
+  display: flex;
+  flex: 25%;
+  height: auto;
+}
+.lawyer_filter_box {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.laywer_filter_cheecked_items_container {
+  height: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 2px;
+}
+.filter_selected {
+  width: auto;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20px;
+  border-radius: 25px;
+  border: 1px solid;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+.image_container {
+  height: 100%;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+}
+.image {
+  width: 80%;
+  height: 15px;
+}
+.image:hover {
+  opacity: 0.9;
+}
+.lawyer_filter_box_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+.lawyer_filter_box_heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.lawyer_filter_box_check_box_container {
+  margin-top: 5px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.checkbox {
+  margin-left: 5px;
+  font-size: 23px;
+}
+
+.lawyer_search_results_container {
+  display: flex;
+  flex-direction: column;
+  flex: 75%;
+  /* border-style: double; */
+}
+.lawyer_search_heading {
+  font-size: 30px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+.lawyer_search_items {
+  display: flex;
+  margin-top: 25px;
+  /* border-style: dashed; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.lawyer_items_card {
+  width: 50%;
+  max-width: 250px;
+  min-width: 100px;
+  height: 180px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+.items_card_price_container {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+.items_card_price {
+  background-color: #18a0fb;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.items_card_details_container {
+  width: auto;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+.items_card_image_container {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  margin: 5px;
+}
+.items_card_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.items_card_name {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+}
+.items_card_cases {
+  font-size: 15px;
+  font-weight: normal;
+}
+@media only screen and (max-width: 718px) {
   .lawyer_search_container {
-    width: 75%;
-    border-style: dashed;
-    height: 100%;
+    flex-wrap: wrap;
   }
+  .lawyer_filter_container{
+    flex: 100%;
+    justify-content: center;
+    border-style: dashed;
+    margin: 10px;
+    margin-bottom: 50px;
+  }
+  .lawyer_search_results_container{
+    flex: 100%;
+  }
+  .lawyer_search_heading{
+    margin-left: 10px;
+  }
+}
+
