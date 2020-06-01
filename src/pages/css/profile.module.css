@@ -1,0 +1,97 @@
+.main_container {
+  width: auto;
+  overflow: hidden;
+  font-family: "Montserrat";
+  margin-top: 120px;
+  width: auto;
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarhandler {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #000;
+}
+.container {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+}
+
+.left_profile_container {
+  display: flex;
+  flex: 40%;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  margin: 10px;
+  border-style: dashed;
+}
+.left_profile_button {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.some_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 10px;
+}
+.box{
+    width: 100%;
+    display: flex;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.img_cont{
+    width: 40px;
+    margin: 2px;
+    height: 30px;
+}
+.desc{
+    width: 90%;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+.right_profile_container {
+    display: flex;
+    flex: 60%;
+    justify-content: center;
+    height: auto;
+    margin: 10px;
+    border-style: dashed;
+  }
+.right_profile_information_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-style: dashed;
+}
+.right_profile_heading{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+.container{
+    flex-wrap: wrap;
+}
+}
