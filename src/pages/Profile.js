@@ -3,6 +3,7 @@ import Nav from '../Components/Navbar/Navbar';
 import ProfileCard from '../Components/Profile/Profile.js';
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
+import Settings from '../Components/Settings/Settings';
 const Profile = () => {
     return (
         <div>
@@ -31,21 +32,6 @@ const Profile = () => {
 
 
 
-                        <div className={styles.some_box}>
-
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Account
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
-
-                        </div>
 
 
 
@@ -53,114 +39,23 @@ const Profile = () => {
 
 
 
-                        <div className={styles.some_box}>
-
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011949543751791/icons8-gear-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Change Password
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
-
-                        </div>
 
 
 
 
 
 
+                        <Settings describe="Account" img="https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png" />
 
-                        <div className={styles.some_box}>
+                        <Settings describe="  Change Password " img="https://cdn.discordapp.com/attachments/715197944202002584/717011949543751791/icons8-gear-50.png" />
 
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011952173449296/icons8-push-notifications-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Notifications
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
+                        <Settings describe=" Notifications  " img="https://cdn.discordapp.com/attachments/715197944202002584/717011952173449296/icons8-push-notifications-50.png" />
 
-                        </div>
+                        <Settings describe="  Privacy " img="https://cdn.discordapp.com/attachments/715197944202002584/717011953951703100/icons8-cloud-privacy-50.png" />
 
+                        <Settings describe=" Membership  " img="https://cdn.discordapp.com/attachments/715197944202002584/717011955080232970/icons8-ledger-50.png" />
 
-
-
-
-
-
-                        <div className={styles.some_box}>
-
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011953951703100/icons8-cloud-privacy-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Privacy
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-
-
-
-                        <div className={styles.some_box}>
-
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011955080232970/icons8-ledger-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Membership
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-
-
-
-                        <div className={styles.some_box}>
-
-                            <div className={styles.box}>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011957353283694/icons8-logout-rounded-down-50.png" />
-                                </div>
-                                <div className={styles.desc}>
-                                    Logout
-                                </div>
-                                <div className={styles.img_cont}>
-                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-
+                        <Settings describe=" Logout " img="https://cdn.discordapp.com/attachments/715197944202002584/717011957353283694/icons8-logout-rounded-down-50.png" />
 
 
 
