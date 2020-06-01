@@ -35,13 +35,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Account
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -57,13 +57,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011949543751791/icons8-gear-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011949543751791/icons8-gear-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Change Password
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -79,13 +79,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011952173449296/icons8-push-notifications-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011952173449296/icons8-push-notifications-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Notifications
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -101,13 +101,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011953951703100/icons8-cloud-privacy-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011953951703100/icons8-cloud-privacy-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Privacy
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -123,13 +123,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011955080232970/icons8-ledger-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011955080232970/icons8-ledger-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Membership
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -145,13 +145,13 @@ const Profile = () => {
 
                             <div className={styles.box}>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717011957353283694/icons8-logout-rounded-down-50.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717011957353283694/icons8-logout-rounded-down-50.png" />
                                 </div>
                                 <div className={styles.desc}>
                                     Logout
                                 </div>
                                 <div className={styles.img_cont}>
-                                    <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
+                                    <img className = {styles.imgabc} src="https://cdn.discordapp.com/attachments/715197944202002584/717012311784554577/icons8-chevron-right-60.png" />
                                 </div>
                             </div>
 
@@ -198,14 +198,14 @@ const Profile = () => {
                                 Display Name
                         </div>
                             <div className={styles.right_profile_data}>
-                                <Input placeholder = "Harvey Spector"/>
+                                <Input placeholder="Harvey Spector" />
                             </div>
 
                             <div className={styles.right_profile_heading}>
                                 Location
                         </div>
                             <div className={styles.right_profile_data}>
-                                <Input placeholder = "Location" />
+                                <Input placeholder="Location" />
                             </div>
 
                         </div>
