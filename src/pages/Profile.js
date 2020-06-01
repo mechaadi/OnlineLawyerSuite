@@ -2,6 +2,7 @@ import styles from './css/profile.module.css';
 import Nav from '../Components/Navbar/Navbar';
 import ProfileCard from '../Components/Profile/Profile.js';
 import Button from '../Components/Buttons/Button';
+import Input from '../Components/Inputs/Input';
 const Profile = () => {
     return (
         <div>
@@ -22,8 +23,8 @@ const Profile = () => {
 
 
 
-                            <ProfileCard />
-                     
+                        <ProfileCard />
+
                         <div className={styles.left_profile_button}>
                             <Button name="Edit Picture" />
                         </div>
@@ -191,14 +192,21 @@ const Profile = () => {
                                 Email
                         </div>
                             <div className={styles.right_profile_data}>
-                                Sidm9
+                                Sidm9@example.com
                         </div>
                             <div className={styles.right_profile_heading}>
                                 Display Name
                         </div>
                             <div className={styles.right_profile_data}>
-                                Sidm9
+                                <Input placeholder = "Harvey Spector"/>
+                            </div>
+
+                            <div className={styles.right_profile_heading}>
+                                Location
                         </div>
+                            <div className={styles.right_profile_data}>
+                                <Input placeholder = "Location" />
+                            </div>
 
                         </div>
 
