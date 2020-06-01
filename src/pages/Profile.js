@@ -22,28 +22,11 @@ const Profile = () => {
                 <div className={styles.container}>
                     <div className={styles.left_profile_container}>
 
-
-
                         <ProfileCard />
 
                         <div className={styles.left_profile_button}>
                             <Button name="Edit Picture" />
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <Settings describe="Account" img="https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png" />
 
@@ -57,29 +40,9 @@ const Profile = () => {
 
                         <Settings describe=" Logout " img="https://cdn.discordapp.com/attachments/715197944202002584/717011957353283694/icons8-logout-rounded-down-50.png" />
 
-
-
-
-
-
-
-
-
                     </div>
 
-
-
-
-
-
-
-
-
-
-
                     <div className={styles.right_profile_container}>
-
-
 
                         <div className={styles.right_profile_information_container}>
 
@@ -102,27 +65,9 @@ const Profile = () => {
                             <div className={styles.right_profile_data}>
                                 <Input placeholder="Location" />
                             </div>
-
                         </div>
-
-
-
-
-
-
-
-
                     </div>
-
-
-
-
-
-
-
                 </div>
-
-
             </div>
         </div>
     )
