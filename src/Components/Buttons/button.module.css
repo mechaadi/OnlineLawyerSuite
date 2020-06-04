@@ -18,6 +18,7 @@
 }
 
 .light_button {
+    font-family: "Montserrat", sans-serif;
     background-color: white;
     border: 1px solid #18a0fb;
     box-sizing: border-box;
@@ -29,7 +30,7 @@
     width: 120px;
     color: #18a0fb;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .light_button:hover {

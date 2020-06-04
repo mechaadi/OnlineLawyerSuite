@@ -27,6 +27,8 @@
   }
   .lawyer_reviews_username{
     font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }
   .lawyer_reviews_username_rating{
     margin-top: 5px;

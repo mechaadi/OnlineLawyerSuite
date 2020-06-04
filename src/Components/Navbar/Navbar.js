@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Button from '../Buttons/Button'
 import { useRouter } from 'next/router'
-
+import Input from '../Inputs/Input.js';
 export default function Navbar() {
 
   const router = useRouter()
@@ -42,7 +42,9 @@ export default function Navbar() {
           <li className={nav.li} onClick={handlePricing}> Pricing </li>
           <li className={nav.li}> Community </li>
           <li className={nav.li}> Support </li>
+          
         </ul>
+        <Input placeholder = "Search"/>
         <ul className={nav.navbuttons}>
 
           <Button name="Login" onChildClick={handleLoginButton}></Button>
