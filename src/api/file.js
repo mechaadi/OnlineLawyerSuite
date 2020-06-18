@@ -1,18 +1,18 @@
 import { FormClient } from "./config"
+import { updateProfile } from "./user"
 
-export const uploadProductImages = async function(fileImages) {
+export const uploadProfilePicture = async function(fileImage) {
     let formData = new FormData()
+    formData.append("file[]", fileImage)
 
-    for (let i = 0; i < fileImages.length; i++) {
-        const fileImage = fileImages[i]
-        formData.append("file[]", fileImage.file)
-    }
 
-    const response = await FormClient.post("/file", formData, {
+    const response = await FormClient.post("/files/profilePic", formData, {
         headers: {
             Authorization: localStorage.getItem("token")
         }
     })
 
+    console.log(response.data)
+    updateProfile();
     return response.data
 }

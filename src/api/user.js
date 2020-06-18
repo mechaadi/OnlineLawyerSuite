@@ -34,6 +34,19 @@ export const getUser = async() => {
     console.log(JSON.parse(userData))
 }
 
+export const updateProfile = async() => {
+    const userData = localStorage.getItem("user")
+    const username = JSON.parse(userData).username
+    const resp = await JSONClient.get(`/user/${username}`, {
+        headers: {
+            Authorization: localStorage.getItem("token")
+        }
+    })
+
+    localStorage.setItem("user", JSON.stringify(resp.data.data))
+    console.log(resp, " synced user")
+}
+
 export const getToken = function() {
     const token = localStorage.getItem('token')
     return token

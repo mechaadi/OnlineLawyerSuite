@@ -5,10 +5,18 @@ import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Settings from '../Components/Settings/Settings';
 import { useState } from 'react';
-import {getUser} from "../api/user"
+import {getUser, updateProfile} from "../api/user"
+import {uploadProfilePicture} from "../api/file"
 const Profile = () => {
 
     getUser();
+    
+
+    const profilePicListener = (e)=>{
+        const doc = document.getElementById("profilePic")
+        uploadProfilePicture(doc.files[0])
+        
+    }
 
 
     const Account_Dark = "https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png";
@@ -117,6 +125,8 @@ const Profile = () => {
                         </div>
                             <div className={styles.right_profile_data}>
                                 <Input placeholder="Location" />
+                                <input id="profilePic" type="file"/>
+                                <button onClick={profilePicListener}>Upload</button>
                             </div>
                         </div>
                     </div>
