@@ -5,7 +5,11 @@ import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Settings from '../Components/Settings/Settings';
 import { useState } from 'react';
+import {getUser} from "../api/user"
 const Profile = () => {
+
+    getUser();
+
 
     const Account_Dark = "https://cdn.discordapp.com/attachments/715197944202002584/717011951003369522/icons8-account-50.png";
     const Account_White = "https://cdn.discordapp.com/attachments/715197944202002584/717302392814567484/icons8-account-50.png";

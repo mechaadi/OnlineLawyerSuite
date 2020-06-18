@@ -5,13 +5,16 @@ import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import {useRouter} from 'next/router'
+import {register} from "../api/user"
 
 const Register = () => {
 
     const router = useRouter();
 
     function handleRegisterButton(event){
-
+        console.log("registering..");
+        const resp = register("sidm99@gmail.com", "asudoasudo", "sidm99", "", 0, "this is about", "siddharth mishra")
+        
     }
 
     function handleLoginButton(event){

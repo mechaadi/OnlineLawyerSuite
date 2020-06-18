@@ -4,15 +4,16 @@ import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
-import {useRouter} from "next/router"
+import { useRouter } from "next/router"
+import { login } from "../api/user"
 
 const Login = () => {
     const router = useRouter()
-    function handleLoginButton(event){
-
+    function handleLoginButton(event) {
+        login("sidm99@gmail.com", "asudoasudo")
     }
 
-    function handleRegisterButton(event){
+    function handleRegisterButton(event) {
         router.push('/Register')
     }
     return (
@@ -31,8 +32,8 @@ const Login = () => {
                 <div className={login_styles.login + ' ' + login_styles.flex_center}>
                     <div className={login_styles.main + ' ' + login_styles.flex_center}>
                         <div className={login_styles.header}>
-                            Welcome Back.
-                </div>
+                            Welcome Back. {process.env.NEXT_APP_API_URL}
+                        </div>
                         <div className={login_styles.subheader}>
                             Login to get access.
                 </div>
@@ -56,8 +57,8 @@ const Login = () => {
 
                             </div>
                             <div className={login_styles.buttons}>
-                                    <Button onChildClick={handleLoginButton} name="Login" />
-                                    <Button onChildClick={handleRegisterButton} name="Register" />
+                                <Button onChildClick={handleLoginButton} name="Login" />
+                                <Button onChildClick={handleRegisterButton} name="Register" />
                             </div>
                         </div>
                     </div>

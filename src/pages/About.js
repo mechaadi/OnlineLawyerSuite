@@ -21,7 +21,7 @@ function About() {
                     <Navbar />
                 </div>
                 <div className={app.jumbotron}>
-                    <h1>People become really quite remarkable when they start thinking that they can do things. When they believe in themselves, they have the first secret of success. <br /> <p>-Norman Vincent Peale</p></h1>
+                    <h1>People become really quite remarkable when they start thinking that they can do things. When they believe in themselves, they have the first secret of success. {process.env.NEXT_SERVER_TEST_1} <br /> <p>-Norman Vincent Peale</p></h1>
                 </div>
                 <div className={app.section}>
                     <CTA />

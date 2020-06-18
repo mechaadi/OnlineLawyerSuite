@@ -1,0 +1,40 @@
+import {
+    JSONClient,
+    FormClient
+} from "./config";
+
+
+export const login = async function(email, password) {
+    const response = await JSONClient.post("/user/login", {
+        email: email,
+        password: password,
+    })
+    console.log(response.data)
+    localStorage.setItem("token", response.data.data)
+}
+
+export const register = async(email, password, username, profile_picture, user_type, about, name) => {
+    const resp = await JSONClient.post("/user/register", {
+        email: email,
+        password: password,
+        username: username,
+        profile_picture: "",
+        user_type: user_type,
+        about: "",
+        name: name
+    });
+    console.log(resp.data)
+    localStorage.setItem("user", JSON.stringify(resp.data.data))
+
+    return resp.data
+}
+
+export const getUser = async() => {
+    const userData = localStorage.getItem("user")
+    console.log(JSON.parse(userData))
+}
+
+export const getToken = function() {
+    const token = localStorage.getItem('token')
+    return token
+}
