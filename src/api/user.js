@@ -14,6 +14,7 @@ export const login = async function(email, password) {
 }
 
 export const register = async(email, password, username, profile_picture, user_type, about, name) => {
+    console.log(name)
     const resp = await JSONClient.post("/user/register", {
         email: email,
         password: password,

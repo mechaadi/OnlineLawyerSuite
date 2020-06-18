@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = "http://172.105.153.11/uplaw"
+axios.defaults.baseURL = "https://uplaw.a7alabs.space/uplaw"
 
 if (process.env.NODE_ENV === "development") {
     axios.interceptors.request.use(request => {

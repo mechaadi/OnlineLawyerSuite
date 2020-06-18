@@ -47,8 +47,8 @@ const Register = () => {
         fullNameHandle()
         const username = EmailAddress.split('@')[0]
         console.log(EmailAddress, "   asdas")
-        console.log("registering..");
-        const resp = register(EmailAddress, Password, username, Type, 0, "this is about", fullName)
+        console.log("registering..", fullName);
+        const resp = register(EmailAddress, Password, username, Type, 0, "this is about", FirstName + " " + LastName)
 
     }
 
