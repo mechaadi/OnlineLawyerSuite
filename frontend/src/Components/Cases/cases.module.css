@@ -1,0 +1,19 @@
+.lawyer_cases_box {
+    flex-direction: column;
+    width: auto;
+    padding: 5px;
+    height: auto;
+  }
+  .lawyer_cases_name {
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .lawyer_cases_description {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
