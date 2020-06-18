@@ -1,3 +1,4 @@
+import React  from 'react'
 import app from './css/app.module.css';
 import Navbar from '../Components/Navbar/Navbar.js'
 import Footer from '../Components/Footer/Footer';

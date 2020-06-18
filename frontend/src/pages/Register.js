@@ -1,5 +1,6 @@
 import register_styles from './css/register.module.css';
 import Link from 'next/link'
+import React from 'react'
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'

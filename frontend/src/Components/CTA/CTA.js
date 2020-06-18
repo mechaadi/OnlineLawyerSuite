@@ -1,6 +1,6 @@
 import styles from './CTA.module.css';
 import LightButton from '../Buttons/LightButton'
-
+import React from 'react'
 const Component = () => {
     return (
         <div className={styles.main}>

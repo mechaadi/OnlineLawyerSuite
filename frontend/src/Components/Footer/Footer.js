@@ -1,4 +1,5 @@
 import footer from "./footer.module.css";
+import React from 'react'
 const Footer = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={footer.brand}>
-      <img src={require('../../../public/static/uplawwhite.png')} height={80}/>
+      <img src={require('../../assets/images/uplawwhite.png')} height={80}/>
       </div>
       <div className={footer.left  + ' ' +  footer.right}>
         <ul className={footer.list}>
@@ -23,7 +24,7 @@ const Footer = () => {
       {/* </div> */}
     </div>
     <div className={footer.brand2}>
-      <img src={require('../../../public/static/uplawwhite.png')} height={80}/>
+      <img src={require('../../assets/images/uplawwhite.png')} height={80}/>
     </div>
   </div>
   );

@@ -1,4 +1,5 @@
 import styles from "./Testimonials.module.css";
+import React from 'react'
 const Component = () => {
     return(
         <div className={styles.main}>

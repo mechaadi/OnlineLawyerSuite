@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Button from '../Buttons/Button'
-import { useRouter } from 'next/router'
 import Input from '../Inputs/Input.js';
 export default function Navbar() {
 
-  const router = useRouter()
+  // const router = useRouter()
 
   function handleLoginButton(event) {
-    router.push('/Login')
+    // router.push('/Login')
   }
 
   function handleRegisterButton(event) {
-    router.push('/Register')
+    // router.push('/Register')
   }
 
   function handleLogoClick() {
-    router.push('/')
+    // router.push('/')
   }
 
   function handlePricing() {
-    router.push('/Pricing')
+    // router.push('/Pricing')
   }
 
   const [state, setstate] = useState(false);

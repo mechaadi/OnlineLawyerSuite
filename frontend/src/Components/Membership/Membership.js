@@ -1,12 +1,11 @@
 import styles from './membership.module.css'
 import Button from '../Buttons/Button'
 import LightButton from '../Buttons/LightButton'
-import { useRouter } from 'next/router'
+import React from 'react'
 
 const Membership = () => {
-    const router = useRouter()
     function hanleButtonClick (event){
-        router.push('/Login')
+        // router.push('/Login')
     }
     return (
         <div className={styles.membership}>
