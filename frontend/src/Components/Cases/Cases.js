@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './cases.module.css'
 const Cases = (props) => {
     return (

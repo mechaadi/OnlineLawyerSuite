@@ -1,3 +1,9 @@
+::placeholder {
+  font-family: "Montserrat";
+}
+input {
+  font-family: "Montserrat";
+}
 .text_input {
   width: 100%;
   padding: 8px;

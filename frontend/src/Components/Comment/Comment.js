@@ -1,4 +1,5 @@
 import styles from './comment.module.css'
+import React from 'react';
 const Comment = (props) => {
     return (
         <div className={styles.lawyer_reviews_container}>

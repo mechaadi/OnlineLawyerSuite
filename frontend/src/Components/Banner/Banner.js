@@ -1,5 +1,6 @@
 import styles from './banner.module.css';
 import Button from '../Buttons/Button.js';
+import React from 'react';
 const Banner = (props) => {
     return (
 

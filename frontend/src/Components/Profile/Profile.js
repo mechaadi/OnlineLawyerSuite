@@ -1,5 +1,5 @@
 import styles from './profile.module.css'
-
+import React from 'react'
 const Profile = (props) => {
     return (
         <div className={styles.lawyer_profile_container}>

@@ -1,5 +1,6 @@
 import styles from './css/pricing.module.css';
 import Banner from '../Components/Banner/Banner';
+import React from 'react';
 import Nav from '../Components/Navbar/Navbar';
 const Pricing = () => {
     return (

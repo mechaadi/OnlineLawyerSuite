@@ -1,13 +1,12 @@
 import register_styles from './css/register.module.css';
-import Link from 'next/link'
 import React from 'react'
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
-import { useRouter } from 'next/router'
 import { register } from "../api/user"
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -36,12 +35,12 @@ const Register = () => {
     }
 
     const fullNameHandle = () => {
-        var fullName = (FirstName+ " " +LastName)
+        var fullName = (FirstName + " " + LastName)
         setfullName(fullName);
         console.log(fullName);
     }
 
-    const router = useRouter();
+    // const router = useRouter();
 
 
     function handleRegisterButton(event) {
@@ -54,7 +53,7 @@ const Register = () => {
     }
 
     function handleLoginButton(event) {
-        router.push('/Login')
+        // router.push('/Login')
     }
 
 
@@ -107,8 +106,12 @@ const Register = () => {
 
                             </div>
                             <div className={register_styles.buttons}>
-                                <Button onChildClick={handleRegisterButton} name="Register" />
-                                <Button onChildClick={handleLoginButton} name="Login" />
+                                <Link to="/Lawyer">
+                                    <Button onChildClick={handleRegisterButton} name="Register" />
+                                </Link>
+                                <Link to="/Login">
+                                    <Button onChildClick={handleLoginButton} name="Login" />
+                                </Link>
                                 <select className={register_styles.select} onChange={handleType} >
                                     <option className={register_styles.option} >User</option><option className={register_styles.option}>Lawyer</option>
                                 </select>
@@ -123,9 +126,10 @@ const Register = () => {
                             <div className={register_styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits </div>
                         </div>
                         <div className={register_styles.mem_right}>
-                            <Link href="/" passHref >
+                            <Link to="/"  >
                                 <Button name="Join Today" />
                             </Link>
+
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import styles from './css/lawyerSearch.module.css';
+import React from 'react'
 import Nav from '../Components/Navbar/Navbar.js';
 import Chips from '../Components/Chips/Chips';
 import Card from '../Components/Card/Card';

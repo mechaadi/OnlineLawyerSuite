@@ -1,26 +1,25 @@
+import React from 'react'
 import login_styles from './css/login.module.css';
-import Link from 'next/link'
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
-import { useRouter } from "next/router"
 import { login } from "../api/user"
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const Login = () => {
-
     const [Email, setEmail] = useState('');
 
     const [Password, setPassword] = useState('');
 
-    const router = useRouter()
+    // const router = useRouter()
     function handleLoginButton(event) {
         login(Email, Password)
     }
 
     function handleRegisterButton(event) {
-        router.push('/Register')
+        // console.log("dab raha hu lawde")
     }
 
     const handleEmailChange = (e) => {
@@ -80,8 +79,12 @@ const Login = () => {
 
                             </div>
                             <div className={login_styles.buttons}>
-                                <Button onChildClick={handleLoginButton} name="Login" />
-                                <Button onChildClick={handleRegisterButton} name="Register" />
+                                <Link to="/Profile" >
+                                    <Button onClick={handleLoginButton} name="Login" />
+                                </Link>
+                                <Link to="/Register">
+                                    <Button onClick={handleRegisterButton} name="Register" />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -90,9 +93,11 @@ const Login = () => {
                             <div className={login_styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits  </div>
                         </div>
                         <div className={login_styles.mem_right}>
-                            <Link href="/" passHref >
+                            <Link to="/" >
                                 <Button name="Join Today" />
                             </Link>
+
+
                         </div>
                     </div>
                 </div>

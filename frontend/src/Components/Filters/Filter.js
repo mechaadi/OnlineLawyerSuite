@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './filter.module.css'
 import Checkbox from '../Checkbox/Checkbox'
 const Filter = (props) => {

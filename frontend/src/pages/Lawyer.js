@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './css/aboutLawyer.module.css';
 import Nav from '../Components/Navbar/Navbar.js';
 import app from './css/app.module.css';

@@ -2,25 +2,8 @@ import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Button from '../Buttons/Button'
 import Input from '../Inputs/Input.js';
+import { Link } from "react-router-dom";
 export default function Navbar() {
-
-  // const router = useRouter()
-
-  function handleLoginButton(event) {
-    // router.push('/Login')
-  }
-
-  function handleRegisterButton(event) {
-    // router.push('/Register')
-  }
-
-  function handleLogoClick() {
-    // router.push('/')
-  }
-
-  function handlePricing() {
-    // router.push('/Pricing')
-  }
 
   const [state, setstate] = useState(false);
 
@@ -32,22 +15,29 @@ export default function Navbar() {
 
   return (
     <div className={nav.nav}>
-      <div className={nav.logo} onClick={handleLogoClick}>
-        <img src={require('../../assets/images/uplawwhite.png')} height={60} />
-      </div>
+      <Link to="/" >
+        <div className={nav.logo}>
+          <img src={require('../../assets/images/uplawwhite.png')} height={60} />
+        </div>
+      </Link>
       <div className={nav.ab}>
         <ul className={nav.items}>
-          <li className={nav.li}> Features </li>
-          <li className={nav.li} onClick={handlePricing}> Pricing </li>
-          <li className={nav.li}> Community </li>
-          <li className={nav.li}> Support </li>
-          
-        </ul>
-        <Input placeholder = "Search"/>
-        <ul className={nav.navbuttons}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+            <li className={nav.li}> Features </li>
+          </Link>
+          <Link to="/Pricing" style={{ textDecoration: 'none', color: 'black' }}>
+            <li className={nav.li}> Pricing </li>
+          </Link>
 
-          <Button name="Login" onChildClick={handleLoginButton}></Button>
-          <Button name="Register" onChildClick={handleRegisterButton}></Button>
+        </ul>
+        <Input placeholder="Search" />
+        <ul className={nav.navbuttons}>
+          <Link to="/Login">
+            <Button name="Login"></Button>
+          </Link>
+          <Link to="/Register">
+            <Button name="Register"></Button>
+          </Link>
         </ul>
       </div>
       <div className={nav.toggler} onClick={toogle}>
@@ -71,11 +61,15 @@ export default function Navbar() {
                 </div>
               </li>
               <li className={nav.li}>Features</li>
-              <li className={nav.li} onClick={handlePricing}>Pricing</li>
-              <li className={nav.li}>Community</li>
-              <li className={nav.li}>Support</li>
-              <li className={nav.li} onClick={handleLoginButton}>Login</li>
-              <li className={nav.li} onClick={handleRegisterButton}>Register</li>
+              <Link to="/Pricing">
+                <li className={nav.li}>Pricing</li>
+              </Link>
+              <Link to="/Login">
+                <li className={nav.li}>Login</li>
+              </Link>
+              <Link to="/Register">
+                <li className={nav.li}>Register</li>
+              </Link>
             </ul>
           </div>
         </div>
