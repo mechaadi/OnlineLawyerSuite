@@ -79,7 +79,7 @@ const Login = () => {
 
                             </div>
                             <div className={login_styles.buttons}>
-                                <Link to="/Profile" >
+                                <Link to="/Lawyer" >
                                     <Button onClick={handleLoginButton} name="Login" />
                                 </Link>
                                 <Link to="/Register">
