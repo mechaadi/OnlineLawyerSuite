@@ -42,10 +42,13 @@ const Register = () => {
 
     const router = useRouter();
 
+
     function handleRegisterButton(event) {
         fullNameHandle()
+        const username = EmailAddress.split('@')[0]
+        console.log(EmailAddress, "   asdas")
         console.log("registering..");
-        const resp = register({ EmailAddress }, {Password}, "sidm99", {Type}, 0, "this is about", {fullName})
+        const resp = register(EmailAddress, Password, username, Type, 0, "this is about", fullName)
 
     }
 

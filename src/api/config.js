@@ -15,14 +15,14 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export const JSONClient = axios.create({
-    baseURL: process.env.NEXT_APP_API_URL,
+    baseURL: process.env.NEXT_SERVER_TEST_1,
     headers: {
         "Content-Type": "application/json"
     }
 })
 
 export const FormClient = axios.create({
-    baseURL: process.env.NEXT_APP_API_URL,
+    baseURL: process.env.NEXT_SERVER_TEST_1,
     headers: {
         "Content-Type": "multipart/form-data"
     }

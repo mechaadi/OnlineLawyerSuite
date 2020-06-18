@@ -4,18 +4,25 @@ import ProfileCard from '../Components/Profile/Profile.js';
 import Button from '../Components/Buttons/Button';
 import Input from '../Components/Inputs/Input';
 import Settings from '../Components/Settings/Settings';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {getUser, updateProfile} from "../api/user"
-import {uploadProfilePicture} from "../api/file"
+import {uploadProfilePicture, getProfilePicture} from "../api/file"
+
 const Profile = () => {
 
-    getUser();
+    const [profilePicUrl, setprofilePicUrl] = useState("")
+
+    useEffect(()=>{
+        getUser();
+        const profilePicUrl = "http://172.105.153.11/uplaw/files/"+ getProfilePicture()
+        setprofilePicUrl(profilePicUrl)
+        console.log(profilePicUrl)
+    }, [])
     
 
     const profilePicListener = (e)=>{
         const doc = document.getElementById("profilePic")
         uploadProfilePicture(doc.files[0])
-        
     }
 
 
@@ -83,7 +90,7 @@ const Profile = () => {
                 <div className={styles.container}>
                     <div className={styles.left_profile_container}>
 
-                        <ProfileCard />
+                        <ProfileCard image={profilePicUrl}/>
 
                         <div className={styles.left_profile_button}>
                             <Button name="Edit Picture" />

@@ -16,7 +16,7 @@ const Login = () => {
 
     const router = useRouter()
     function handleLoginButton(event) {
-        login({Email}, {Password})
+        login(Email, Password)
     }
 
     function handleRegisterButton(event) {
