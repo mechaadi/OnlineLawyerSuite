@@ -6,16 +6,39 @@ import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import { useRouter } from "next/router"
 import { login } from "../api/user"
+import { useState, useEffect } from 'react';
 
 const Login = () => {
+
+    const [Email, setEmail] = useState('');
+
+    const [Password, setPassword] = useState('');
+
     const router = useRouter()
     function handleLoginButton(event) {
-        login("sidm99@gmail.com", "asudoasudo")
+        login({Email}, {Password})
     }
 
     function handleRegisterButton(event) {
         router.push('/Register')
     }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value)
+        console.log(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+        console.log(e.target.value);
+    }
+
+    // useEffect(() => {
+    //     return () => {
+    //         {Email}
+    //     }
+    // }, )
+
     return (
         <div>
             <style jsx global>{`
@@ -49,10 +72,10 @@ const Login = () => {
                             <div className={login_styles.formc}>
 
                                 <div className={login_styles.border}>
-                                    <Input placeholder="Email Address" autoComplete={true} type="email" />
+                                    <Input placeholder="Email Address" onChange={handleEmailChange} autoComplete={true} type="email" />
                                 </div>
                                 <div className={login_styles.border}>
-                                    <Input placeholder="Enter Password" autoComplete={false} type="password" />
+                                    <Input placeholder="Enter Password" onChange={handlePasswordChange} autoComplete={false} type="password" />
                                 </div>
 
                             </div>
