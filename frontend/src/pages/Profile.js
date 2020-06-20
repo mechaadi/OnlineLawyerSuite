@@ -19,17 +19,15 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    return async () => {
-      const userDetails = await getUser();
-      console.log(userDetails);
-      getLawyers();
-      setUser(userDetails);
-      try{
-      const profilePicUrl =
-        process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
-      setprofilePicUrl(profilePicUrl);
-      }catch(e){}
-    };
+    async function fetchData(){
+        const userDetails = await getUser();
+        console.log(userDetails, " here");
+        setUser(userDetails);
+        const profilePicUrl =
+          process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
+        setprofilePicUrl(profilePicUrl);
+    }
+    fetchData();
   }, []);
 
   const profilePicListener = (e) => {

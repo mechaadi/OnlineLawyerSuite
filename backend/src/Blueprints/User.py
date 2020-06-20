@@ -7,6 +7,7 @@ from functools import wraps
 from secrets import token_urlsafe
 import bcrypt
 from src.Middlewares.AuthMiddleware import *
+from flask import jsonify
 
 user_bp = Blueprint('user', __name__, url_prefix='/user')
 
@@ -95,6 +96,6 @@ def login_user():
     if user is not None:
         if bcrypt.checkpw(password.encode('utf-8'), user.password.__str__().encode('utf-8')):
             token = create_token(user)
-            return respond(token, 201)
+            return jsonify({'data': {'token': token, 'user': user.to_dict()}, 'status': 201})
         else:
             return respond_error("UNAUTHORIZED", 401)

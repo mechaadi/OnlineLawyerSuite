@@ -12,10 +12,13 @@ export const login = async function(email, password) {
             password: password,
         })
         if (response.data.status) {
-            localStorage.setItem("token", response.data.data)
+            localStorage.setItem("token", response.data.data.token)
+            localStorage.setItem("user", JSON.stringify(response.data.data.user))
         }
+
         return response.data
     } catch (e) {
+        console.log(e)
         if (e.response.status === 401) {
             return e.response
         }
@@ -41,6 +44,7 @@ export const register = async(email, password, username, user_type, premium, pro
 
 export const getUser = async() => {
     const userData = localStorage.getItem("user")
+    console.log(userData)
     return JSON.parse(userData)
 }
 
