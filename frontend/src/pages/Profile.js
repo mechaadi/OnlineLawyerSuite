@@ -5,7 +5,7 @@ import ProfileCard from "../Components/Profile/Profile.js";
 import Button from "../Components/Buttons/Button";
 import Input from "../Components/Inputs/Input";
 import Settings from "../Components/Settings/Settings";
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
 import { getLawyers } from "../api/lawyers";
@@ -18,16 +18,18 @@ const Profile = () => {
     about: ""
   });
 
-  useEffect(async () => {
-    const userDetails = await getUser();
-    console.log(userDetails);
-    getLawyers();
-    setUser(userDetails);
-    const profilePicUrl =
-      process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
-    setprofilePicUrl(profilePicUrl);
-    console.log(profilePicUrl);
-  }, []);
+  useEffect(() => {
+    return async () => {
+      const userDetails = await getUser();
+      console.log(userDetails);
+      getLawyers();
+      setUser(userDetails);
+      const profilePicUrl =
+        process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
+      setprofilePicUrl(profilePicUrl);
+      console.log(profilePicUrl);
+    }
+  }, [])
 
   const profilePicListener = (e) => {
     const doc = document.getElementById("profilePic");
