@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import register_styles from './css/register.module.css';
 import React from 'react'
 import Button from '../Components/Buttons/Button';
@@ -59,14 +60,7 @@ const Register = () => {
 
 
     return (
-        <div>
-            <style jsx global>{`
-      body {
-        margin: 0;
-        height: 100%;
-        background: #e5e5e5;
-      }
-    `}</style>
+        <div style={{ background: "#e5e5e5" }}>
             <div className={app.navbarhandler}>
                 <Nav />
             </div>
@@ -107,8 +101,8 @@ const Register = () => {
                             </div>
                             <div className={register_styles.buttons}>
                                 {/*<Link to="/Lawyer"> */}
-                                    <Button function={handleRegisterButton} name="Register" />
-                               {/*  </Link>  */}
+                                <Button function={handleRegisterButton} name="Register" />
+                                {/*  </Link>  */}
                                 <Link to="/Login">
                                     <Button function={handleLoginButton} name="Login" />
                                 </Link>

@@ -38,7 +38,7 @@ const Lawyer_Search = () => {
                         <div className={styles.search_bar}>
                             <Input placeholder="Search For Lawyers ..." />
                             <div className={styles.search_icon_container}>
-                                <img src="https://cdn.discordapp.com/attachments/715197944202002584/716624918674145280/icons8-search-96.png" style={{ height: "90%", width: "90%", objectFit: "cover" }}/>
+                                <img alt="" src="https://cdn.discordapp.com/attachments/715197944202002584/716624918674145280/icons8-search-96.png" style={{ height: "90%", width: "90%", objectFit: "cover" }}/>
                             </div>
                         </div>
 

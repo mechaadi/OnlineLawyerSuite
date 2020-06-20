@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import login_styles from './css/login.module.css';
 import Button from '../Components/Buttons/Button';
@@ -40,12 +41,7 @@ const Login = () => {
     // }, )
 
     return (
-        <div>
-            <style jsx global>{`
-      body {
-        background: #e5e5e5;
-      }
-    `}</style>
+        <div style = {{ background: "#e5e5e5" }}>
             <div className={app.navbarhandler}>
                 <Nav />
             </div>

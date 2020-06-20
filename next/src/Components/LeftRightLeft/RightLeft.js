@@ -6,7 +6,7 @@ export default function App(props) {
       <div className={rightleft.Main}>
 
         <div className={rightleft.left_box}>
-          <img src={props.img} className={rightleft.image} />
+          <img src={props.img} alt="" className={rightleft.image} />
         </div>
         <div className={rightleft.right_box}>
           <div className={rightleft.h1_heading}>{props.title}</div>

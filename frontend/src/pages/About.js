@@ -24,7 +24,7 @@ function About() {
 
                 </div>
                 <div className={app.section}>
-                    <LeftRight title="ShortList" desc="We had hand-picked some of the best Lawyers, you can browse through the website and shortlist few according to your legal need, city, and specialization." img="https://cdn.discordapp.com/attachments/631529399203921962/715069452299010119/Scrutinize.jpg" />
+                    <LeftRight title="ShortList" desc="We had hand-picked some of the best Lawyers, you can browse through the website and shortlist few according to your legal need, city, and specialization." img="https://cdn.discordapp.com/attachments/631529399203921962/715069452299010119/Scrutinize.jpg"  alt = "AOIh"/>
                 </div>
                 <div className={app.specialSection}>
                     <div className={app.section}>
@@ -33,7 +33,7 @@ function About() {
                 </div>
                 <div className={app.section}>
                     <LeftRight title="Select" desc="Once you’re done analysing, you can select and hire the best lawyer in your area ensuring a seamless experience.
-                    " img="https://cdn.discordapp.com/attachments/715197944202002584/715197974288007178/Untitled.png" />
+                    " img="https://cdn.discordapp.com/attachments/715197944202002584/715197974288007178/Untitled.png" alt={"wefiu"}/>
                 </div>
                 <div className={app.section}>
                     <Testimonials />

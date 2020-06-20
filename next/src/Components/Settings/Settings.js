@@ -14,13 +14,13 @@ const Settings = (props) => {
 
         <div onMouseEnter = {hoverHandle} onMouseLeave = {hoverHandle} className={styles.settings_menu}>
             <div className={styles.img_container}>
-                    <img className={styles.img_arrow} src={props.img}/>
+                    <img alt="" className={styles.img_arrow} src={props.img}/>
             </div>
             <div className={styles.desc}>
                 {props.describe}
         </div>
             <div className={styles.img_container}>
-                    <img className={styles.img_arrow} src={props.Arrow} />
+                    <img  alt=""className={styles.img_arrow} src={props.Arrow} />
             </div>
         </div>
 
