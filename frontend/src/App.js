@@ -31,10 +31,10 @@ function App() {
           <Route path="/Register">
             <Register />
           </Route>
-          <Route path="/Lawyer">
+          <Route path="/Lawyer/:id">
             <Lawyer />
           </Route>
-          <Route path="/Lawyer_Search">
+          <Route path="/Lawyers">
             <Lawyer_Search />
           </Route>
           <Route path="/Pricing">

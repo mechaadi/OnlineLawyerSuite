@@ -8,7 +8,6 @@ import Settings from "../Components/Settings/Settings";
 import React, { useState, useEffect } from "react";
 import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
-import { getLawyers } from "../api/lawyers";
 
 const Profile = () => {
   const [profilePicUrl, setprofilePicUrl] = useState("");
@@ -19,13 +18,12 @@ const Profile = () => {
   });
 
   useEffect(() => {
-    async function fetchData(){
-        const userDetails = await getUser();
-        console.log(userDetails, " here");
-        setUser(userDetails);
-        const profilePicUrl =
-          process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
-        setprofilePicUrl(profilePicUrl);
+    async function fetchData() {
+      const userDetails = await getUser();
+      setUser(userDetails);
+      const profilePicUrl =
+        process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
+      setprofilePicUrl(profilePicUrl);
     }
     fetchData();
   }, []);

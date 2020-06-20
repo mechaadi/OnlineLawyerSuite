@@ -9,14 +9,6 @@ import Input from '../Components/Inputs/Input.js';
 const Lawyer_Search = () => {
     return (
         <div>
-            <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          width: 100%;
-        }
-      `}</style>
             <div className={styles.navbarhandler}>
                 <Nav />
             </div>
