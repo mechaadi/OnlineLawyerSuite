@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import footer from "./footer.module.css";
 import React from 'react'
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div>
     <div className={footer.App}>
@@ -18,7 +18,7 @@ const Footer = () => {
       <div className={footer.left  + ' ' +  footer.right}>
         <ul className={footer.list}>
           <li className={footer.li}>Help Desk</li>
-          <li className={footer.li}>Contact</li>
+          <li onClick={props.onContactClick} className={footer.li}>Contact</li>
           <li className={footer.li}>Resources</li>
         </ul>
       </div>
