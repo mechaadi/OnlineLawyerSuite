@@ -1,0 +1,8 @@
+flask
+peewee
+mysql
+mysql-connector
+python-dotenv
+gunicorn
+redis
+bcrypt
