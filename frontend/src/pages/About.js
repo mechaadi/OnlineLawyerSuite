@@ -11,11 +11,6 @@ import Testimonials from '../Components/Testimonials/Testimonials.js';
 function About() {
     return (
         <div>
-            <style jsx global>{`
-      body {
-        margin: 0
-      }
-    `}</style>
 
             <div className={app.body}>
                 <div className={app.navbarhandler}>

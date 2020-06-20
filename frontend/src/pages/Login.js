@@ -43,8 +43,6 @@ const Login = () => {
         <div>
             <style jsx global>{`
       body {
-        margin: 0;
-        height: 100%;
         background: #e5e5e5;
       }
     `}</style>
