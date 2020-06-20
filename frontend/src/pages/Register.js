@@ -7,7 +7,7 @@ import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import { register } from "../api/user"
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Register = () => {
 
@@ -17,6 +17,10 @@ const Register = () => {
     const [Password, setPassword] = useState();
     const [fullName, setFullName] = useState()
     const [Type, setType] = useState(1);
+    const [error, setError] = useState("")
+    const [registerState, setRegisterState] = useState("Register");
+
+    const history = useHistory()
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
@@ -38,21 +42,58 @@ const Register = () => {
             setType(0)
     }
 
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    function validatePassword(password) {
+        var re = /[a-z]\d|\d[a-z]/i;
+        return re.test(password) && password.length > 8;
+    }
+
     const fullNameHandle = () => {
         var fullName = (FirstName + " " + LastName)
         setFullName(fullName);
         console.log(fullName);
     }
 
-    // const router = useRouter();
 
-
-    function handleRegisterButton(event) {
+    // register logic
+    async function handleRegisterButton(event) {
+        setError("")
+        setRegisterState("Wait...")
+        var validator = 1;
         fullNameHandle()
-        const username = EmailAddress.split('@')[0]
-        console.log(EmailAddress, "   asdas")
-        console.log("registering..", fullName, Type);
-        const resp = register(EmailAddress, Password, username, Type, 0,"" ,"this is about", FirstName + " " + LastName)
+        if (!validateEmail(EmailAddress)) {
+            setError(e => [e + "Email address not valid <br/>"])
+            validator = 0;
+
+        }
+        if (!validatePassword(Password)) {
+            setError(e => [e + "Password needs to be 8 chars long and should consist atleast one number"])
+            validator = 0;
+
+        }
+        if (FirstName === "" || FirstName === null || FirstName === undefined) {
+            setError(e => [e + "First Name is mandatory"])
+            validator = 0;
+        }
+
+        if (validator === 1) {
+            const username = EmailAddress.split('@')[0]
+            const resp = await register(EmailAddress, Password, username, Type, 0, "", "", FirstName + " " + LastName)
+            if (resp.status === 201) {
+                history.push('/login')
+            } else {
+                setError("Something went wrong.")
+            }
+        }
+        else {
+            setRegisterState("Register")
+        }
+
+
 
     }
 
@@ -60,9 +101,8 @@ const Register = () => {
         // router.push('/Login')
     }
 
-    useState(()=>{
+    useState(() => {
         setType(0)
-        console.log(Type)
     }, [])
 
 
@@ -107,9 +147,13 @@ const Register = () => {
                                 </div>
 
                             </div>
+                            <div style={{ display: 'flex', width: '100%' }}>
+                                <p style={{ margin: 10, color: 'red' }} dangerouslySetInnerHTML={{ __html: error }}></p>
+
+                            </div>
                             <div className={register_styles.buttons}>
                                 {/*<Link to="/Lawyer"> */}
-                                <Button function={handleRegisterButton} name="Register" />
+                                <Button function={handleRegisterButton} name={registerState} />
                                 {/*  </Link>  */}
                                 <Link to="/Login">
                                     <Button function={handleLoginButton} name="Login" />
