@@ -10,4 +10,4 @@ This directory contains the Flask APP (the rest API)
 This directory contains the firebase config and hosting files (the frontend is hosted on firebase)
 
 ### NEXT
-This directory contains the 1st version of this app (SSR BASED)
+This directory contains the 1st version of this app (SSR BASED).
