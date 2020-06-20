@@ -15,7 +15,7 @@ const Profile = () => {
   const [user, setUser] = useState({
     email: "",
     name: "",
-    about: ""
+    about: "",
   });
 
   useEffect(() => {
@@ -24,12 +24,13 @@ const Profile = () => {
       console.log(userDetails);
       getLawyers();
       setUser(userDetails);
+      try{
       const profilePicUrl =
         process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
       setprofilePicUrl(profilePicUrl);
-      console.log(profilePicUrl);
-    }
-  }, [])
+      }catch(e){}
+    };
+  }, []);
 
   const profilePicListener = (e) => {
     const doc = document.getElementById("profilePic");
@@ -129,7 +130,7 @@ const Profile = () => {
                 id="profilePic"
                 type="file"
               />
-              <div class={styles.left_profile_button}>
+              <div className={styles.left_profile_button}>
                 <Button name="Upload" function={profilePicListener}>
                   Upload
                 </Button>

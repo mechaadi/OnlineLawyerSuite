@@ -1,12 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import nav from "./navbar.module.css";
-import Button from '../Buttons/Button'
-import Input from '../Inputs/Input.js';
-import { Link } from "react-router-dom";
-export default function Navbar() {
+import Button from "../Buttons/Button";
+import Input from "../Inputs/Input.js";
+import { Link, useHistory } from "react-router-dom";
 
+export default function Navbar() {
   const [state, setstate] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+
+  const history = useHistory();
 
   const toogle = () => {
     setstate(!state);
@@ -14,32 +18,62 @@ export default function Navbar() {
     console.log(state);
   };
 
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setLoggedIn(true);
+    } else {
+      setLoggedIn(false);
+    }
+  }, []);
+
+  const handleLogout = ()=>{
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    history.push("/Login")
+  }
+
   return (
     <div className={nav.nav}>
-      <Link to="/" >
+      <Link to="/">
         <div className={nav.logo}>
-          <img src={require('../../assets/images/uplawwhite.png')} height={60} />
+          <img
+            src={require("../../assets/images/uplawwhite.png")}
+            height={60}
+          />
         </div>
       </Link>
       <div className={nav.ab}>
         <ul className={nav.items}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <li className={nav.li}> Features </li>
           </Link>
-          <Link to="/Pricing" style={{ textDecoration: 'none', color: 'black' }}>
+          <Link
+            to="/Pricing"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <li className={nav.li}> Pricing </li>
           </Link>
-
         </ul>
         <Input placeholder="Search" />
-        <ul className={nav.navbuttons}>
-          <Link to="/Login">
-            <Button name="Login"></Button>
-          </Link>
-          <Link to="/Register">
-            <Button name="Register"></Button>
-          </Link>
-        </ul>
+
+        {!loggedIn && (
+          <ul className={nav.navbuttons}>
+            <Link to="/Login">
+              <Button name="Login"></Button>
+            </Link>
+            <Link to="/Register">
+              <Button name="Register"></Button>
+            </Link>
+          </ul>
+        )}
+        {loggedIn && (
+          <ul className={nav.navbuttons}>
+            <Link to="/Profile">
+              <Button name="Profile"></Button>
+            </Link>
+            <Button function={handleLogout} name="Logout"></Button>
+          </ul>
+        )}
       </div>
       <div className={nav.toggler} onClick={toogle}>
         <img
