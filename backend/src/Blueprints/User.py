@@ -82,7 +82,7 @@ def update_profile(username):
 
 @user_bp.route('/lawyers', methods=['GET'])
 def get_lawyers():
-    user = User.select().where(User.user_type==0)
+    user = User.select().where(User.user_type==1)
     user = [u.to_dict() for u in user]
     return respond(user, 201)
 
