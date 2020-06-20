@@ -53,6 +53,12 @@ export default function Navbar() {
           >
             <li className={nav.li}> Pricing </li>
           </Link>
+          <Link
+            to="/lawyers"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <li className={nav.li}> Lawyers </li>
+          </Link>
         </ul>
         <Input placeholder="Search" />
 

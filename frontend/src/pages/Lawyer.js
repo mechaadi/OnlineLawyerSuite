@@ -8,28 +8,26 @@ import Comment from "../Components/Comment/Comment";
 import Cases from "../Components/Cases/Cases";
 import Profile from "../Components/Profile/Profile";
 import { useLocation } from "react-router-dom";
-import {getLawyerByUsername} from "../api/lawyers"
+import { getLawyerByUsername } from "../api/lawyers";
 
 const Lawyer = (props) => {
   const location = useLocation();
   const [lawyer, setLawyer] = useState({
-    name:"",
+    name: "",
     profile_picture: "",
-    about: ""
-  })
+    about: "",
+  });
 
   useEffect(() => {
     console.log(location.state);
-    async function getLawyerDetails(){
-      const lawyerDetails = await getLawyerByUsername(location.state)
-      setLawyer(lawyerDetails.data)
+    async function getLawyerDetails() {
+      const lawyerDetails = await getLawyerByUsername(location.state);
+      setLawyer(lawyerDetails.data);
     }
 
     getLawyerDetails();
   }, [location]);
 
-
-  
   return (
     <div>
       <div className={app.navbarhandler}>
@@ -46,7 +44,11 @@ const Lawyer = (props) => {
             </div>
             <div className={styles.lawyer_profile + " " + styles.flex_center}>
               <Profile
-                image={process.env.REACT_APP_API_URL+ "/files/"+lawyer.profile_picture}
+                image={
+                  process.env.REACT_APP_API_URL +
+                  "/files/" +
+                  lawyer.profile_picture
+                }
                 name={lawyer.name}
                 type=""
                 about={lawyer.about}

@@ -5,7 +5,7 @@ const Profile = (props) => {
     return (
         <div className={styles.lawyer_profile_container}>
             <div className={styles.lawyer_profile_picture_container}>
-                <img src={props.image} className={styles.lawyer_profile_picture} />
+                <img alt="" src={props.image} className={styles.lawyer_profile_picture} />
             </div>
             <div className={styles.lawyer_profile_name}>
                 {props.name}
