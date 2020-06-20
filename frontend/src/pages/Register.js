@@ -15,7 +15,7 @@ const Register = () => {
     const [EmailAddress, setEmailAddress] = useState();
     const [Password, setPassword] = useState();
     const [fullName, setfullName] = useState()
-    const [Type, setType] = useState('User');
+    const [Type, setType] = useState(0);
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
@@ -30,8 +30,8 @@ const Register = () => {
         setPassword(e.target.value);
     }
     const handleType = (e) => {
-        setType(e.target.value);
-        console.log(e.target.value);
+        (e.target.value === "Lawyer") ? (setType(1)) : (setType(0));
+        console.log(Type);
     }
 
     const fullNameHandle = () => {
