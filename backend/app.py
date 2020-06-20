@@ -6,8 +6,11 @@ from src.Blueprints.File import file_bp
 from src.Blueprints.Cases import case_bp
 from src.Blueprints.Reviews import review_bp
 from src.db import db
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 app.register_blueprint(post_bp)
 app.register_blueprint(user_bp)

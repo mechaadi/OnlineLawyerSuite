@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, g, request, send_file
-from src.model import Post, File
+from src.model import Post, File, User
 from src.db import db
 from src.Middlewares.AuthMiddleware import *
 from werkzeug.utils import secure_filename
@@ -38,6 +38,36 @@ def _upload_image():
         file.save(os.path.join(os.environ["UPLOAD_DIR"], db_file.unique_id))
         result.append(db_file.to_dict())
 
+    print(result, flush=True)
+    return respond(result, 201)
+
+@file_bp.route('/profilePic', methods=['POST'])
+@check_auth
+def _upload_profile_pic():
+    print("profile pic", flush=True)
+    data = request.files.getlist("file[]")
+    for file in data:
+        if file.filename == "":
+            return respond_error("No filename uploaded", 400)
+        filename = secure_filename(file.filename)
+        extension = filename.split(".")[-1]
+        if extension not in ALLOWED_EXTENSIONS:
+            return respond_error(f"{extension} not allowed", 400)
+    result = []
+
+    for file in data:
+        filename = secure_filename(file.filename)
+        db_file = File(filename=filename, owner=g.user.id)
+        db_file.save()
+        file.save(os.path.join(os.environ["UPLOAD_DIR"], db_file.unique_id))
+        result.append(db_file.to_dict())
+
+    print(result[0], flush=True)
+    user = User.get_or_none(User.id == g.user.id)
+    if user is not None:
+        user.profile_picture = result[0]['unique_id']
+        user.save()
+    print(result, flush=True)
     return respond(result, 201)
 
 

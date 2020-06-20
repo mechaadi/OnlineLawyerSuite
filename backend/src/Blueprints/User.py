@@ -29,6 +29,7 @@ def respond_error(msg, code):
 @user_bp.route('/register', methods=['POST'])
 def register_user():
     body = request.json
+    print(body, flush=True)
     name = body['name']
     email = body['email']
     username = body['username']
@@ -36,6 +37,7 @@ def register_user():
     password = body['password']
     user_type = body['user_type']
     about = body["about"]
+    print(password, flush=True)
     password_encoded = password.encode('utf-8')
     hashed_password = bcrypt.hashpw(password_encoded, bcrypt.gensalt(12))
 
@@ -58,6 +60,13 @@ def get_user_by_username(username):
     else:
         return respond_error("No user found", 404)
 
+
+@user_bp.route('/lawyers', methods=['GET'])
+def get_lawyers():
+    user = User.select().where(User.user_type==0)
+    user = [u.to_dict() for u in user]
+    print(user,"ok", flush=True)
+    return respond(user, 201)
 
 @user_bp.route('/login', methods=['POST'])
 def login_user():

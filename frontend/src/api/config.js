@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = "https://172.105.153.11/uplaw"
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 if (process.env.NODE_ENV === "development") {
     axios.interceptors.request.use(request => {
@@ -15,14 +15,14 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export const JSONClient = axios.create({
-    baseURL: process.env.NEXT_SERVER_TEST_1,
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         "Content-Type": "application/json"
     }
 })
 
 export const FormClient = axios.create({
-    baseURL: process.env.NEXT_SERVER_TEST_1,
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         "Content-Type": "multipart/form-data"
     }
