@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './css/profile.module.css';
 import Nav from '../Components/Navbar/Navbar';
 import ProfileCard from '../Components/Profile/Profile.js';

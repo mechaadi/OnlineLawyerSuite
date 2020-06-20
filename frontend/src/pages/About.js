@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import app from './css/app.module.css';
 import Navbar from '../Components/Navbar/Navbar.js'
 import Footer from '../Components/Footer/Footer';
@@ -11,11 +11,6 @@ import Testimonials from '../Components/Testimonials/Testimonials.js';
 function About() {
     return (
         <div>
-            <style jsx global>{`
-      body {
-        margin: 0
-      }
-    `}</style>
 
             <div className={app.body}>
                 <div className={app.navbarhandler}>
@@ -29,7 +24,7 @@ function About() {
 
                 </div>
                 <div className={app.section}>
-                    <LeftRight title="ShortList" desc="We had hand-picked some of the best Lawyers, you can browse through the website and shortlist few according to your legal need, city, and specialization." img = "https://cdn.discordapp.com/attachments/631529399203921962/715069452299010119/Scrutinize.jpg"/>
+                    <LeftRight title="ShortList" desc="We had hand-picked some of the best Lawyers, you can browse through the website and shortlist few according to your legal need, city, and specialization." img="https://cdn.discordapp.com/attachments/631529399203921962/715069452299010119/Scrutinize.jpg" />
                 </div>
                 <div className={app.specialSection}>
                     <div className={app.section}>

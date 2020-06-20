@@ -4,6 +4,7 @@ import './App.css';
 import About from './pages/About';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Profile from './pages/Profile';
 import Pricing from './pages/Pricing';
 import Lawyer from './pages/Lawyer';
 import Lawyer_Search from './pages/Lawyer_Search';
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/Pricing">
             <Pricing />
+          </Route>
+          <Route path="/Profile">
+            <Profile />
           </Route>
         </Switch>
 

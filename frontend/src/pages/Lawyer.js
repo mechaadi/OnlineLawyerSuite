@@ -9,13 +9,6 @@ import Profile from '../Components/Profile/Profile';
 const Lawyer = () => {
     return (
         <div>
-            <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-        }
-      `}</style>
             <div className={app.navbarhandler}>
                 <Nav />
             </div>

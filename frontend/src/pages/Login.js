@@ -14,8 +14,9 @@ const Login = () => {
     const [Password, setPassword] = useState('');
 
     // const router = useRouter()
-    function handleLoginButton(event) {
-        login(Email, Password)
+    function handleLoginButton() {
+        login(Email, Password);
+        console.log("I called");
     }
 
     function handleRegisterButton(event) {
@@ -42,8 +43,6 @@ const Login = () => {
         <div>
             <style jsx global>{`
       body {
-        margin: 0;
-        height: 100%;
         background: #e5e5e5;
       }
     `}</style>
@@ -79,12 +78,12 @@ const Login = () => {
 
                             </div>
                             <div className={login_styles.buttons}>
-                                <Link to="/Profile" >
-                                    <Button onClick={handleLoginButton} name="Login" />
-                                </Link>
-                                <Link to="/Register">
-                                    <Button onClick={handleRegisterButton} name="Register" />
-                                </Link>
+                                {/* <Link to="/Lawyer" > */}
+                                <Button function={handleLoginButton} name="Login" />
+                                {/*  </Link> */}
+                                {/* <Link to="/Register">*/}
+                                <Button function={handleRegisterButton} name="Register" />
+                                {/*  </Link> */}
                             </div>
                         </div>
                     </div>
@@ -93,10 +92,9 @@ const Login = () => {
                             <div className={login_styles.mem_text}>Enjoy our exclusive service with uplaw Premium with high prioritiy acess and other benifits  </div>
                         </div>
                         <div className={login_styles.mem_right}>
-                            <Link to="/" >
-                                <Button name="Join Today" />
-                            </Link>
-
+                            {/* <Link to="/" > */}
+                            <Button name="Join Today" />
+                            {/*  </Link>  */}
 
                         </div>
                     </div>

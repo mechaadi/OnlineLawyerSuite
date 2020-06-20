@@ -10,7 +10,8 @@
     border-radius: 25px;
     border: 1px solid;
     background-color: #f1f1f1;
-    padding: 5px;
+    padding: 8px;
+    transition: 0.3s;
   }
   .image_container {
     height: 100%;
@@ -18,12 +19,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 2px;
+    margin-left: 10px;
   }
   .image {
     width: 80%;
     height: 15px;
+    transition: 0.3s;
+  }
+  .filter_selected:hover{
+    transform: scale(1.02);
+    box-shadow: 2px 2px 10px rgb(195, 195, 195);
   }
   .image:hover {
-    opacity: 0.9;
+    transform: scale(1.1);
+    background-color: red;
+    border-radius: 50%;
+    padding: 3px;
   }
