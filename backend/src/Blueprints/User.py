@@ -51,11 +51,10 @@ def register_user():
             return respond_error(str(e), 500)
 
 
-@user_bp.route("/<username>", methods=['GET'])
+@user_bp.route("/lawyers/<username>", methods=['GET'])
 @check_auth
 def get_user_by_username(username):
     user = User.get_or_none(User.username == username)
-    print(user)
     if user is not None:
         return respond(user.to_dict(), 201)
     else:

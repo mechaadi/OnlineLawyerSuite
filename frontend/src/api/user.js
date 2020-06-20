@@ -85,6 +85,4 @@ export const updateProfileData = async(about, name) => {
         }
     })
     localStorage.setItem("user", JSON.stringify(resp.data.data))
-
-    console.log(resp)
 }

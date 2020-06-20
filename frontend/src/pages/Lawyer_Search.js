@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styles from "./css/lawyerSearch.module.css";
 import React, { useEffect, useState } from "react";
+import {useHistory} from 'react-router-dom'
 import Nav from "../Components/Navbar/Navbar.js";
 import Chips from "../Components/Chips/Chips";
 import Card from "../Components/Card/Card";
@@ -9,6 +10,9 @@ import Input from "../Components/Inputs/Input.js";
 import { getLawyers } from "../api/lawyers";
 
 const Lawyer_Search = () => {
+
+  const history = useHistory()
+
   const [lawyers, setLawyers] = useState([]);
   useEffect(() => {
     async function loadLawyers() {
@@ -19,6 +23,10 @@ const Lawyer_Search = () => {
 
     loadLawyers();
   }, []);
+
+  const handleLawyerCardClick = (e)=>{
+      history.push({pathname: `/lawyer/${e}`, state: e})
+  }
 
   return (
     <div>
@@ -55,7 +63,7 @@ const Lawyer_Search = () => {
             </div>
             <div className={styles.lawyer_search_items}>
               {lawyers.map((lawyer, i) => (
-                <Card key={i} price="69" image={lawyer.profile_picture} name={lawyer.name} total_cases="12" />
+                <Card key={lawyer.id} click={handleLawyerCardClick} id={lawyer.id} username={lawyer.username} price="69" image={lawyer.profile_picture} name={lawyer.name} total_cases="12" />
               ))}
             </div>
           </div>

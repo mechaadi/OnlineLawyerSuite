@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './card.module.css'
 const Card = (props) => {
     return (
-        <div className={styles.lawyer_items_card}>
+        <div onClick={()=>{props.click(props.username)}} className={styles.lawyer_items_card}>
             <div className={styles.items_card_price_container}>
                 <div className={styles.items_card_price}>
                     ₹{props.price}
