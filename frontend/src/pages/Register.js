@@ -16,7 +16,7 @@ const Register = () => {
     const [EmailAddress, setEmailAddress] = useState();
     const [Password, setPassword] = useState();
     const [fullName, setfullName] = useState()
-    const [Type, setType] = useState(0);
+    const [Type, setType] = useState(1);
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
@@ -31,8 +31,11 @@ const Register = () => {
         setPassword(e.target.value);
     }
     const handleType = (e) => {
-        (e.target.value === "Lawyer") ? (setType(1)) : (setType(0));
-        console.log(Type);
+        console.log(Type, e.target.value);
+        if (e.target.value == "Lawyer")
+            setType(1)
+        else
+            setType(0)
     }
 
     const fullNameHandle = () => {
@@ -48,14 +51,19 @@ const Register = () => {
         fullNameHandle()
         const username = EmailAddress.split('@')[0]
         console.log(EmailAddress, "   asdas")
-        console.log("registering..", fullName);
-        const resp = register(EmailAddress, Password, username, Type, 0, "this is about", FirstName + " " + LastName)
+        console.log("registering..", fullName, Type);
+        const resp = register(EmailAddress, Password, username, Type, 0,"" ,"this is about", FirstName + " " + LastName)
 
     }
 
     function handleLoginButton(event) {
         // router.push('/Login')
     }
+
+    useState(()=>{
+        setType(0)
+        console.log(Type)
+    }, [])
 
 
 

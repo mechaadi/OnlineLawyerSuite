@@ -10,11 +10,14 @@ export const login = async function(email, password) {
         email: email,
         password: password,
     })
-    console.log(response.data)
-    localStorage.setItem("token", response.data.data)
+    if (response.data.data) {
+        window.location.href = "/profile"
+        localStorage.setItem("token", response.data.data)
+
+    }
 }
 
-export const register = async(email, password, username, profile_picture, user_type, about, name) => {
+export const register = async(email, password, username, user_type, premium, profile_picture, about, name) => {
     console.log(name)
     const resp = await JSONClient.post("/user/register", {
         email: email,
@@ -33,7 +36,7 @@ export const register = async(email, password, username, profile_picture, user_t
 
 export const getUser = async() => {
     const userData = localStorage.getItem("user")
-    console.log(JSON.parse(userData))
+    return JSON.parse(userData)
 }
 
 export const updateProfile = async() => {

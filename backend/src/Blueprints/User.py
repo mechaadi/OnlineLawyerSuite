@@ -65,7 +65,6 @@ def get_user_by_username(username):
 def get_lawyers():
     user = User.select().where(User.user_type==0)
     user = [u.to_dict() for u in user]
-    print(user,"ok", flush=True)
     return respond(user, 201)
 
 @user_bp.route('/login', methods=['POST'])

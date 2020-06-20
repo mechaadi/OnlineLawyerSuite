@@ -10,6 +10,7 @@ export const uploadProfilePicture = async function(fileImage) {
         }
     })
     updateProfile();
+    alert("Profile picture saved!!")
     return response.data
 }
 
