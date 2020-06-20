@@ -1,0 +1,106 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  font-family: "Montserrat";
+}
+
+.Main {
+  justify-content: space-evenly;
+  display: flex;
+  margin: 10px;
+  margin-bottom: 25px !important;
+  margin-top: 25px !important;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  box-shadow: -2px 1px 10px #3b3a3b;
+  object-fit: fill;
+  transition: 0.3s;
+  transition: 0.3s;
+  z-index: 500;
+}
+
+.image:hover {
+}
+
+.left_box {
+  align-items: stretch;
+  display: flex;
+  flex: 60%;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 200px;
+  justify-content: center;
+}
+
+.right_box {
+  min-width: 400px;
+  min-height: 200px;
+  display: flex;
+  flex: 40%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.h1_heading {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.description {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1080px) {
+  .right_box {
+    justify-content: center !important;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .right_box {
+    min-height: auto;
+    min-width: 300px;
+  }
+  .left_box {
+    min-width: 200px;
+    min-height: 100px;
+  }
+  .right_box {
+    transform: scale(0.6);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  .right_box {
+    min-height: 200px;
+    min-width: 100%;
+  }
+  .left_box {
+    min-width: 200px;
+    min-height: 100px;
+    justify-content: center;
+  }
+  .description {
+    text-align: justify;
+    margin-left: 0px;
+  }
+  .h1_heading {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+}
