@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
+/* eslint-disable */
 import React from 'react';
 import './App.css';
 import About from './pages/About';

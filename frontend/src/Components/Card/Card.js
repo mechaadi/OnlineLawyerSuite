@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styles from './card.module.css'
 const Card = (props) => {

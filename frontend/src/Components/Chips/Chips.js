@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styles from './chips.module.css';
 const Chips = (props) => {

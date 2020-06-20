@@ -1,3 +1,4 @@
+/* eslint-disable */
 import leftright from "./leftright.module.css";
 import React from 'react'
 export default function App(props) {
@@ -9,7 +10,8 @@ export default function App(props) {
           <div className={leftright.description}>{props.desc}</div>
         </div>
         <div className={leftright.right_box}>
-          <img src={props.img} className={leftright.image} />
+          
+          <img src={props.img} alt = "asd" className={leftright.image} />
         </div>
       </div>
     </div>

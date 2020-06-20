@@ -68,7 +68,7 @@
 .lawyer_reviews_section {
   width: auto;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   margin-top: 50px;
   align-items: stretch;

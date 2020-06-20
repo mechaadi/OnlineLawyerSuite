@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from './profile.module.css'
 import React from 'react'
 const Profile = (props) => {

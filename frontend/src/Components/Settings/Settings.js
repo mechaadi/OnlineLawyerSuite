@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from './settings.module.css';
 import React from 'react'
 import { useState } from 'react';

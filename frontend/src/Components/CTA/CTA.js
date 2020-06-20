@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import styles from './CTA.module.css';
 import LightButton from '../Buttons/LightButton'
 import React from 'react'

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import rightleft from "./rightleft.module.css";
 import React from 'react'
 export default function App(props) {

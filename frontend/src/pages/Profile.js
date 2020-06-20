@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import styles from './css/profile.module.css';
 import Nav from '../Components/Navbar/Navbar';
@@ -76,13 +77,6 @@ const Profile = () => {
 
     return (
         <div>
-            <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-        }
-      `}</style>
             <div className={styles.navbarhandler}>
                 <Nav />
             </div>
