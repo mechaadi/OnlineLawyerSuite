@@ -35,7 +35,6 @@ const Register = () => {
         setPassword(e.target.value);
     }
     const handleType = (e) => {
-        console.log(Type, e.target.value);
         if (e.target.value === "Lawyer")
             setType(1)
         else
@@ -55,7 +54,6 @@ const Register = () => {
     const fullNameHandle = () => {
         var fullName = (FirstName + " " + LastName)
         setFullName(fullName);
-        console.log(fullName);
     }
 
 

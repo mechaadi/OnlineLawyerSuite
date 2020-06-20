@@ -6,16 +6,20 @@ import {
 
 
 export const login = async function(email, password) {
-    const response = await JSONClient.post("/user/login", {
-        email: email,
-        password: password,
-    })
-    if (response.data.data) {
-        // window.location.href = "/profile"
-        localStorage.setItem("token", response.data.data)
-
+    try {
+        const response = await JSONClient.post("/user/login", {
+            email: email,
+            password: password,
+        })
+        if (response.data.status) {
+            localStorage.setItem("token", response.data.data)
+        }
+        return response.data
+    } catch (e) {
+        if (e.response.status === 401) {
+            return e.response
+        }
     }
-    return response.data
 }
 
 export const register = async(email, password, username, user_type, premium, profile_picture, about, name) => {
@@ -69,7 +73,9 @@ export const updateProfileData = async(about, name) => {
         userData.about = about;
     }
 
-    const resp = await JSONClient.post(`/user/update/${userData.username}`, { userData }, {
+    const resp = await JSONClient.post(`/user/update/${userData.username}`, {
+        userData
+    }, {
         headers: {
             Authorization: localStorage.getItem('token')
         }

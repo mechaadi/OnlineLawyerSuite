@@ -97,4 +97,4 @@ def login_user():
             token = create_token(user)
             return respond(token, 201)
         else:
-            return respond_error("UNAUTHORIZED", 404)
+            return respond_error("UNAUTHORIZED", 401)
