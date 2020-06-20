@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import app from './css/app.module.css';
 import Navbar from '../Components/Navbar/Navbar.js'

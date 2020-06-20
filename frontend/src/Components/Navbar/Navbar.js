@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import nav from "./navbar.module.css";
 import Button from '../Buttons/Button'

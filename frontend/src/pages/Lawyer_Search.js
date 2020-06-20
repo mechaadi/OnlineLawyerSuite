@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from './css/lawyerSearch.module.css';
 import React from 'react'
 import Nav from '../Components/Navbar/Navbar.js';

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import footer from "./footer.module.css";
 import React from 'react'
 const Footer = () => {
