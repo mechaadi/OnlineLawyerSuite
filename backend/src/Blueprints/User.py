@@ -61,6 +61,24 @@ def get_user_by_username(username):
         return respond_error("No user found", 404)
 
 
+@user_bp.route("/update/<username>", methods=['POST'])
+@check_auth
+def update_profile(username):
+    body = request.json['userData']
+    print(body)
+    user = User.get_or_none(User.username == username)
+    if user is not None:
+        if body['name'] is not "" and body['name'] is not None:
+            user.name = body['name']
+            print("updating name")
+        if body['about'] is not "" and body['about'] is not None:
+            user.about = body['about']
+            print("updating about")
+
+        user.save()
+    return respond(user.to_dict(), 201)
+
+
 @user_bp.route('/lawyers', methods=['GET'])
 def get_lawyers():
     user = User.select().where(User.user_type==0)

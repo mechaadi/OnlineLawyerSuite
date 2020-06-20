@@ -1,6 +1,5 @@
 import {
-    JSONClient,
-    FormClient
+    JSONClient
 } from "./config";
 
 export const getLawyers = async() => {

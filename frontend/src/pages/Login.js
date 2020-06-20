@@ -6,18 +6,23 @@ import Input from '../Components/Inputs/Input';
 import Nav from '../Components/Navbar/Navbar.js'
 import app from './css/app.module.css';
 import { login } from "../api/user"
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
 
 const Login = () => {
     const [Email, setEmail] = useState('');
-
     const [Password, setPassword] = useState('');
 
+    const history = useHistory();
+
     // const router = useRouter()
-    function handleLoginButton() {
-        login(Email, Password);
-        console.log("I called");
+    async function handleLoginButton() {
+        const resp = await login(Email, Password);
+        if(resp.data){
+            history.push("/profile")
+        }
+        
     }
 
     function handleRegisterButton(event) {

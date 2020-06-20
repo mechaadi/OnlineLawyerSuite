@@ -11,10 +11,11 @@ export const login = async function(email, password) {
         password: password,
     })
     if (response.data.data) {
-        window.location.href = "/profile"
+        // window.location.href = "/profile"
         localStorage.setItem("token", response.data.data)
 
     }
+    return response.data
 }
 
 export const register = async(email, password, username, user_type, premium, profile_picture, about, name) => {
@@ -56,4 +57,24 @@ export const updateProfile = async() => {
 export const getToken = function() {
     const token = localStorage.getItem('token')
     return token
+}
+
+export const updateProfileData = async(about, name) => {
+    var userData = await getUser();
+    console.log(userData)
+    if (name !== "") {
+        userData.name = name;
+    }
+    if (about !== "") {
+        userData.about = about;
+    }
+
+    const resp = await JSONClient.post(`/user/update/${userData.username}`, { userData }, {
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    })
+    localStorage.setItem("user", JSON.stringify(resp.data.data))
+
+    console.log(resp)
 }

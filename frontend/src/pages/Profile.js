@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
 import styles from "./css/profile.module.css";
 import Nav from "../Components/Navbar/Navbar";
 import ProfileCard from "../Components/Profile/Profile.js";
 import Button from "../Components/Buttons/Button";
 import Input from "../Components/Inputs/Input";
 import Settings from "../Components/Settings/Settings";
-import { useState, useEffect } from "react";
-import { getUser, updateProfile } from "../api/user";
+import React,{ useState, useEffect } from "react";
+import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
 import { getLawyers } from "../api/lawyers";
 
@@ -16,6 +15,7 @@ const Profile = () => {
   const [user, setUser] = useState({
     email: "",
     name: "",
+    about: ""
   });
 
   useEffect(async () => {
@@ -69,6 +69,8 @@ const Profile = () => {
   const [Privacy, setPrivacy] = useState(true);
   const [Membership, setMembership] = useState(true);
   const [Logout, setLogout] = useState(true);
+  const [nameEdit, setNameEdit] = useState("");
+  const [aboutEdit, setAboutEdit] = useState("");
 
   const iconChange_Account = (dataFromChild) => {
     setAccount(dataFromChild);
@@ -99,6 +101,17 @@ const Profile = () => {
     setprofilePicUrl(URL.createObjectURL(e.target.files[0]));
   };
 
+  const handleUpdateProfileData = () => {
+    updateProfileData(aboutEdit, nameEdit);
+  };
+
+  const handleNameEdit = (e) => {
+    setNameEdit(e.target.value);
+  };
+  const handleAboutEdit = (e) => {
+    setAboutEdit(e.target.value);
+  };
+
   return (
     <div>
       <div className={styles.navbarhandler}>
@@ -108,11 +121,6 @@ const Profile = () => {
         <div className={styles.container}>
           <div className={styles.left_profile_container}>
             <ProfileCard image={profilePicUrl} />
-
-            {/* <div className={styles.left_profile_button}>
-              <Button name="Edit Picture" />
-            </div> */}
-
             <div className={styles.right_profile_data}>
               <input
                 onChange={profilePictureHandler}
@@ -183,12 +191,22 @@ const Profile = () => {
               <div className={styles.right_profile_data}>{user.email}</div>
               <div className={styles.right_profile_heading}>Display Name</div>
               <div className={styles.right_profile_data}>
-                <Input placeholder={user.name} />
+                <Input onChange={handleNameEdit} placeholder={user.name} />
               </div>
 
-              <div className={styles.right_profile_heading}>Location</div>
+              <div className={styles.right_profile_heading}>About</div>
               <div className={styles.right_profile_data}>
-                <Input placeholder="Location" />
+                <Input onChange={handleAboutEdit} placeholder={user.about} />
+                <div style={{ marginTop: 50 }}></div>
+              </div>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
+                <Button function={handleUpdateProfileData} name="SAVE"></Button>
               </div>
             </div>
           </div>
