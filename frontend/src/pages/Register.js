@@ -106,11 +106,11 @@ const Register = () => {
 
                             </div>
                             <div className={register_styles.buttons}>
-                                <Link to="/Lawyer">
-                                    <Button onChildClick={handleRegisterButton} name="Register" />
-                                </Link>
+                                {/*<Link to="/Lawyer"> */}
+                                    <Button function={handleRegisterButton} name="Register" />
+                               {/*  </Link>  */}
                                 <Link to="/Login">
-                                    <Button onChildClick={handleLoginButton} name="Login" />
+                                    <Button function={handleLoginButton} name="Login" />
                                 </Link>
                                 <select className={register_styles.select} onChange={handleType} >
                                     <option className={register_styles.option} >User</option><option className={register_styles.option}>Lawyer</option>
