@@ -44,15 +44,15 @@ export const register = async(email, password, username, user_type, premium, pro
 
 export const getUser = async() => {
     const userData = localStorage.getItem("user")
-    console.log(userData)
+    const resp = await updateProfile()
+    console.log(resp)
     return JSON.parse(userData)
 }
 
 export const updateProfile = async() => {
     const userData = localStorage.getItem("user")
     const username = JSON.parse(userData).username
-    console.log(username)
-    const resp = await JSONClient.get(`/user/${username}`, {
+    const resp = await JSONClient.get(`/user/user/${username}`, {
         headers: {
             Authorization: localStorage.getItem("token")
         }

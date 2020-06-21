@@ -53,7 +53,17 @@ def register_user():
 
 @user_bp.route("/lawyers/<username>", methods=['GET'])
 @check_auth
+def get_lawyer_by_username(username):
+    user = User.get_or_none(User.username == username)
+    if user is not None:
+        return respond(user.to_dict(), 201)
+    else:
+        return respond_error("No user found", 404)
+
+@user_bp.route("/user/<username>", methods=['GET'])
+@check_auth
 def get_user_by_username(username):
+    print(username)
     user = User.get_or_none(User.username == username)
     if user is not None:
         return respond(user.to_dict(), 201)
