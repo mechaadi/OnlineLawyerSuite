@@ -15,6 +15,11 @@ This directory contains the Flask APP (the rest API)
 
 ### prod
 This directory contains the firebase config and hosting files (the frontend is hosted on firebase)
+- **public/index.html**: this is the file where we inject the js chunks (built from the webpack), which in turn renders all the markup of the website.
+- **static**: this is the directory which contains all the build files (js chunks, css chunks and media files [if any])
+    - **js**: containing all js chunks
+    - **css**: containing all css chunks
+    - **media**: containing all media chunks
 
 ### NEXT
 This directory contains the 1st version of this app (SSR BASED).
