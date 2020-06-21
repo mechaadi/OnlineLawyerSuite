@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import Pricing from './pages/Pricing';
 import Lawyer from './pages/Lawyer';
 import Lawyer_Search from './pages/Lawyer_Search';
+import Posts from "./pages/Posts"
 
 import {
   BrowserRouter as Router,
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/Profile/">
             <Profile />
+          </Route>
+          <Route path="/Posts/">
+            <Posts />
           </Route>
         </Switch>
 

@@ -4,7 +4,6 @@ import {
 
 export const getLawyers = async() => {
     const response = await JSONClient.get('/user/lawyers');
-    // console.log(response)
     return response.data
 }
 

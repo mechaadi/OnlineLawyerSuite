@@ -1,0 +1,31 @@
+.navbarhandler {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.postsContainer {
+    max-width: 1376px;
+    margin: auto;
+    height: 100vh;
+    margin-top: 120px;
+}
+
+.postRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.postCard {
+    max-height: 300px;
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 2px 4px black;
+    border-radius: 8px;
+    margin: 5px;
+    margin-bottom: 20px;
+}
