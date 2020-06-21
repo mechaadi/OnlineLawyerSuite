@@ -92,6 +92,7 @@ function About() {
             width: "100%",
             backgroundColor: "#000000aa",
             margin: "auto",
+            zIndex: 2000
           }}
         >
           <div
@@ -104,6 +105,7 @@ function About() {
               display: "flex",
               flexDirection: "column",
               padding: "10px",
+             
             }}
           >
             <div
@@ -121,25 +123,25 @@ function About() {
                 <h1 onClick={handleToggleModal} style={{ cursor: "pointer" }}>&#10006;</h1>
               </div>
             </div>
-            <div style={{ padding: "10px", width: "95%"}}>
+            <div style={{ padding: "10px", width: "100%"}}>
               <input
                 onChange={handleNameChange}
                 placeholder="Name"
-                style={{ padding: "10px", width: "95%" }}
+                style={{ padding: "10px", width: "100%" }}
               ></input>
             </div>
-            <div style={{ padding: "10px", width: "95%" }}>
+            <div style={{ padding: "10px", width: "100%" }}>
               <input
                 onChange={handleEmailChange}
                 placeholder="Email"
-                style={{ padding: "10px", width: "95%" }}
+                style={{ padding: "10px", width: "100%" }}
               ></input>
             </div>
-            <div style={{ padding: "10px", width: "95%" }}>
+            <div style={{ padding: "10px", width: "100%" }}>
               <textarea
                 onChange={handleMessageChange}
                 placeholder="Message"
-                style={{ padding: "10px", width: "95%", height: 200 }}
+                style={{ padding: "10px", width: "100%", height: 200 }}
               ></textarea>
             </div>
             <div
