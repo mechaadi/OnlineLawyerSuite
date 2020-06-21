@@ -17,3 +17,14 @@ export const addCase = async(title, body, client) => {
 
     console.log(response.data)
 }
+
+export const getAllCases = async(id) => {
+    const response = await JSONClient.get(`/cases/allCases/${id}`, {
+        headers: {
+            Authorization: localStorage.getItem("token")
+        }
+    })
+
+    console.log(response)
+    return response.data
+}

@@ -43,6 +43,15 @@ def _create_post():
             except Exception as e:
                 return respond_error(str(e), 500)
 
+@case_bp.route('/allCases/<id>', methods=['GET'])
+@check_auth
+def get_lawyer_cases(id):
+    print(id)
+    lawyer = User.get_or_none(User.id == id)
+    reviews = Cases.select().where(Cases.lawyer == lawyer).order_by(Cases.pub_at.desc())
+    reviews = [r.to_dict() for r in reviews]
+    return respond(reviews, 201)
+
 
 @case_bp.route('/', methods=['GET'])
 @check_auth

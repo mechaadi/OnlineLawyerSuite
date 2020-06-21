@@ -8,7 +8,7 @@ import Settings from "../Components/Settings/Settings";
 import React, { useState, useEffect } from "react";
 import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
-import {addCase} from "../api/cases"
+import { addCase, getAllCases } from "../api/cases";
 import {
   BrowserRouter as Router,
   Switch,
@@ -40,6 +40,8 @@ const Profile = () => {
   const [caseBody, setCaseBody] = useState("");
   const [caseClient, setCaseClient] = useState("");
 
+  const [cases, setCases] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const userDetails = await getUser();
@@ -47,6 +49,8 @@ const Profile = () => {
       const profilePicUrl =
         process.env.REACT_APP_API_URL + "/files/" + getProfilePicture();
       setprofilePicUrl(profilePicUrl);
+      const resp = await getAllCases(userDetails.id);
+      setCases(resp.data);
     }
     fetchData();
   }, []);
@@ -132,12 +136,14 @@ const Profile = () => {
     setCaseBody(e.target.value);
   };
 
-  const handleCaseClientChange = (e)=>{
-    setCaseClient(e.target.value)
-  }
-  const handleAddCase = async(e) => {
+  const handleCaseClientChange = (e) => {
+    setCaseClient(e.target.value);
+  };
+  const handleAddCase = async (e) => {
     console.log(caseTitle, caseBody);
-    await addCase(caseTitle, caseBody, caseClient)
+    await addCase(caseTitle, caseBody, caseClient);
+    const resp = await getAllCases(user.id);
+    setCases(resp.data);
   };
 
   const handleSwitchAccount = (e) => {
@@ -290,25 +296,25 @@ const Profile = () => {
               <div style={{ width: "100%" }}>
                 <h1>Cases</h1>
                 {user.user_type == 1 && (
-                  <div style={{ width: "100%", marginTop: 80 }}>
+                  <div style={{ width: "100%", marginTop: 30 }}>
                     <h1>Add new case details</h1>
                     <div style={{ height: 30 }}></div>
                     <input
                       onChange={handleCaseTitleChange}
                       placeholder="Title"
-                      style={{ width: "95%", padding: 8 }}
+                      style={{ width: "100%", padding: 8 }}
                     ></input>
                     <div style={{ height: 10 }}></div>
                     <input
                       onChange={handleCaseClientChange}
                       placeholder="Client's email address"
-                      style={{ width: "95%", padding: 8 }}
+                      style={{ width: "100%", padding: 8 }}
                     ></input>
                     <div style={{ height: 10 }}></div>
                     <textarea
                       onChange={handleCaseBodyChange}
                       placeholder="Content"
-                      style={{ width: "95%", padding: 8, height: 120 }}
+                      style={{ width: "100%", padding: 8, height: 120 }}
                     ></textarea>
                     <div
                       style={{
@@ -319,6 +325,55 @@ const Profile = () => {
                     >
                       <Button function={handleAddCase} name="SAVE"></Button>
                     </div>
+
+                    <div style={{ height: 50 }}></div>
+                    <h1>Previous Cases ({cases.length})</h1>
+                    <div style={{ height: 10 }}></div>
+                    {cases.map((caseObj) => (
+                      <div
+                        style={{
+                          width: "100%",
+                          boxShadow: "0px 2px 4px black",
+                          borderRadius: 8,
+                          padding: 10,
+                          marginTop: 10,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <h3>
+                          {caseObj.title}{" "}
+                          <span style={{ fontSize: 10 }}>{caseObj.pub_at}</span>
+                        </h3>
+                        <div
+                          style={{
+                            width: "100%",
+                            height: 2,
+                            backgroundColor: "grey",
+                            marginBottom: 4,
+                            marginTop: 4,
+                          }}
+                        >
+                          {" "}
+                        </div>
+                        <div>
+                          <h4>Client</h4>
+                          <h5>Email: {caseObj.user.email}</h5>
+                          <h5>Name: {caseObj.user.name}</h5>
+                        </div>
+
+                        <div
+                          style={{
+                            width: "100%",
+                            height: 2,
+                            backgroundColor: "grey",
+                            marginTop: 4,
+                            marginBottom: 4,
+                          }}
+                        ></div>
+                        <p>{caseObj.description}</p>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
