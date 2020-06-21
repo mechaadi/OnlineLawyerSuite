@@ -34,7 +34,7 @@ def test():
 def get_reviews(id):
     lawyer = User.get_or_none(User.id==id)
     if lawyer is not None:
-        review = Review.select().where(Review.lawyer == id)
+        review = Review.select().where(Review.lawyer == id).order_by(Review.pub_at.desc())
         review = [r.to_dict() for r in review]
         return respond(review, 201)
     else:
@@ -45,14 +45,12 @@ def get_reviews(id):
 def create_review():
     user = g.user
     data = request.json
-    print(data)
     comment_text = data['review']
     pub_at = dt.parse(data['pub_at'])
     stars = data['stars']
     lawyer_id = data['lawyer']
 
     lawyer = User.get_or_none(User.id == lawyer_id)
-    print(lawyer.username)
     if lawyer is not None:
         review = Review(review=comment_text, user=g.user.id, lawyer=lawyer_id, pub_at=pub_at, stars=stars)
         with db.atomic() as tx:
