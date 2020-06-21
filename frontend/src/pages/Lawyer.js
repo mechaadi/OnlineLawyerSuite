@@ -139,7 +139,7 @@ const Lawyer = (props) => {
             <textarea
               onChange={handleReviewChange}
               placeholder="Write a review"
-              style={{ height: 60, padding: 10 }}
+              style={{ height: 100, padding: 10 }}
             ></textarea>
             <input
               onChange={handleStarCountChange}
