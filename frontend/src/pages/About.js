@@ -121,7 +121,7 @@ function About() {
                 <h1 onClick={handleToggleModal} style={{ cursor: "pointer" }}>&#10006;</h1>
               </div>
             </div>
-            <div style={{ padding: "10px", width: "95%" }}>
+            <div style={{ padding: "10px", width: "95%"}}>
               <input
                 onChange={handleNameChange}
                 placeholder="Name"
