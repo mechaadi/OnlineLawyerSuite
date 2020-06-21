@@ -7,6 +7,7 @@ class Cases(BaseModel):
     title = pw.TextField()
     description = pw.TextField()
     pub_at = pw.DateTimeField()
+    verified = pw.BooleanField()
     
     # Foreign Key
     user = pw.ForeignKeyField(User, backref='cases', on_delete='CASCADE')

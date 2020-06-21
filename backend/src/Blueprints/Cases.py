@@ -32,7 +32,7 @@ def _create_post():
     pub_at = body['pub_at']
     lawyer = body['lawyer']
 
-    c = Cases(title=title, description=description, pub_at=pub_at, user=g.user.id, lawyer=lawyer)
+    c = Cases(title=title, description=description, verified=0, pub_at=pub_at, user=g.user.id, lawyer=lawyer)
 
     with db.atomic() as tx:
         try:

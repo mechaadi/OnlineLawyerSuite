@@ -12,8 +12,7 @@ const Settings = (props) => {
     }
     
     return (
-        <div className={styles.settings_menu_container}>
-
+        <div onClick={props.click} className={styles.settings_menu_container}>
         <div onMouseEnter = {hoverHandle} onMouseLeave = {hoverHandle} className={styles.settings_menu}>
             <div className={styles.img_container}>
                     <img className={styles.img_arrow} src={props.img}/>

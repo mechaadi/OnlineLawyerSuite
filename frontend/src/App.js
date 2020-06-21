@@ -40,12 +40,12 @@ function App() {
           <Route path="/Pricing">
             <Pricing />
           </Route>
-          <Route path="/Profile">
+          <Route path="/Profile/">
             <Profile />
           </Route>
         </Switch>
 
-      </Router>
+      </Router>   
     </div>
   );
 }

@@ -8,14 +8,32 @@ import Settings from "../Components/Settings/Settings";
 import React, { useState, useEffect } from "react";
 import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
 
 const Profile = () => {
+  const history = useHistory();
   const [profilePicUrl, setprofilePicUrl] = useState("");
   const [user, setUser] = useState({
     email: "",
     name: "",
     about: "",
   });
+  const [Account, setAccount] = useState(true);
+  const [Change_Password, setChange_Password] = useState(true);
+  const [Notifications, setNotifications] = useState(true);
+  const [Privacy, setPrivacy] = useState(true);
+  const [Membership, setMembership] = useState(true);
+  const [Logout, setLogout] = useState(true);
+  const [nameEdit, setNameEdit] = useState("");
+  const [aboutEdit, setAboutEdit] = useState("");
+
+  const [isAccount, setIsAccount] = useState(true);
+  const [isCases, setIsCases] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -62,15 +80,6 @@ const Profile = () => {
   const Arrow_Light =
     "https://cdn.discordapp.com/attachments/715197944202002584/717303031242293429/icons8-chevron-right-50_1.png";
 
-  const [Account, setAccount] = useState(true);
-  const [Change_Password, setChange_Password] = useState(true);
-  const [Notifications, setNotifications] = useState(true);
-  const [Privacy, setPrivacy] = useState(true);
-  const [Membership, setMembership] = useState(true);
-  const [Logout, setLogout] = useState(true);
-  const [nameEdit, setNameEdit] = useState("");
-  const [aboutEdit, setAboutEdit] = useState("");
-
   const iconChange_Account = (dataFromChild) => {
     setAccount(dataFromChild);
   };
@@ -111,6 +120,16 @@ const Profile = () => {
     setAboutEdit(e.target.value);
   };
 
+  const handleSwitchAccount = (e) => {
+    setIsAccount(true);
+    setIsCases(false);
+  };
+
+  const handleSwitchCases = () => {
+    setIsCases(true);
+    setIsAccount(false);
+  };
+
   return (
     <div>
       <div className={styles.navbarhandler}>
@@ -119,11 +138,21 @@ const Profile = () => {
       <div className={styles.main_container}>
         <div className={styles.container}>
           <div className={styles.left_profile_container}>
-            <ProfileCard name={user.name} about={user.about} image={profilePicUrl}></ProfileCard>
+            <ProfileCard
+              name={user.name}
+              about={user.about}
+              image={profilePicUrl}
+            ></ProfileCard>
             <div className={styles.right_profile_data}>
-              <div class="image-upload" style={{display: 'flex', justifyContent: 'center'}}>
+              <div
+                class="image-upload"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <label for="profilePic">
-                  <img src="https://goo.gl/pB9rpQ" style={{ width: 40, cursor: 'pointer' }} />
+                  <img
+                    src="https://goo.gl/pB9rpQ"
+                    style={{ width: 40, cursor: "pointer" }}
+                  />
                 </label>
                 <input
                   style={{ display: "none" }}
@@ -132,11 +161,6 @@ const Profile = () => {
                   type="file"
                 />
               </div>
-              {/* <input
-                onChange={profilePictureHandler}
-                id="profilePic"
-                type="file"
-              /> */}
               <div className={styles.left_profile_button}>
                 <Button name="Upload" function={profilePicListener}>
                   Upload
@@ -145,12 +169,21 @@ const Profile = () => {
             </div>
 
             <Settings
+              click={handleSwitchAccount}
               hoverData={iconChange_Account}
               describe="Account"
               img={Account === false ? Account_White : Account_Dark}
               Arrow={Account === true ? Arrow_Dark : Arrow_Light}
             />
-
+            {user.user_type == 1 && (
+              <Settings
+                click={handleSwitchCases}
+                hoverData={iconChange_Account}
+                describe="Cases"
+                img={Account === false ? Account_White : Account_Dark}
+                Arrow={Account === true ? Arrow_Dark : Arrow_Light}
+              />
+            )}
             <Settings
               hoverData={iconChange_Change_Password}
               describe="Change Password"
@@ -195,31 +228,77 @@ const Profile = () => {
             />
           </div>
 
-          <div className={styles.right_profile_container}>
-            <div className={styles.right_profile_information_container}>
-              <div className={styles.right_profile_heading}>Email</div>
-              <div className={styles.right_profile_data}>{user.email}</div>
-              <div className={styles.right_profile_heading}>Display Name</div>
-              <div className={styles.right_profile_data}>
-                <Input onChange={handleNameEdit} placeholder={user.name} />
-              </div>
+          {isAccount && (
+            <div className={styles.right_profile_container}>
+              <div style={{ width: "100%" }}>
+                <div className={styles.right_profile_information_container}>
+                  <div className={styles.right_profile_heading}>Email</div>
+                  <div className={styles.right_profile_data}>{user.email}</div>
+                  <div className={styles.right_profile_heading}>
+                    Display Name
+                  </div>
+                  <div className={styles.right_profile_data}>
+                    <Input onChange={handleNameEdit} placeholder={user.name} />
+                  </div>
 
-              <div className={styles.right_profile_heading}>About</div>
-              <div className={styles.right_profile_data}>
-                <Input onChange={handleAboutEdit} placeholder={user.about} />
-                <div style={{ marginTop: 50 }}></div>
-              </div>
-              <div
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "flex-end",
-                }}
-              >
-                <Button function={handleUpdateProfileData} name="SAVE"></Button>
+                  <div className={styles.right_profile_heading}>About</div>
+                  <div className={styles.right_profile_data}>
+                    <Input
+                      onChange={handleAboutEdit}
+                      placeholder={user.about}
+                    />
+                    <div style={{ marginTop: 50 }}></div>
+                  </div>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Button
+                      function={handleUpdateProfileData}
+                      name="SAVE"
+                    ></Button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
+          {isCases && (
+            <div className={styles.right_profile_container}>
+              <div style={{ width: "100%" }}>
+                <h1>Cases</h1>
+                {user.user_type == 1 && (
+                  <div style={{ width: "100%", marginTop: 80 }}>
+                    <h1>Add new case details</h1>
+                    <div style={{ height: 30 }}></div>
+                    <input
+                      placeholder="Title"
+                      style={{ width: "95%", padding: 8 }}
+                    ></input>
+                    <div style={{ height: 10 }}></div>
+                    <textarea
+                      placeholder="Content"
+                      style={{ width: "95%", padding: 8, height: 120 }}
+                    ></textarea>
+                    <div
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "flex-end",
+                      }}
+                    >
+                      <Button
+                        function={handleUpdateProfileData}
+                        name="SAVE"
+                      ></Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
