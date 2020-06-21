@@ -8,7 +8,7 @@ import Comment from "../Components/Comment/Comment";
 import Cases from "../Components/Cases/Cases";
 import Profile from "../Components/Profile/Profile";
 import { useLocation } from "react-router-dom";
-import { getLawyerByUsername } from "../api/lawyers";
+import { getLawyerByUsername, addReview, getReviews } from "../api/lawyers";
 
 const Lawyer = (props) => {
   const location = useLocation();
@@ -16,17 +16,38 @@ const Lawyer = (props) => {
     name: "",
     profile_picture: "",
     about: "",
+    id: "",
   });
+
+  const [review, setReview] = useState("");
+  const [stars, setStars] = useState(0);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     console.log(location.state);
     async function getLawyerDetails() {
       const lawyerDetails = await getLawyerByUsername(location.state);
       setLawyer(lawyerDetails.data);
+      const reviews = await getReviews(lawyerDetails.data.id);
+      setReviews(reviews.data);
     }
-
     getLawyerDetails();
   }, [location]);
+
+  const handleSubmitReview = async () => {
+    await addReview(lawyer.id, review, stars);
+    const reviews = await getReviews(lawyer.id);
+    setReviews(reviews.data);
+    
+  };
+
+  const handleReviewChange = (e) => {
+    setReview(e.target.value);
+  };
+
+  const handleStarCountChange = (e) => {
+    setStars(parseInt(e.target.value));
+  };
 
   return (
     <div>
@@ -67,18 +88,28 @@ const Lawyer = (props) => {
 
           <div className={styles.lawyer_reviews_section}>
             <div className={styles.lawyer_reviews_heading}>Reviews</div>
-            <Comment
-              username="Harvey Spector"
-              timestamp="5 hours ago"
-              stars="⭐⭐⭐⭐⭐"
-              review="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
-            <Comment
-              username="Harvey Spector"
-              timestamp="5 hours ago"
-              stars="⭐⭐⭐⭐⭐"
-              review="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
+            <textarea
+              onChange={handleReviewChange}
+              placeholder="Write a review"
+              style={{ height: 60, padding: 10 }}
+            ></textarea>
+            <input
+              onChange={handleStarCountChange}
+              placeholder="star count"
+              style={{ padding: 10 }}
+            ></input>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Button name="Submit" function={handleSubmitReview}></Button>
+            </div>
+            {reviews.map((review) => (
+              <Comment
+                username={review.user.name}
+                timestamp={review.pub_at}
+                stars={review.stars}
+                review={review.review}
+                image={`${process.env.REACT_APP_API_URL}/files/${review.user.profile_picture}`}
+              />
+            ))}
           </div>
         </div>
       </div>
