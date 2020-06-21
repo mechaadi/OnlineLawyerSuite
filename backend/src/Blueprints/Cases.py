@@ -1,10 +1,11 @@
 from flask import Flask, Blueprint, g, request
-from src.model import Post, File, Cases
+from src.model import Post, File, Cases, User
 from src.db import db
 from src.Middlewares.AuthMiddleware import *
 from werkzeug.utils import secure_filename
 import os
 case_bp = Blueprint('cases', __name__, url_prefix='/cases')
+import dateutil.parser as dt
 
 
 def respond(data, code):
@@ -29,17 +30,18 @@ def _create_post():
     body = request.json
     title = body['title']
     description = body['description']
-    pub_at = body['pub_at']
-    lawyer = body['lawyer']
+    pub_at = dt.parse(body['pub_at'])
+    client = body['client']
 
-    c = Cases(title=title, description=description, verified=0, pub_at=pub_at, user=g.user.id, lawyer=lawyer)
-
-    with db.atomic() as tx:
-        try:
-            c.save()
-            return respond(c.to_dict(), 201)
-        except Exception as e:
-            return respond_error(str(e), 500)
+    user = User.get_or_none(User.email == client)
+    if user is not None:
+        c = Cases(title=title, description=description, verified=0, pub_at=pub_at, lawyer=g.user.id, user=user)
+        with db.atomic() as tx:
+            try:
+                c.save()
+                return respond(c.to_dict(), 201)
+            except Exception as e:
+                return respond_error(str(e), 500)
 
 
 @case_bp.route('/', methods=['GET'])

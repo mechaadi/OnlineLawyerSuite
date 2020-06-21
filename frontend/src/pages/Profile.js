@@ -8,6 +8,7 @@ import Settings from "../Components/Settings/Settings";
 import React, { useState, useEffect } from "react";
 import { getUser, updateProfile, updateProfileData } from "../api/user";
 import { uploadProfilePicture, getProfilePicture } from "../api/file";
+import {addCase} from "../api/cases"
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,6 +35,10 @@ const Profile = () => {
 
   const [isAccount, setIsAccount] = useState(true);
   const [isCases, setIsCases] = useState(false);
+
+  const [caseTitle, setCaseTitle] = useState("");
+  const [caseBody, setCaseBody] = useState("");
+  const [caseClient, setCaseClient] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -105,7 +110,6 @@ const Profile = () => {
   };
 
   const profilePictureHandler = (e) => {
-    console.log(URL.createObjectURL(e.target.files[0]));
     setprofilePicUrl(URL.createObjectURL(e.target.files[0]));
   };
 
@@ -118,6 +122,22 @@ const Profile = () => {
   };
   const handleAboutEdit = (e) => {
     setAboutEdit(e.target.value);
+  };
+
+  const handleCaseTitleChange = (e) => {
+    setCaseTitle(e.target.value);
+  };
+
+  const handleCaseBodyChange = (e) => {
+    setCaseBody(e.target.value);
+  };
+
+  const handleCaseClientChange = (e)=>{
+    setCaseClient(e.target.value)
+  }
+  const handleAddCase = async(e) => {
+    console.log(caseTitle, caseBody);
+    await addCase(caseTitle, caseBody, caseClient)
   };
 
   const handleSwitchAccount = (e) => {
@@ -274,11 +294,19 @@ const Profile = () => {
                     <h1>Add new case details</h1>
                     <div style={{ height: 30 }}></div>
                     <input
+                      onChange={handleCaseTitleChange}
                       placeholder="Title"
                       style={{ width: "95%", padding: 8 }}
                     ></input>
                     <div style={{ height: 10 }}></div>
+                    <input
+                      onChange={handleCaseClientChange}
+                      placeholder="Client's email address"
+                      style={{ width: "95%", padding: 8 }}
+                    ></input>
+                    <div style={{ height: 10 }}></div>
                     <textarea
+                      onChange={handleCaseBodyChange}
                       placeholder="Content"
                       style={{ width: "95%", padding: 8, height: 120 }}
                     ></textarea>
@@ -289,10 +317,7 @@ const Profile = () => {
                         justifyContent: "flex-end",
                       }}
                     >
-                      <Button
-                        function={handleUpdateProfileData}
-                        name="SAVE"
-                      ></Button>
+                      <Button function={handleAddCase} name="SAVE"></Button>
                     </div>
                   </div>
                 )}
