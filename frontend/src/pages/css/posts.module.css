@@ -17,7 +17,6 @@
 .postRow {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .postCard {
@@ -29,6 +28,14 @@
     border-radius: 8px;
     margin: 5px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.postImage {
+    max-height: 100%;
+    object-fit: fill;
+    width: 100%;
+    border-radius: 8px;
 }
 
 .postIcon {
@@ -42,4 +49,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.postData {
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    color: wheat;
 }

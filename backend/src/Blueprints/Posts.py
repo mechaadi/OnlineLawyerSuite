@@ -4,6 +4,8 @@ from src.db import db
 from src.Middlewares.AuthMiddleware import *
 from werkzeug.utils import secure_filename
 import os
+import dateutil.parser as dt
+
 post_bp = Blueprint('post', __name__, url_prefix='/posts')
 
 
@@ -27,24 +29,26 @@ def test():
 @check_auth
 def _create_post():
     body = request.json
+    print(body)
     title = body['title']
     content = body['content']
-    pub_at = body['pub_at']
-    tags = json.loads(json.dumps(body['tags']))
-    images = json.loads(json.dumps(body['images']))
+    pub_at = dt.parse(body['pub_at'])
+    # tags = json.loads(json.dumps(body['tags']))
+    #images = json.loads(json.dumps(body['images']))
+    #print(body['images'])
 
-    p = Post(title=title, content=content, pub_at=pub_at, user=g.user.id, tags=tags, images=images)
+    p = Post(title=title, content=content, images=body['images'],pub_at=pub_at, user=g.user.id)
 
     with db.atomic() as tx:
         try:
             p.save()
             return respond(p.to_dict(), 201)
         except Exception as e:
+            print(e)
             return respond_error(str(e), 500)
 
 
 @post_bp.route('/', methods=['GET'])
-@check_auth
 def _get_all_posts():
     post = Post.select()
     post = [p.to_dict() for p in post]
