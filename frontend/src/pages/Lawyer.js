@@ -9,6 +9,7 @@ import Cases from "../Components/Cases/Cases";
 import Profile from "../Components/Profile/Profile";
 import { useLocation } from "react-router-dom";
 import { getLawyerByUsername, addReview, getReviews } from "../api/lawyers";
+import {getAllCases} from "../api/cases"
 
 const Lawyer = (props) => {
   const location = useLocation();
@@ -23,6 +24,8 @@ const Lawyer = (props) => {
   const [stars, setStars] = useState(0);
   const [reviews, setReviews] = useState([]);
 
+  const [cases, setCases] = useState([])
+
   useEffect(() => {
     console.log(location.state);
     async function getLawyerDetails() {
@@ -30,6 +33,9 @@ const Lawyer = (props) => {
       setLawyer(lawyerDetails.data);
       const reviews = await getReviews(lawyerDetails.data.id);
       setReviews(reviews.data);
+
+      const resp = await getAllCases(lawyerDetails.data.id)
+      setCases(resp.data)
     }
     getLawyerDetails();
   }, [location]);
@@ -58,9 +64,51 @@ const Lawyer = (props) => {
         <div className={styles.lawyer_container}>
           <div className={styles.lawyer_box}>
             <div className={styles.lawyer_cases_section}>
-              <Cases />
-              <Cases />
-              <Cases />
+            {cases.map((caseObj) => (
+                      <div
+                        style={{
+                          width: "100%",
+                          boxShadow: "0px 2px 4px black",
+                          borderRadius: 8,
+                          padding: 10,
+                          marginTop: 10,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <h3>
+                          {caseObj.title}{" "}
+                          <span style={{ fontSize: 10 }}>{caseObj.pub_at}</span>
+                        </h3>
+                        <div
+                          style={{
+                            width: "100%",
+                            height: 2,
+                            backgroundColor: "grey",
+                            marginBottom: 4,
+                            marginTop: 4,
+                          }}
+                        >
+                          {" "}
+                        </div>
+                        <div>
+                          <h4>Client</h4>
+                          <h5>Email: {caseObj.user.email}</h5>
+                          <h5>Name: {caseObj.user.name}</h5>
+                        </div>
+
+                        <div
+                          style={{
+                            width: "100%",
+                            height: 2,
+                            backgroundColor: "grey",
+                            marginTop: 4,
+                            marginBottom: 4,
+                          }}
+                        ></div>
+                        <p>{caseObj.description}</p>
+                      </div>
+                    ))}
               <div className={styles.lawyer_cases_readmore}>Read More...</div>
             </div>
             <div className={styles.lawyer_profile + " " + styles.flex_center}>
