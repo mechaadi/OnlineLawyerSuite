@@ -119,13 +119,24 @@ const Profile = () => {
       <div className={styles.main_container}>
         <div className={styles.container}>
           <div className={styles.left_profile_container}>
-            <ProfileCard image={profilePicUrl} />
+            <ProfileCard name={user.name} about={user.about} image={profilePicUrl}></ProfileCard>
             <div className={styles.right_profile_data}>
-              <input
+              <div class="image-upload" style={{display: 'flex', justifyContent: 'center'}}>
+                <label for="profilePic">
+                  <img src="https://goo.gl/pB9rpQ" style={{ width: 40, cursor: 'pointer' }} />
+                </label>
+                <input
+                  style={{ display: "none" }}
+                  onChange={profilePictureHandler}
+                  id="profilePic"
+                  type="file"
+                />
+              </div>
+              {/* <input
                 onChange={profilePictureHandler}
                 id="profilePic"
                 type="file"
-              />
+              /> */}
               <div className={styles.left_profile_button}>
                 <Button name="Upload" function={profilePicListener}>
                   Upload

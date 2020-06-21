@@ -44,8 +44,7 @@ export const register = async(email, password, username, user_type, premium, pro
 
 export const getUser = async() => {
     const userData = localStorage.getItem("user")
-    const resp = await updateProfile()
-    console.log(resp)
+        // const resp = await updateProfile()
     return JSON.parse(userData)
 }
 
@@ -59,7 +58,6 @@ export const updateProfile = async() => {
     })
 
     localStorage.setItem("user", JSON.stringify(resp.data.data))
-    console.log(resp, " synced user")
 }
 
 export const getToken = function() {
