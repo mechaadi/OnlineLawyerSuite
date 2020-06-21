@@ -59,8 +59,13 @@ export default function Navbar() {
           >
             <li className={nav.li}> Lawyers </li>
           </Link>
+          <Link
+            to="/Help"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <li className={nav.li}> Help </li>
+          </Link>
         </ul>
-        <Input placeholder="Search" />
 
         {!loggedIn && (
           <ul className={nav.navbuttons}>
@@ -104,6 +109,12 @@ export default function Navbar() {
               <li className={nav.li}>Features</li>
               <Link to="/Pricing">
                 <li className={nav.li}>Pricing</li>
+              </Link>
+              <Link to="/Lawyers">
+                <li className={nav.li}>Lawyers</li>
+              </Link>
+              <Link to="/Help">
+                <li className={nav.li}>Help</li>
               </Link>
               <Link to="/Login">
                 <li className={nav.li}>Login</li>
