@@ -7,17 +7,17 @@
   align-items: center;
 }
 .navbarhandler {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 2px 2px 5px #000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #000;
 }
 .container {
   width: 60%;
   margin: 50px;
 }
 .title {
- margin-top: 50px;
+  margin-top: 50px;
   font-size: 45px;
   font-weight: bolder;
   text-align: center;
@@ -28,6 +28,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: start;
+  font-style: italic;
   font-weight: 500;
 }
 .text_container {
@@ -49,3 +50,23 @@
   font-size: 20px;
 }
 
+@media only screen and (max-width: 750px) {
+  .title {
+    font-size: 35px;
+  }
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 35px;
+  }
+  .container {
+    margin: 0px;
+  }
+  .brief { 
+      font-size: 20px;
+  }
+}
