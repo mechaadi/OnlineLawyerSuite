@@ -9,6 +9,7 @@ import Membership from "../Components/Membership/Membership";
 import CTA from "../Components/CTA/CTA.js";
 import Testimonials from "../Components/Testimonials/Testimonials.js";
 import Button from "../Components/Buttons/Button";
+import Input from "../Components/Inputs/Input";
 
 function About() {
   const [contactModal, setContactModal] = useState(false);
@@ -85,6 +86,7 @@ function About() {
         <div
           style={{
             position: "fixed",
+            fontFamily :'Montserrat',
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -124,30 +126,29 @@ function About() {
               </div>
             </div>
             <div style={{ padding: "10px", width: "100%"}}>
-              <input
+              <Input
                 onChange={handleNameChange}
                 placeholder="Name"
-                style={{ padding: "10px", width: "100%" }}
-              ></input>
+                // style={{ padding: "10px", width: "100%" }}
+              ></Input>
             </div>
             <div style={{ padding: "10px", width: "100%" }}>
-              <input
+              <Input
                 onChange={handleEmailChange}
                 placeholder="Email"
-                style={{ padding: "10px", width: "100%" }}
-              ></input>
+                // style={{ padding: "10px", width: "100%" }}
+              ></Input>
             </div>
             <div style={{ padding: "10px", width: "100%" }}>
               <textarea
                 onChange={handleMessageChange}
                 placeholder="Message"
-                style={{ padding: "10px", width: "100%", height: 200 }}
+                style={{ padding: "10px", width: "100%", height: 200 , borderRadius: 5 }}
               ></textarea>
             </div>
             <div
               style={{
-                padding: "10px",
-                width: "95%",
+                width: "100%",
                 display: "flex",
                 justifyContent: "flex-end",
               }}

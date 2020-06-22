@@ -299,17 +299,17 @@ const Profile = () => {
                   <div style={{ width: "100%", marginTop: 30 }}>
                     <h1>Add new case details</h1>
                     <div style={{ height: 30 }}></div>
-                    <input
+                    <Input
                       onChange={handleCaseTitleChange}
                       placeholder="Title"
-                      style={{ width: "100%", padding: 8 }}
-                    ></input>
+                    // style={{ width: "100%", padding: 8 }}
+                    ></Input>
                     <div style={{ height: 10 }}></div>
-                    <input
+                    <Input
                       onChange={handleCaseClientChange}
                       placeholder="Client's email address"
-                      style={{ width: "100%", padding: 8 }}
-                    ></input>
+                    // style={{ width: "100%", padding: 8 }}
+                    ></Input>
                     <div style={{ height: 10 }}></div>
                     <textarea
                       onChange={handleCaseBodyChange}
@@ -342,7 +342,7 @@ const Profile = () => {
                         }}
                       >
                         <h3>
-                          {caseObj.title}{" "}
+                          {caseObj.title}
                           <span style={{ fontSize: 10 }}>{caseObj.pub_at}</span>
                         </h3>
                         <div
@@ -354,7 +354,7 @@ const Profile = () => {
                             marginTop: 4,
                           }}
                         >
-                          {" "}
+
                         </div>
                         <div>
                           <h4>Client</h4>
