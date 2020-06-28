@@ -4,11 +4,21 @@ const Cases = (props) => {
     return (
         <div className={styles.lawyer_cases_box}>
             <div className={styles.lawyer_cases_name}>
-                Where does it come from?
-                                </div>
+                {props.caseTitle} <span className = {styles.pubat} >
+                    {props.pubAt}
+
+                </span>
+            </div>
+            <div className={styles.line} />
+
+
+            <h4>Client</h4>
+            <h5>Email: {props.caseEmail}</h5>
+            <h5>Name: {props.caseName}</h5>
+            <div className={styles.line} />
             <div className={styles.lawyer_cases_description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </div>
+                {props.caseDescription}
+            </div>
         </div>
     )
 }

@@ -9,7 +9,7 @@ import Cases from "../Components/Cases/Cases";
 import Profile from "../Components/Profile/Profile";
 import { useLocation } from "react-router-dom";
 import { getLawyerByUsername, addReview, getReviews } from "../api/lawyers";
-import {getAllCases} from "../api/cases"
+import { getAllCases } from "../api/cases"
 
 const Lawyer = (props) => {
   const location = useLocation();
@@ -44,7 +44,7 @@ const Lawyer = (props) => {
     await addReview(lawyer.id, review, stars);
     const reviews = await getReviews(lawyer.id);
     setReviews(reviews.data);
-    
+
   };
 
   const handleReviewChange = (e) => {
@@ -64,51 +64,9 @@ const Lawyer = (props) => {
         <div className={styles.lawyer_container}>
           <div className={styles.lawyer_box}>
             <div className={styles.lawyer_cases_section}>
-            {cases.map((caseObj) => (
-                      <div
-                        style={{
-                          width: "100%",
-                          boxShadow: "0px 2px 4px black",
-                          borderRadius: 8,
-                          padding: 10,
-                          marginTop: 10,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <h3>
-                          {caseObj.title}{" "}
-                          <span style={{ fontSize: 10 }}>{caseObj.pub_at}</span>
-                        </h3>
-                        <div
-                          style={{
-                            width: "100%",
-                            height: 2,
-                            backgroundColor: "grey",
-                            marginBottom: 4,
-                            marginTop: 4,
-                          }}
-                        >
-                          {" "}
-                        </div>
-                        <div>
-                          <h4>Client</h4>
-                          <h5>Email: {caseObj.user.email}</h5>
-                          <h5>Name: {caseObj.user.name}</h5>
-                        </div>
-
-                        <div
-                          style={{
-                            width: "100%",
-                            height: 2,
-                            backgroundColor: "grey",
-                            marginTop: 4,
-                            marginBottom: 4,
-                          }}
-                        ></div>
-                        <p>{caseObj.description}</p>
-                      </div>
-                    ))}
+              {cases.map((caseObj) => (
+                <Cases caseTitle={caseObj.title} pubAt={caseObj.pub_at} caseEmail={caseObj.user.email} caseName={caseObj.user.name} caseDescription={caseObj.description} />
+              ))}
               <div className={styles.lawyer_cases_readmore}>Read More...</div>
             </div>
             <div className={styles.lawyer_profile + " " + styles.flex_center}>
